@@ -3,39 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minarul Islam | Academic Portfolio</title>
+
+  <title>Minarul Islam | Academic Homepage</title>
 
   <style>
-    :root {
-      --bg: #061526;
-      --bg2: #0b2745;
-      --card: rgba(10, 34, 58, 0.92);
-      --card2: rgba(15, 47, 79, 0.88);
-      --gold: #f5b642;
-      --blue: #3da5ff;
-      --text: #eef6ff;
-      --muted: #b8c7d9;
-      --border: rgba(255,255,255,0.16);
-    }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(61,165,255,0.24), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(245,182,66,0.18), transparent 25%),
-        linear-gradient(135deg, #03101f 0%, #061526 40%, #020814 100%);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+      font-size: 16px;
+      line-height: 1.65;
     }
 
     a {
-      color: var(--gold);
+      color: #1f78b4;
       text-decoration: none;
     }
 
@@ -43,557 +25,225 @@
       text-decoration: underline;
     }
 
-    .nav {
+    .topbar {
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(3, 12, 24, 0.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
+      z-index: 100;
     }
 
-    .nav-inner {
-      max-width: 1200px;
-      margin: auto;
-      padding: 14px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      color: white;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--gold), #ffe199);
-      color: #061526;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-    }
-
-    .brand small {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 500;
-      margin-top: 2px;
-    }
-
-    .links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .links a {
-      color: white;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .cv-nav {
-      background: var(--gold);
-      color: #061526 !important;
-      padding: 9px 14px;
-      border-radius: 8px;
-    }
-
-    .hero {
-      position: relative;
-      min-height: 620px;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(90deg, rgba(3,12,24,0.98) 0%, rgba(3,12,24,0.88) 45%, rgba(3,12,24,0.55) 100%),
-        radial-gradient(circle at 78% 40%, rgba(61,165,255,0.28), transparent 26%);
-    }
-
-    .network {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 52%;
-      height: 100%;
-      opacity: 0.9;
-      background:
-        linear-gradient(135deg, transparent, rgba(61,165,255,0.10)),
-        repeating-linear-gradient(35deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 42px);
-    }
-
-    .network::after {
-      content: "AI";
-      position: absolute;
-      right: 16%;
-      top: 38%;
-      width: 190px;
-      height: 190px;
-      border: 1px solid rgba(245,182,66,0.35);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 58px;
-      font-weight: 900;
-      color: rgba(245,182,66,0.35);
-      box-shadow: 0 0 70px rgba(61,165,255,0.22);
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: auto;
-      padding: 82px 24px 70px;
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      gap: 46px;
-      align-items: center;
-    }
-
-    .avatar {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 40% 30%, #ffe3ad, #d78d56 38%, #08213b 39%, #0b2e53 100%);
-      border: 5px solid var(--gold);
-      display: grid;
-      place-items: center;
-      font-size: 54px;
-      font-weight: 900;
-      color: white;
-      box-shadow: 0 18px 44px rgba(0,0,0,0.45);
-    }
-
-    .social {
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 20px;
       display: flex;
       justify-content: center;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .social a {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      color: white;
-      background: rgba(255,255,255,0.06);
-      font-weight: 700;
-    }
-
-    .hero h1 {
-      font-size: 58px;
-      line-height: 1.05;
-      margin: 0;
-      color: white;
-      letter-spacing: -1px;
-    }
-
-    .hero h2 {
-      color: var(--gold);
-      font-size: 25px;
-      line-height: 1.3;
-      margin: 14px 0 18px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      color: #e8f3ff;
-      font-size: 17px;
-      margin: 0 0 14px;
-    }
-
-    .actions {
-      margin-top: 26px;
-      display: flex;
-      gap: 14px;
+      align-items: center;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 13px 19px;
-      border-radius: 8px;
-      font-weight: 800;
-      border: 1px solid var(--border);
+    .nav a {
+      color: #555555;
+      font-weight: 500;
+      font-size: 15px;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), #ffd36a);
-      color: #061526;
+    .nav a:first-child {
+      font-weight: 700;
+      color: #444444;
     }
 
-    .btn-secondary {
-      color: white;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .facts {
-      position: relative;
-      z-index: 5;
-      max-width: 1200px;
-      margin: -48px auto 30px;
-      padding: 0 24px;
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 45px 20px;
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
+      grid-template-columns: 260px 1fr;
+      gap: 55px;
     }
 
-    .fact {
-      background: rgba(7, 25, 45, 0.96);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px 14px;
-      text-align: center;
-      box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      align-self: start;
     }
 
-    .fact-icon {
-      font-size: 26px;
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #dddddd;
+      display: block;
+      margin-bottom: 22px;
+      background: #f1f1f1;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #333333;
       margin-bottom: 8px;
     }
 
-    .fact strong {
-      display: block;
-      color: var(--gold);
-      font-size: 17px;
-    }
-
-    .fact span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 24px 50px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.24);
-    }
-
-    .card h2 {
-      color: white;
-      margin: 0 0 18px;
-      font-size: 25px;
-      display: inline-block;
-      border-bottom: 2px solid var(--gold);
-      padding-bottom: 10px;
-    }
-
-    .card p {
-      color: #dbe9f8;
-    }
-
-    .research-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px 20px;
-      margin-top: 8px;
-    }
-
-    .research-list div {
-      color: #e8f3ff;
-    }
-
-    .research-list div::before {
-      content: "●";
-      color: var(--gold);
-      margin-right: 8px;
-    }
-
-    .section-title {
-      margin: 34px 0 18px;
-      color: white;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .section-title h2 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    .section-title::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .project {
-      background: rgba(7, 30, 55, 0.96);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: 0.2s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-6px);
-      border-color: var(--gold);
-    }
-
-    .project-visual {
-      height: 145px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #0e3a66, #07192d);
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-visual::before {
-      content: "";
-      position: absolute;
-      inset: -30%;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(245,182,66,0.30), transparent 20%),
-        radial-gradient(circle at 70% 60%, rgba(61,165,255,0.30), transparent 22%),
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 18px);
-    }
-
-    .project-visual span {
-      position: relative;
-      z-index: 2;
-      font-size: 42px;
-    }
-
-    .project-body {
-      padding: 17px;
-    }
-
-    .project-body h3 {
-      margin: 0 0 10px;
-      color: white;
-      font-size: 17px;
-    }
-
-    .project-body p {
-      margin: 0;
+    .bio {
       font-size: 14px;
-      color: #c7d9ea;
+      color: #444444;
+      margin-bottom: 18px;
     }
 
-    .project-body a {
-      display: inline-block;
-      margin-top: 14px;
-      font-weight: 800;
-      font-size: 14px;
-    }
-
-    .pub-list {
+    .side-links {
       list-style: none;
       padding: 0;
       margin: 0;
-    }
-
-    .pub-list li {
-      display: grid;
-      grid-template-columns: 38px 1fr auto;
-      gap: 14px;
-      border-bottom: 1px solid var(--border);
-      padding: 13px 0;
-      align-items: start;
-    }
-
-    .pub-num {
-      width: 34px;
-      height: 34px;
-      border-radius: 9px;
-      display: grid;
-      place-items: center;
-      background: #15558f;
-      color: white;
-      font-weight: 900;
-    }
-
-    .pub-title {
-      color: white;
-      font-weight: 700;
-    }
-
-    .pub-meta {
-      color: var(--muted);
       font-size: 14px;
+    }
+
+    .side-links li {
+      margin-bottom: 9px;
+    }
+
+    .content h1 {
+      font-size: 31px;
+      line-height: 1.2;
+      margin: 0 0 18px;
+      color: #444444;
+    }
+
+    .content h2 {
+      font-size: 25px;
+      color: #444444;
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    .content h3 {
+      font-size: 20px;
+      color: #444444;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .intro p {
+      margin-bottom: 17px;
+    }
+
+    .center-table {
+      width: 100%;
+      margin-top: 28px;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .center-table td {
+      border: none;
+      vertical-align: top;
+      padding: 10px 20px;
+    }
+
+    .research-cloud {
+      padding: 18px;
+      min-height: 135px;
+    }
+
+    .big-red {
+      color: #b00000;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .big-purple {
+      color: #4b2e83;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1.2;
       margin-top: 4px;
     }
 
-    .timeline {
-      border-left: 2px solid var(--gold);
+    .small-topic {
+      display: inline-block;
+      margin: 5px 8px;
+      font-size: 13px;
+      color: #333333;
+    }
+
+    .spotlight {
+      text-align: left;
+      color: #8b0000;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .project-list {
       padding-left: 22px;
-      margin-left: 8px;
     }
 
-    .timeline-item {
-      margin-bottom: 24px;
-      position: relative;
+    .project-list li {
+      margin-bottom: 12px;
     }
 
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -31px;
-      top: 5px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--gold);
+    .news-list li {
+      margin-bottom: 10px;
     }
 
     .date {
-      color: var(--gold);
-      font-weight: 800;
-      font-size: 14px;
+      color: #0057b8;
+      font-weight: 700;
     }
 
-    .timeline-item h3 {
-      margin: 5px 0;
-      color: white;
+    .pub-list {
+      padding-left: 22px;
     }
 
-    .contact-banner {
-      margin-top: 28px;
-      padding: 26px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(19,72,120,0.95), rgba(8,28,50,0.95));
-      border: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 20px;
+    .pub-list li {
+      margin-bottom: 12px;
     }
 
-    .contact-banner h2 {
-      margin: 0;
-      color: white;
+    .teaching-list {
+      padding-left: 22px;
     }
 
-    .contact-banner p {
-      margin: 5px 0 0;
-      color: var(--muted);
+    .teaching-list li {
+      margin-bottom: 10px;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .contact-box {
-      padding: 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.05);
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .contact-box strong {
-      display: block;
-      color: white;
-      margin-bottom: 5px;
-    }
-
-    footer {
+    .footer {
+      border-top: 1px solid #eeeeee;
       text-align: center;
       padding: 24px;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      background: rgba(2,8,20,0.92);
+      color: #777777;
+      font-size: 14px;
     }
 
-    @media (max-width: 1000px) {
-      .hero-inner,
-      .grid-2,
-      .contact-banner {
+    @media (max-width: 800px) {
+      .page {
         grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .facts,
-      .projects,
-      .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .sidebar {
+        position: static;
+        text-align: center;
       }
 
-      .hero h1 {
-        font-size: 42px;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
+      .profile-img {
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      .facts,
-      .projects,
-      .contact-grid,
-      .research-list {
-        grid-template-columns: 1fr;
+      .side-links {
+        text-align: center;
       }
 
-      .hero-inner {
-        padding-top: 50px;
-      }
-
-      .avatar {
-        width: 180px;
-        height: 180px;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .pub-list li {
-        grid-template-columns: 38px 1fr;
-      }
-
-      .pub-list li a {
-        grid-column: 2;
+      .center-table,
+      .center-table tr,
+      .center-table td {
+        display: block;
+        width: 100%;
       }
     }
   </style>
@@ -601,337 +251,213 @@
 
 <body>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <div class="brand-mark">AI</div>
-        <div>
-          Minarul Islam
-          <small>AI • NLP • Security • Speech • Systems</small>
-        </div>
+  <div class="topbar">
+    <nav class="nav">
+      <a href="index.html">Minarul Islam</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main class="page">
+
+    <aside class="sidebar">
+      <img src="images:profile.png" alt="Minarul Islam" class="profile-img" />
+
+      <div class="name">Minarul Islam</div>
+
+      <div class="bio">
+        Ph.D. Candidate<br />
+        Department of Computer Science and Software Engineering<br />
+        Auburn University
       </div>
 
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-        <a class="cv-nav" href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a>
-      </div>
-    </div>
-  </nav>
+      <ul class="side-links">
+        <li>📍 Auburn, Alabama, USA</li>
+        <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+        <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+        <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
+        <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+      </ul>
+    </aside>
 
-  <header class="hero">
-    <div class="network"></div>
+    <section class="content">
 
-    <div class="hero-inner">
-      <div>
-        <div class="avatar">MI</div>
+      <h1>Welcome to my personal homepage</h1>
 
-        <div class="social">
-          <a href="mailto:mzi0030@auburn.edu">✉</a>
-          <a href="https://github.com/minarul2526" target="_blank">GH</a>
-          <a href="#" target="_blank">GS</a>
-          <a href="#" target="_blank">in</a>
-        </div>
-      </div>
-
-      <div>
-        <h1>Minarul Islam</h1>
-        <h2>Ph.D. Candidate in Computer Science and Software Engineering</h2>
-
-        <p><strong>Auburn University, Auburn, Alabama, USA</strong></p>
-
+      <div class="intro">
         <p>
-          I build reliable, context-aware, and secure AI systems. My research connects machine learning,
-          natural language processing, sentiment analysis, speech processing, AI security, software security,
-          and sensing systems.
+          My name is <strong>Minarul Islam</strong>. I am a Ph.D. candidate in the Department of
+          Computer Science and Software Engineering at <strong>Auburn University</strong>.
+          My research focuses on reliable and context-aware machine learning for natural language,
+          speech, security, and sensing applications.
         </p>
 
         <p>
-          My dissertation focuses on reliable and context-aware sentiment analysis under linguistic complexity,
-          with emphasis on distribution shift, discourse structure, irony, aspect-level opinion, and trustworthy prediction.
+          My dissertation work focuses on <strong>Reliable and Context-Aware Sentiment Analysis
+          under Linguistic Complexity</strong>. I study how machine learning models can make more
+          reliable decisions when text contains distribution shift, discourse complexity, irony,
+          aspect-level opinion, and domain variation.
         </p>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a>
-          <a class="btn btn-secondary" href="mailto:mzi0030@auburn.edu">Contact Me</a>
-          <a class="btn btn-secondary" href="#projects">View Projects</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="facts">
-    <div class="fact">
-      <div class="fact-icon">🎓</div>
-      <strong>Ph.D. Candidate</strong>
-      <span>Auburn University</span>
-    </div>
-
-    <div class="fact">
-      <div class="fact-icon">🧠</div>
-      <strong>Research Areas</strong>
-      <span>NLP, ML, Speech, Security</span>
-    </div>
-
-    <div class="fact">
-      <div class="fact-icon">📘</div>
-      <strong>8+ Projects</strong>
-      <span>Research and systems</span>
-    </div>
-
-    <div class="fact">
-      <div class="fact-icon">👥</div>
-      <strong>100+ Students</strong>
-      <span>Supported per semester</span>
-    </div>
-
-    <div class="fact">
-      <div class="fact-icon">🏫</div>
-      <strong>4+ Years</strong>
-      <span>Teaching experience</span>
-    </div>
-  </section>
-
-  <main class="container">
-
-    <section class="grid-2" id="about">
-      <div class="card">
-        <h2>About Me</h2>
         <p>
-          I am a Ph.D. candidate in the Department of Computer Science and Software Engineering at Auburn University.
-          My research focuses on reliable and context-aware machine learning for natural language, speech,
-          security, and sensing applications.
+          Beyond my dissertation, I also work on speech model diagnostics, software and AI security,
+          smartphone-based structural sensing, and deepfake audio detection. My broader goal is to
+          build AI systems that are accurate, reliable, interpretable, and useful in real-world settings.
         </p>
+
         <p>
-          I am interested in AI systems that can work reliably in real-world settings where inputs are noisy,
-          ambiguous, shifted, or structurally complex.
+          You can download my full CV <a href="Minarul_Islam_CV.pdf" target="_blank">here</a>.
         </p>
       </div>
 
-      <div class="card" id="research">
-        <h2>Research Interests</h2>
-        <div class="research-list">
-          <div>Natural Language Processing</div>
-          <div>Reliable Machine Learning</div>
-          <div>Sentiment Analysis</div>
-          <div>Deep Learning</div>
-          <div>Speech Processing</div>
-          <div>AI Security</div>
-          <div>Software Security</div>
-          <div>Sensing Systems</div>
-        </div>
-      </div>
-    </section>
+      <table class="center-table">
+        <tr>
+          <td><h2>Research Interests</h2></td>
+          <td><h2>Spotlight</h2></td>
+        </tr>
 
-    <div class="section-title" id="projects">
+        <tr>
+          <td>
+            <div class="research-cloud">
+              <div class="big-red">Natural Language Processing</div>
+              <div class="big-purple">Reliable Machine Learning</div>
+              <span class="small-topic">Sentiment Analysis</span>
+              <span class="small-topic">Deep Learning</span>
+              <span class="small-topic">Speech Processing</span>
+              <span class="small-topic">AI Security</span>
+              <span class="small-topic">Software Security</span>
+              <span class="small-topic">Sensing Systems</span>
+            </div>
+          </td>
+
+          <td>
+            <div class="spotlight">
+              1. Ph.D. candidate at Auburn University with research in NLP, ML, speech, and security.<br />
+              2. Dissertation work focuses on reliable and context-aware sentiment analysis.<br />
+              3. Experienced Graduate Teaching Assistant supporting large CSSE courses.<br />
+              4. Actively seeking academic, research, and industry opportunities.
+            </div>
+          </td>
+        </tr>
+      </table>
+
       <h2>Featured Research Projects</h2>
-    </div>
 
-    <section class="projects">
-      <div class="project">
-        <div class="project-visual"><span>📊</span></div>
-        <div class="project-body">
-          <h3>ShiftAware-Select</h3>
-          <p>Reliable NLP classification under distribution shift using uncertainty and abstain-to-human decisioning.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
+      <ol class="project-list">
+        <li>
+          <strong>ShiftAware-Select:</strong> Reliable NLP classification under distribution shift with
+          abstain-to-human decisioning.
+        </li>
 
-      <div class="project">
-        <div class="project-visual"><span>🔀</span></div>
-        <div class="project-body">
-          <h3>CAGLSAv2</h3>
-          <p>Context-aware sentiment analysis using contrastive clauses and richer linguistic evidence.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
+        <li>
+          <strong>CAGLSAv2:</strong> Context-aware sentiment analysis using contrastive clause information.
+        </li>
 
-      <div class="project">
-        <div class="project-visual"><span>💬</span></div>
-        <div class="project-body">
-          <h3>Irony-Aware MTL</h3>
-          <p>Multitask sentiment learning using irony and emotion-related context in social media text.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
+        <li>
+          <strong>Irony-Aware Multitask Sentiment Learning:</strong> Sentiment analysis with irony and
+          emotion-aware auxiliary learning.
+        </li>
 
-      <div class="project">
-        <div class="project-visual"><span>🛡️</span></div>
-        <div class="project-body">
-          <h3>CWE Severity Classification</h3>
-          <p>Hierarchical vulnerability severity prediction using sentence evidence and CWE enrichment.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
+        <li>
+          <strong>Hierarchical Severity Classification with CWE Enrichment:</strong> Security severity
+          classification using sentence evidence and structured vulnerability knowledge.
+        </li>
 
-      <div class="project">
-        <div class="project-visual"><span>🕸️</span></div>
-        <div class="project-body">
-          <h3>DualGraph-RoBERTa for ABSA</h3>
-          <p>Graph-enhanced aspect-based sentiment analysis with structural opinion modeling.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
+        <li>
+          <strong>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis:</strong> Graph-enhanced
+          sentiment analysis using structural and contextual evidence.
+        </li>
 
-      <div class="project">
-        <div class="project-visual"><span>🎧</span></div>
-        <div class="project-body">
-          <h3>LayerLens</h3>
-          <p>Task-relevant layer disruption analysis for self-supervised speech encoders.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
+        <li>
+          <strong>LayerLens:</strong> Task-relevant layer disruption analysis for self-supervised speech encoders.
+        </li>
 
-      <div class="project">
-        <div class="project-visual"><span>📱</span></div>
-        <div class="project-body">
-          <h3>Vi-Detect</h3>
-          <p>Smartphone-based vibration sensing for fine-grained component looseness detection.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
+        <li>
+          <strong>Vi-Detect:</strong> Smartphone-based vibration sensing for component looseness detection.
+        </li>
 
-      <div class="project">
-        <div class="project-visual"><span>🎙️</span></div>
-        <div class="project-body">
-          <h3>DeepFakeDetect</h3>
-          <p>Deepfake audio detection using mechanical vocal-fold modeling and ML features.</p>
-          <a href="#">View Details →</a>
-        </div>
-      </div>
-    </section>
+        <li>
+          <strong>DeepFakeDetect:</strong> Deepfake audio detection using mechanical modeling of vocal folds.
+        </li>
+      </ol>
 
-    <section class="grid-2" style="margin-top: 26px;">
-      <div class="card" id="publications">
-        <h2>Selected Publications</h2>
+      <h2>Selected Publications and Manuscripts</h2>
 
-        <ul class="pub-list">
-          <li>
-            <span class="pub-num">1</span>
-            <div>
-              <div class="pub-title">Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity</div>
-              <div class="pub-meta">Dissertation research, Auburn University.</div>
-            </div>
-            <a href="#">Paper</a>
-          </li>
+      <ol class="pub-list">
+        <li>
+          <strong>Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity.</strong>
+          Dissertation research, Auburn University.
+        </li>
 
-          <li>
-            <span class="pub-num">2</span>
-            <div>
-              <div class="pub-title">ShiftAware-Select: Reliable NLP Classification under Distribution Shift</div>
-              <div class="pub-meta">Selective prediction, uncertainty estimation, and calibration.</div>
-            </div>
-            <a href="#">Paper</a>
-          </li>
+        <li>
+          <strong>ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning.</strong>
+        </li>
 
-          <li>
-            <span class="pub-num">3</span>
-            <div>
-              <div class="pub-title">LayerLens: Task-Relevant Layer Disruption Analysis for Speech Encoders</div>
-              <div class="pub-meta">Speech robustness and representation diagnostics.</div>
-            </div>
-            <a href="#">Paper</a>
-          </li>
+        <li>
+          <strong>LayerLens: Task-Relevant Layer Disruption Analysis for Self-Supervised Speech Encoders.</strong>
+        </li>
 
-          <li>
-            <span class="pub-num">4</span>
-            <div>
-              <div class="pub-title">Vi-Detect: Vibration-Based Component Looseness Detection</div>
-              <div class="pub-meta">Smartphone sensing and structural health monitoring.</div>
-            </div>
-            <a href="#">Paper</a>
-          </li>
+        <li>
+          <strong>Vi-Detect: Fine-Grained Vibration-Based Component Looseness Detection Using Smartphones.</strong>
+        </li>
 
-          <li>
-            <span class="pub-num">5</span>
-            <div>
-              <div class="pub-title">DeepFakeDetect: Fine-Grained Deepfake Audio Detection</div>
-              <div class="pub-meta">Audio forensics using vocal-fold mechanical modeling.</div>
-            </div>
-            <a href="#">Paper</a>
-          </li>
-        </ul>
-      </div>
+        <li>
+          <strong>DeepFakeDetect: Fine-Grained Deepfake Audio Detection Using Mechanical Modeling of Vocal Folds.</strong>
+        </li>
+      </ol>
 
-      <div class="card" id="teaching">
-        <h2>Teaching Experience</h2>
+      <h2>Teaching Experience</h2>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="date">2022 – Present</div>
-            <h3>Graduate Teaching Assistant</h3>
-            <p>
-              Senior Design Project, Auburn University. Supported student teams, project guidance,
-              grading, demos, communication, and mentoring.
-            </p>
-          </div>
+      <ul class="teaching-list">
+        <li>
+          <strong>Graduate Teaching Assistant, Senior Design Project, Auburn University.</strong>
+          Supported student teams, project guidance, demonstrations, grading, and course logistics.
+        </li>
 
-          <div class="timeline-item">
-            <div class="date">2022 – Present</div>
-            <h3>Graduate Teaching Assistant</h3>
-            <p>
-              Software Quality Assurance, Auburn University. Supported course logistics, grading,
-              office hours, and undergraduate/graduate student support.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <li>
+          <strong>Graduate Teaching Assistant, Software Quality Assurance, Auburn University.</strong>
+          Supported undergraduate and graduate students through grading, office hours, and course management.
+        </li>
 
-    <section class="card" id="cv" style="margin-top: 26px;">
-      <h2>Academic CV</h2>
-      <p>
-        My CV includes education, research experience, publications, projects, teaching experience,
-        technical skills, academic service, and awards.
-      </p>
-      <a class="btn btn-primary" href="Minarul_Islam_CV.pdf" target="_blank">Open CV PDF</a>
-    </section>
+        <li>
+          Worked with large classes and supported more than 100 students per semester.
+        </li>
+      </ul>
 
-    <section class="contact-banner" id="contact">
-      <div>
-        <h2>Interested in collaboration or have a question?</h2>
-        <p>I am open to discussing research, teaching, academic opportunities, and industry collaboration.</p>
-      </div>
+      <h2>News and Updates</h2>
 
-      <a class="btn btn-primary" href="mailto:mzi0030@auburn.edu">Get in Touch →</a>
-    </section>
+      <ol class="news-list">
+        <li>
+          <span class="date">[June 2026]</span>
+          I am preparing for my Ph.D. proposal and continuing dissertation research on reliable and
+          context-aware sentiment analysis.
+        </li>
 
-    <section class="contact-grid">
-      <div class="contact-box">
-        <strong>Email</strong>
-        <a href="mailto:mzi0030@auburn.edu">mzi0030@auburn.edu</a>
-      </div>
+        <li>
+          <span class="date">[2026]</span>
+          Current research projects include reliable NLP, speech representation diagnostics,
+          software security, AI security, and sensing systems.
+        </li>
 
-      <div class="contact-box">
-        <strong>Location</strong>
-        Auburn, Alabama, USA
-      </div>
+        <li>
+          <span class="date">[2022 – Present]</span>
+          I have served as a Graduate Teaching Assistant at Auburn University, supporting Senior Design
+          Project and Software Quality Assurance courses.
+        </li>
+      </ol>
 
-      <div class="contact-box">
-        <strong>GitHub</strong>
-        <a href="https://github.com/minarul2526" target="_blank">github.com/minarul2526</a>
-      </div>
-
-      <div class="contact-box">
-        <strong>Google Scholar</strong>
-        <a href="#" target="_blank">Add link</a>
-      </div>
-
-      <div class="contact-box">
-        <strong>LinkedIn</strong>
-        <a href="#" target="_blank">Add link</a>
-      </div>
     </section>
 
   </main>
 
-  <footer>
-    © 2026 Minarul Islam. All rights reserved.
+  <footer class="footer">
+    © 2026 Minarul Islam. Powered by GitHub Pages.
   </footer>
 
 </body>
