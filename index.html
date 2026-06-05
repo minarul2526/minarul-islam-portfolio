@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +23,7 @@
     }
 
     a:hover {
+      color: #0b5f95;
       text-decoration: underline;
     }
 
@@ -31,6 +33,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
     }
 
     .nav {
@@ -71,18 +74,19 @@
     }
 
     .profile-img {
-      width: 170px;
-      height: 170px;
+      width: 172px;
+      height: 172px;
       object-fit: cover;
       border-radius: 50%;
-      border: 1px solid #dddddd;
+      border: 1px solid #d9d9d9;
       display: block;
       margin-bottom: 22px;
       background: #f1f1f1;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     .name {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 700;
       line-height: 1.2;
       color: #333333;
@@ -104,10 +108,11 @@
 
     .side-links li {
       margin-bottom: 9px;
+      color: #444444;
     }
 
     .content h1 {
-      font-size: 31px;
+      font-size: 32px;
       line-height: 1.2;
       margin: 0 0 18px;
       color: #444444;
@@ -116,7 +121,7 @@
     .content h2 {
       font-size: 25px;
       color: #444444;
-      margin-top: 36px;
+      margin-top: 38px;
       margin-bottom: 14px;
     }
 
@@ -131,6 +136,11 @@
       margin-bottom: 17px;
     }
 
+    .highlight {
+      color: #000000;
+      font-weight: 700;
+    }
+
     .center-table {
       width: 100%;
       margin-top: 28px;
@@ -141,7 +151,8 @@
     .center-table td {
       border: none;
       vertical-align: top;
-      padding: 10px 20px;
+      padding: 10px 22px;
+      width: 50%;
     }
 
     .research-cloud {
@@ -176,6 +187,19 @@
       color: #8b0000;
       font-size: 16px;
       line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .education-box {
+      background: #fafafa;
+      border-left: 4px solid #1f78b4;
+      padding: 16px 20px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    .education-box p {
+      margin: 8px 0;
     }
 
     .project-list {
@@ -184,15 +208,6 @@
 
     .project-list li {
       margin-bottom: 12px;
-    }
-
-    .news-list li {
-      margin-bottom: 10px;
-    }
-
-    .date {
-      color: #0057b8;
-      font-weight: 700;
     }
 
     .pub-list {
@@ -209,6 +224,15 @@
 
     .teaching-list li {
       margin-bottom: 10px;
+    }
+
+    .news-list li {
+      margin-bottom: 11px;
+    }
+
+    .date {
+      color: #0057b8;
+      font-weight: 700;
     }
 
     .footer {
@@ -266,7 +290,7 @@
   <main class="page">
 
     <aside class="sidebar">
-      <img src="images:profile.png" alt="Minarul Islam" class="profile-img" />
+      <img src="profile.png" alt="Minarul Islam" class="profile-img" />
 
       <div class="name">Minarul Islam</div>
 
@@ -316,6 +340,26 @@
         </p>
       </div>
 
+      <h2>Academic Background</h2>
+
+      <div class="education-box">
+        <p>
+          <strong>Ph.D. in Computer Science and Software Engineering</strong><br />
+          Auburn University, Auburn, Alabama, USA<br />
+          Expected completion: Fall 2026
+        </p>
+
+        <p>
+          <strong>M.Sc. by Research in Electrical and Electronic Engineering</strong><br />
+          Universiti Malaysia Pahang, Malaysia
+        </p>
+
+        <p>
+          <strong>B.Sc. in Computer Science and Engineering</strong><br />
+          Jessore University of Science and Technology, Bangladesh
+        </p>
+      </div>
+
       <table class="center-table">
         <tr>
           <td><h2>Research Interests</h2></td>
@@ -340,8 +384,9 @@
             <div class="spotlight">
               1. Ph.D. candidate at Auburn University with research in NLP, ML, speech, and security.<br />
               2. Dissertation work focuses on reliable and context-aware sentiment analysis.<br />
-              3. Experienced Graduate Teaching Assistant supporting large CSSE courses.<br />
-              4. Actively seeking academic, research, and industry opportunities.
+              3. M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.<br />
+              4. Experienced Graduate Teaching Assistant supporting large CSSE courses.<br />
+              5. Actively seeking academic, research, and industry opportunities.
             </div>
           </td>
         </tr>
@@ -435,20 +480,32 @@
       <ol class="news-list">
         <li>
           <span class="date">[June 2026]</span>
-          I am preparing for my Ph.D. proposal and continuing dissertation research on reliable and
-          context-aware sentiment analysis.
+          Preparing for my Ph.D. proposal on reliable and context-aware sentiment analysis under linguistic complexity.
         </li>
 
         <li>
           <span class="date">[2026]</span>
-          Current research projects include reliable NLP, speech representation diagnostics,
-          software security, AI security, and sensing systems.
+          Continuing research on reliable NLP, distribution shift, selective prediction, and context-aware sentiment analysis.
         </li>
 
         <li>
-          <span class="date">[2022 – Present]</span>
-          I have served as a Graduate Teaching Assistant at Auburn University, supporting Senior Design
-          Project and Software Quality Assurance courses.
+          <span class="date">[2026]</span>
+          Working on speech representation diagnostics through LayerLens for self-supervised speech encoders.
+        </li>
+
+        <li>
+          <span class="date">[2025–2026]</span>
+          Continuing research on smartphone-based vibration sensing for component looseness detection.
+        </li>
+
+        <li>
+          <span class="date">[2022–Present]</span>
+          Serving as a Graduate Teaching Assistant at Auburn University for Senior Design Project and Software Quality Assurance.
+        </li>
+
+        <li>
+          <span class="date">[2022]</span>
+          Started Ph.D. study in Computer Science and Software Engineering at Auburn University.
         </li>
       </ol>
 
@@ -462,3 +519,4 @@
 
 </body>
 </html>
+```
