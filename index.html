@@ -37,7 +37,7 @@
     }
 
     .nav {
-      max-width: 1120px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 17px 20px;
       display: flex;
@@ -59,12 +59,12 @@
     }
 
     .page {
-      max-width: 1120px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 46px 20px;
+      padding: 42px 20px;
       display: grid;
-      grid-template-columns: 250px 760px;
-      gap: 50px;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
     }
 
     .sidebar {
@@ -120,18 +120,11 @@
     }
 
     .content h2 {
-      font-size: 25px;
+      font-size: 24px;
       color: #444444;
-      margin-top: 40px;
+      margin-top: 34px;
       margin-bottom: 14px;
       font-weight: 700;
-    }
-
-    .content h3 {
-      font-size: 20px;
-      color: #444444;
-      margin-top: 24px;
-      margin-bottom: 8px;
     }
 
     .section-title {
@@ -140,11 +133,12 @@
     }
 
     .intro-box {
-      background: #f6fbff;
-      border-left: 4px solid #1f78b4;
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
       padding: 18px 22px;
-      margin-top: 10px;
-      margin-bottom: 18px;
+      margin-top: 8px;
+      margin-bottom: 26px;
+      border-radius: 2px;
     }
 
     .intro-box p {
@@ -171,27 +165,37 @@
       font-weight: 700;
     }
 
-    .education-box {
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .info-card {
       background: #fafafa;
+      border: 1px solid #eeeeee;
+      padding: 18px 20px;
+      min-height: 210px;
+    }
+
+    .info-card h2 {
+      margin-top: 0;
+      color: #444444;
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
+    }
+
+    .education-card {
       border-left: 4px solid #1f78b4;
-      padding: 16px 20px;
-      margin-top: 16px;
-      margin-bottom: 10px;
     }
 
-    .education-box p {
-      margin: 10px 0;
-    }
-
-    .advisor-box {
+    .advisor-card {
       background: #fffdf7;
       border-left: 4px solid #a51c1c;
-      padding: 16px 20px;
-      margin-top: 16px;
-      margin-bottom: 10px;
     }
 
-    .advisor-box p {
+    .info-card p {
       margin: 10px 0;
     }
 
@@ -205,24 +209,37 @@
       font-weight: 700;
     }
 
-    .center-table {
-      width: 100%;
-      margin-top: 30px;
-      border-collapse: collapse;
+    .research-spotlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 10px;
+      margin-bottom: 32px;
+    }
+
+    .research-card {
       text-align: center;
-    }
-
-    .center-table td {
-      border: none;
-      vertical-align: top;
-      padding: 10px 24px;
-      width: 50%;
-    }
-
-    .research-cloud {
-      padding: 18px 10px;
-      min-height: 135px;
       background: #ffffff;
+      border: 1px solid #eeeeee;
+      padding: 20px 18px;
+      min-height: 210px;
+    }
+
+    .spotlight-card {
+      background: #fff7f7;
+      border: 1px solid #f2dddd;
+      border-left: 4px solid #a51c1c;
+      padding: 18px 20px;
+      min-height: 210px;
+    }
+
+    .research-card h2,
+    .spotlight-card h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
+      text-align: center;
     }
 
     .big-red {
@@ -230,6 +247,7 @@
       font-size: 25px;
       font-weight: 700;
       line-height: 1.2;
+      margin-top: 24px;
     }
 
     .big-purple {
@@ -237,7 +255,7 @@
       font-size: 23px;
       font-weight: 700;
       line-height: 1.2;
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     .small-topic {
@@ -247,15 +265,17 @@
       color: #333333;
     }
 
-    .spotlight {
-      text-align: left;
+    .spotlight-list {
       color: #8b0000;
-      font-size: 16px;
+      font-size: 15.5px;
       line-height: 1.65;
       font-weight: 500;
-      background: #fff7f7;
-      border-left: 4px solid #a51c1c;
-      padding: 14px 18px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .spotlight-list li {
+      margin-bottom: 7px;
     }
 
     .project-list {
@@ -328,7 +348,7 @@
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       .page {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -348,11 +368,9 @@
         text-align: center;
       }
 
-      .center-table,
-      .center-table tr,
-      .center-table td {
-        display: block;
-        width: 100%;
+      .info-grid,
+      .research-spotlight-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -428,75 +446,73 @@
     </p>
   </div>
 
-  <h2 class="section-title">Academic Background</h2>
+  <div class="info-grid">
+    <div class="info-card education-card">
+      <h2>Academic Background</h2>
 
-  <div class="education-box">
-    <p>
-      <strong class="red-heading">Ph.D. in Computer Science and Software Engineering</strong><br />
-      <span class="blue-text">Auburn University</span>, Auburn, Alabama, USA<br />
-      Expected completion: Fall 2026
-    </p>
+      <p>
+        <strong class="red-heading">Ph.D. in Computer Science and Software Engineering</strong><br />
+        <span class="blue-text">Auburn University</span>, Auburn, Alabama, USA<br />
+        Expected completion: Fall 2026
+      </p>
 
-    <p>
-      <strong class="red-heading">M.Sc. by Research in Electrical and Electronic Engineering</strong><br />
-      <span class="blue-text">Universiti Malaysia Pahang</span>, Malaysia
-    </p>
+      <p>
+        <strong class="red-heading">M.Sc. by Research in Electrical and Electronic Engineering</strong><br />
+        <span class="blue-text">Universiti Malaysia Pahang</span>, Malaysia
+      </p>
 
-    <p>
-      <strong class="red-heading">B.Sc. in Computer Science and Engineering</strong><br />
-      <span class="blue-text">Jessore University of Science and Technology</span>, Bangladesh
-    </p>
+      <p>
+        <strong class="red-heading">B.Sc. in Computer Science and Engineering</strong><br />
+        <span class="blue-text">Jessore University of Science and Technology</span>, Bangladesh
+      </p>
+    </div>
+
+    <div class="info-card advisor-card">
+      <h2>Ph.D. Advisor and Committee</h2>
+
+      <p>
+        <span class="advisor-title">Ph.D. Advisor:</span><br />
+        Dr. Cheryl D. Seals, Professor, Department of Computer Science and Software Engineering,
+        Auburn University
+      </p>
+
+      <p>
+        <span class="committee-title">Ph.D. Committee:</span><br />
+        Dr. Jakita O. Thomas, Auburn University<br />
+        Dr. Richard Chapman, Auburn University<br />
+        Dr. Daniela Marghitu, Auburn University<br />
+        Dr. Shazibul Islam Shamim, Kennesaw State University
+      </p>
+    </div>
   </div>
 
-  <h2 class="section-title">Ph.D. Advisor and Committee</h2>
+  <div class="research-spotlight-grid">
+    <div class="research-card">
+      <h2>Research Interests</h2>
 
-  <div class="advisor-box">
-    <p>
-      <span class="advisor-title">Ph.D. Advisor:</span><br />
-      Dr. Cheryl D. Seals, Professor, Department of Computer Science and Software Engineering,
-      Auburn University
-    </p>
+      <div class="big-red">Natural Language Processing</div>
+      <div class="big-purple">Reliable Machine Learning</div>
 
-    <p>
-      <span class="committee-title">Ph.D. Committee:</span><br />
-      Dr. Jakita O. Thomas, Auburn University<br />
-      Dr. Richard Chapman, Auburn University<br />
-      Dr. Daniela Marghitu, Auburn University<br />
-      Dr. Shazibul Islam Shamim, Kennesaw State University
-    </p>
+      <span class="small-topic">Sentiment Analysis</span>
+      <span class="small-topic">Deep Learning</span>
+      <span class="small-topic">Distribution Shift</span>
+      <span class="small-topic">Selective Prediction</span>
+      <span class="small-topic">Software Security</span>
+      <span class="small-topic">AI Security</span>
+    </div>
+
+    <div class="spotlight-card">
+      <h2>Spotlight</h2>
+
+      <ol class="spotlight-list">
+        <li>Ph.D. candidate at Auburn University working on reliable and context-aware NLP.</li>
+        <li>Dissertation research focuses on linguistic complexity in sentiment analysis.</li>
+        <li>M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.</li>
+        <li>Graduate Teaching Assistant with experience supporting large CSSE courses.</li>
+        <li>Open to academic, research, and industry collaboration opportunities.</li>
+      </ol>
+    </div>
   </div>
-
-  <table class="center-table">
-    <tr>
-      <td><h2>Research Interests</h2></td>
-      <td><h2>Spotlight</h2></td>
-    </tr>
-
-    <tr>
-      <td>
-        <div class="research-cloud">
-          <div class="big-red">Natural Language Processing</div>
-          <div class="big-purple">Reliable Machine Learning</div>
-          <span class="small-topic">Sentiment Analysis</span>
-          <span class="small-topic">Deep Learning</span>
-          <span class="small-topic">Distribution Shift</span>
-          <span class="small-topic">Selective Prediction</span>
-          <span class="small-topic">Software Security</span>
-          <span class="small-topic">AI Security</span>
-        </div>
-      </td>
-
-      <td>
-        <div class="spotlight">
-          1. Ph.D. candidate at Auburn University working on reliable and context-aware NLP.<br />
-          2. Dissertation research focuses on linguistic complexity in sentiment analysis.<br />
-          3. M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.<br />
-          4. Graduate Teaching Assistant with experience supporting large CSSE courses.<br />
-          5. Open to academic, research, and industry collaboration opportunities.
-        </div>
-      </td>
-    </tr>
-  </table>
 
   <h2 class="section-title">Featured Research Projects</h2>
 
