@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Services | Minarul Islam</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: #1f78b4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0b5f95;
+      text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 17px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #555555;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .nav a:first-child {
+      font-weight: 700;
+      color: #444444;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 20px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+    }
+
+    .profile-img {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #d9d9d9;
+      display: block;
+      margin-bottom: 22px;
+      background: #f1f1f1;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    }
+
+    .name {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #444444;
+      margin-bottom: 18px;
+    }
+
+    .side-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .side-links li {
+      margin-bottom: 9px;
+      color: #444444;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      color: #444444;
+      font-weight: 700;
+    }
+
+    .content h2 {
+      font-size: 25px;
+      color: #444444;
+      margin-top: 38px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin-bottom: 34px;
+    }
+
+    .intro p {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .service-block {
+      max-width: 900px;
+      margin-bottom: 32px;
+    }
+
+    .service-title {
+      font-size: 23px;
+      font-weight: 700;
+      color: #a51c1c;
+      margin-bottom: 10px;
+    }
+
+    .service-block p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      max-width: 900px;
+      margin-top: 26px;
+    }
+
+    .column-title {
+      font-size: 23px;
+      font-weight: 700;
+      color: #444444;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .service-list {
+      margin-top: 0;
+      padding-left: 22px;
+    }
+
+    .service-list li {
+      margin-bottom: 11px;
+    }
+
+    .highlight-box {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      border-left: 4px solid #1f78b4;
+      padding: 17px 20px;
+      max-width: 900px;
+      margin-top: 26px;
+    }
+
+    .highlight-box p {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .blue-text {
+      color: #1f78b4;
+      font-weight: 700;
+    }
+
+    .red-text {
+      color: #a51c1c;
+      font-weight: 700;
+    }
+
+    .purple-text {
+      color: #7a007a;
+      font-weight: 700;
+    }
+
+    .footer {
+      border-top: 1px solid #eeeeee;
+      text-align: center;
+      padding: 24px;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .sidebar {
+        position: static;
+        text-align: center;
+      }
+
+      .profile-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .side-links {
+        text-align: center;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    <nav class="nav">
+      <a href="index.html">Minarul Islam</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main class="page">
+<aside class="sidebar">
+  <img src="profile.png" alt="Minarul Islam" class="profile-img" />
+
+  <div class="name">Minarul Islam</div>
+
+  <div class="bio">
+    Ph.D. Candidate<br />
+    Department of Computer Science and Software Engineering<br />
+    Auburn University<br />
+    Research: NLP, Reliable ML, Sentiment Analysis
+  </div>
+
+  <ul class="side-links">
+    <li>📍 Auburn, Alabama, USA</li>
+    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+  </ul>
+</aside>
+
+<section class="content">
+
+  <h1>Selected Services</h1>
+
+  <div class="intro">
+    <p>
+      My service experience is closely connected to teaching, student mentoring, course support,
+      and collaborative academic work. As a Ph.D. student and Graduate Teaching Assistant at
+      <strong class="blue-text">Auburn University</strong>, I have supported large CSSE courses and helped students
+      move from technical requirements to working software systems.
+    </p>
+
+    <p>
+      I am interested in contributing to academic communities through teaching support, student mentoring,
+      research collaboration, manuscript development, and service activities related to
+      <strong class="red-text">natural language processing</strong>,
+      <strong class="purple-text">machine learning</strong>, software engineering, and AI security.
+    </p>
+  </div>
+
+  <div class="service-block">
+    <div class="service-title">Student Mentoring and Course Support</div>
+
+    <p>
+      I have supported Senior Design Project at Auburn University for eight consecutive semesters. This role
+      involved mentoring student teams, reviewing project progress, helping students prepare demonstrations,
+      supporting sponsor-facing communication, and assisting with course logistics for large classes.
+    </p>
+
+    <p>
+      I have also supported Software Quality Assurance for multiple semesters, where my responsibilities included
+      grading, office hours, technical feedback, Canvas updates, and student communication. These experiences
+      shaped my interest in student-centered teaching and practical software engineering education.
+    </p>
+  </div>
+
+  <div class="two-column">
+    <div>
+      <div class="column-title">Teaching and Academic Service</div>
+
+      <ol class="service-list">
+        <li>Graduate Teaching Assistant, Senior Design Project, Auburn University.</li>
+        <li>Graduate Teaching Assistant, Software Quality Assurance, Auburn University.</li>
+        <li>Supported large CSSE courses with more than 100 students per semester.</li>
+        <li>Mentored student teams on project planning, implementation, demonstrations, and final deliverables.</li>
+        <li>Provided grading support, office hours, technical feedback, and course communication.</li>
+      </ol>
+    </div>
+
+    <div>
+      <div class="column-title">Research and Professional Service</div>
+
+      <ol class="service-list">
+        <li>Contributed to collaborative research projects in NLP, sentiment analysis, software security, and sensing systems.</li>
+        <li>Supported manuscript preparation, revision, literature organization, and experimental documentation.</li>
+        <li>Participated in interdisciplinary academic collaboration with researchers from multiple institutions.</li>
+        <li>Interested in future service as a reviewer for NLP, ML, software engineering, and AI security venues.</li>
+        <li>Open to academic and industry collaboration on reliable AI and context-aware machine learning.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p>
+      <strong>Service Focus:</strong> My service goal is to support students and collaborators through clear technical
+      communication, careful feedback, and reliable project organization.
+    </p>
+
+    <p>
+      I especially value service activities that connect research, teaching, and real-world computing problems.
+    </p>
+  </div>
+
+</section>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Minarul Islam. Powered by GitHub Pages.
+  </footer>
+
+</body>
+</html>
