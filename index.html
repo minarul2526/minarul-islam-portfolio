@@ -1,5 +1,5 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -33,17 +33,17 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
     }
 
     .nav {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 18px 20px;
+      padding: 17px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 28px;
+      gap: 27px;
       flex-wrap: wrap;
     }
 
@@ -61,7 +61,7 @@
     .page {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 45px 20px;
+      padding: 46px 20px;
       display: grid;
       grid-template-columns: 260px 1fr;
       gap: 55px;
@@ -74,15 +74,15 @@
     }
 
     .profile-img {
-      width: 172px;
-      height: 172px;
+      width: 170px;
+      height: 170px;
       object-fit: cover;
       border-radius: 50%;
       border: 1px solid #d9d9d9;
       display: block;
       margin-bottom: 22px;
       background: #f1f1f1;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
     }
 
     .name {
@@ -116,13 +116,15 @@
       line-height: 1.2;
       margin: 0 0 18px;
       color: #444444;
+      font-weight: 700;
     }
 
     .content h2 {
       font-size: 25px;
       color: #444444;
-      margin-top: 38px;
+      margin-top: 40px;
       margin-bottom: 14px;
+      font-weight: 700;
     }
 
     .content h3 {
@@ -136,14 +138,58 @@
       margin-bottom: 17px;
     }
 
-    .highlight {
-      color: #000000;
+    .red-heading {
+      color: #a51c1c;
+      font-weight: 700;
+    }
+
+    .purple-heading {
+      color: #7a007a;
+      font-weight: 700;
+    }
+
+    .blue-text {
+      color: #1f78b4;
+      font-weight: 700;
+    }
+
+    .education-box {
+      background: #fafafa;
+      border-left: 4px solid #1f78b4;
+      padding: 16px 20px;
+      margin-top: 16px;
+      margin-bottom: 10px;
+    }
+
+    .education-box p {
+      margin: 9px 0;
+    }
+
+    .advisor-box {
+      background: #fffdf7;
+      border-left: 4px solid #a51c1c;
+      padding: 16px 20px;
+      margin-top: 16px;
+      margin-bottom: 10px;
+    }
+
+    .advisor-box p {
+      margin: 9px 0;
+    }
+
+    .advisor-title {
+      color: #a51c1c;
+      font-weight: 700;
+    }
+
+    .committee-title {
+      color: #7a007a;
       font-weight: 700;
     }
 
     .center-table {
       width: 100%;
-      margin-top: 28px;
+      margin-top: 30px;
       border-collapse: collapse;
       text-align: center;
     }
@@ -151,12 +197,12 @@
     .center-table td {
       border: none;
       vertical-align: top;
-      padding: 10px 22px;
+      padding: 10px 24px;
       width: 50%;
     }
 
     .research-cloud {
-      padding: 18px;
+      padding: 18px 10px;
       min-height: 135px;
     }
 
@@ -186,48 +232,22 @@
       text-align: left;
       color: #8b0000;
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.65;
       font-weight: 500;
     }
 
-    .education-box {
-      background: #fafafa;
-      border-left: 4px solid #1f78b4;
-      padding: 16px 20px;
-      margin-top: 18px;
-      margin-bottom: 8px;
-    }
-
-    .education-box p {
-      margin: 8px 0;
-    }
-
-    .project-list {
+    .project-list,
+    .pub-list,
+    .teaching-list,
+    .news-list {
       padding-left: 22px;
     }
 
-    .project-list li {
-      margin-bottom: 12px;
-    }
-
-    .pub-list {
-      padding-left: 22px;
-    }
-
-    .pub-list li {
-      margin-bottom: 12px;
-    }
-
-    .teaching-list {
-      padding-left: 22px;
-    }
-
-    .teaching-list li {
-      margin-bottom: 10px;
-    }
-
+    .project-list li,
+    .pub-list li,
+    .teaching-list li,
     .news-list li {
-      margin-bottom: 11px;
+      margin-bottom: 12px;
     }
 
     .date {
@@ -271,6 +291,7 @@
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -288,228 +309,248 @@
   </div>
 
   <main class="page">
+    
+<aside class="sidebar">
+  <img src="profile.png" alt="Minarul Islam" class="profile-img" />
 
-    <aside class="sidebar">
-      <img src="profile.png" alt="Minarul Islam" class="profile-img" />
+  <div class="name">Minarul Islam</div>
 
-      <div class="name">Minarul Islam</div>
+  <div class="bio">
+    Ph.D. Candidate<br />
+    Department of Computer Science and Software Engineering<br />
+    Auburn University
+  </div>
 
-      <div class="bio">
-        Ph.D. Candidate<br />
-        Department of Computer Science and Software Engineering<br />
-        Auburn University
-      </div>
+  <ul class="side-links">
+    <li>📍 Auburn, Alabama, USA</li>
+    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+  </ul>
+</aside>
 
-      <ul class="side-links">
-        <li>📍 Auburn, Alabama, USA</li>
-        <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
-        <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-        <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
-        <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
-        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
-      </ul>
-    </aside>
+<section class="content">
 
-    <section class="content">
+  <h1>Welcome to my personal homepage</h1>
 
-      <h1>Welcome to my personal homepage</h1>
+  <div class="intro">
+    <p>
+      My name is <strong>Minarul Islam</strong>. I am a Ph.D. candidate in the Department of
+      Computer Science and Software Engineering at <strong class="blue-text">Auburn University</strong>.
+      My research focuses on reliable and context-aware machine learning for natural language,
+      speech, software security, and AI systems.
+    </p>
 
-      <div class="intro">
-        <p>
-          My name is <strong>Minarul Islam</strong>. I am a Ph.D. candidate in the Department of
-          Computer Science and Software Engineering at <strong>Auburn University</strong>.
-          My research focuses on reliable and context-aware machine learning for natural language,
-          speech, security, and sensing applications.
-        </p>
+    <p>
+      My dissertation work focuses on <strong class="red-heading">Reliable and Context-Aware Sentiment Analysis
+      under Linguistic Complexity</strong>. Many language models perform well on standard benchmarks,
+      but they can still make confident mistakes when text contains contrast, irony, implicit meaning,
+      aspect-specific opinion, or domain shift. My work studies how to make these models more reliable
+      and easier to understand in such settings.
+    </p>
 
-        <p>
-          My dissertation work focuses on <strong>Reliable and Context-Aware Sentiment Analysis
-          under Linguistic Complexity</strong>. I study how machine learning models can make more
-          reliable decisions when text contains distribution shift, discourse complexity, irony,
-          aspect-level opinion, and domain variation.
-        </p>
+    <p>
+      My research develops methods that use context, structure, uncertainty, and task-specific evidence
+      to improve model behavior. The broader goal is to build AI systems that are accurate, reliable,
+      interpretable, and useful in real-world applications.
+    </p>
 
-        <p>
-          Beyond my dissertation, I also work on speech model diagnostics, software and AI security,
-          smartphone-based structural sensing, and deepfake audio detection. My broader goal is to
-          build AI systems that are accurate, reliable, interpretable, and useful in real-world settings.
-        </p>
+    <p>
+      You can download my full CV <a href="Minarul_Islam_CV.pdf" target="_blank">here</a>.
+    </p>
+  </div>
 
-        <p>
-          You can download my full CV <a href="Minarul_Islam_CV.pdf" target="_blank">here</a>.
-        </p>
-      </div>
+  <h2>Academic Background</h2>
 
-      <h2>Academic Background</h2>
+  <div class="education-box">
+    <p>
+      <strong class="red-heading">Ph.D. in Computer Science and Software Engineering</strong><br />
+      <span class="blue-text">Auburn University</span>, Auburn, Alabama, USA<br />
+      Expected completion: Fall 2026
+    </p>
 
-      <div class="education-box">
-        <p>
-          <strong>Ph.D. in Computer Science and Software Engineering</strong><br />
-          Auburn University, Auburn, Alabama, USA<br />
-          Expected completion: Fall 2026
-        </p>
+    <p>
+      <strong class="red-heading">M.Sc. by Research in Electrical and Electronic Engineering</strong><br />
+      <span class="blue-text">Universiti Malaysia Pahang</span>, Malaysia
+    </p>
 
-        <p>
-          <strong>M.Sc. by Research in Electrical and Electronic Engineering</strong><br />
-          Universiti Malaysia Pahang, Malaysia
-        </p>
+    <p>
+      <strong class="red-heading">B.Sc. in Computer Science and Engineering</strong><br />
+      <span class="blue-text">Jessore University of Science and Technology</span>, Bangladesh
+    </p>
+  </div>
 
-        <p>
-          <strong>B.Sc. in Computer Science and Engineering</strong><br />
-          Jessore University of Science and Technology, Bangladesh
-        </p>
-      </div>
+  <h2>Ph.D. Advisor and Committee</h2>
 
-      <table class="center-table">
-        <tr>
-          <td><h2>Research Interests</h2></td>
-          <td><h2>Spotlight</h2></td>
-        </tr>
+  <div class="advisor-box">
+    <p>
+      <span class="advisor-title">Ph.D. Advisor:</span><br />
+      Dr. Cheryl D. Seals, Professor, Department of Computer Science and Software Engineering,
+      Auburn University
+    </p>
 
-        <tr>
-          <td>
-            <div class="research-cloud">
-              <div class="big-red">Natural Language Processing</div>
-              <div class="big-purple">Reliable Machine Learning</div>
-              <span class="small-topic">Sentiment Analysis</span>
-              <span class="small-topic">Deep Learning</span>
-              <span class="small-topic">Speech Processing</span>
-              <span class="small-topic">AI Security</span>
-              <span class="small-topic">Software Security</span>
-              <span class="small-topic">Sensing Systems</span>
-            </div>
-          </td>
+    <p>
+      <span class="committee-title">Ph.D. Committee:</span><br />
+      Dr. Jakita O. Thomas, Auburn University<br />
+      Dr. Richard Chapman, Auburn University<br />
+      Dr. Daniela Marghitu, Auburn University<br />
+      Dr. Shazibul Islam Shamim, Kennesaw State University
+    </p>
+  </div>
 
-          <td>
-            <div class="spotlight">
-              1. Ph.D. candidate at Auburn University with research in NLP, ML, speech, and security.<br />
-              2. Dissertation work focuses on reliable and context-aware sentiment analysis.<br />
-              3. M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.<br />
-              4. Experienced Graduate Teaching Assistant supporting large CSSE courses.<br />
-              5. Actively seeking academic, research, and industry opportunities.
-            </div>
-          </td>
-        </tr>
-      </table>
+  <table class="center-table">
+    <tr>
+      <td><h2>Research Interests</h2></td>
+      <td><h2>Spotlight</h2></td>
+    </tr>
 
-      <h2>Featured Research Projects</h2>
+    <tr>
+      <td>
+        <div class="research-cloud">
+          <div class="big-red">Natural Language Processing</div>
+          <div class="big-purple">Reliable Machine Learning</div>
+          <span class="small-topic">Sentiment Analysis</span>
+          <span class="small-topic">Deep Learning</span>
+          <span class="small-topic">Distribution Shift</span>
+          <span class="small-topic">Selective Prediction</span>
+          <span class="small-topic">Software Security</span>
+          <span class="small-topic">AI Security</span>
+        </div>
+      </td>
 
-      <ol class="project-list">
-        <li>
-          <strong>ShiftAware-Select:</strong> Reliable NLP classification under distribution shift with
-          abstain-to-human decisioning.
-        </li>
+      <td>
+        <div class="spotlight">
+          1. Ph.D. candidate at Auburn University working on reliable and context-aware NLP.<br />
+          2. Dissertation research focuses on linguistic complexity in sentiment analysis.<br />
+          3. M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.<br />
+          4. Graduate Teaching Assistant with experience supporting large CSSE courses.<br />
+          5. Actively seeking academic, research, and industry opportunities.
+        </div>
+      </td>
+    </tr>
+  </table>
 
-        <li>
-          <strong>CAGLSAv2:</strong> Context-aware sentiment analysis using contrastive clause information.
-        </li>
+  <h2>Featured Research Projects</h2>
 
-        <li>
-          <strong>Irony-Aware Multitask Sentiment Learning:</strong> Sentiment analysis with irony and
-          emotion-aware auxiliary learning.
-        </li>
+  <ol class="project-list">
+    <li>
+      <strong>ShiftAware-Select:</strong> Reliable NLP classification under distribution shift using
+      uncertainty estimation, calibration, and abstain-to-human decisioning to reduce confident errors.
+    </li>
 
-        <li>
-          <strong>Hierarchical Severity Classification with CWE Enrichment:</strong> Security severity
-          classification using sentence evidence and structured vulnerability knowledge.
-        </li>
+    <li>
+      <strong>CAGLSAv2:</strong> Context-aware sentiment analysis method that models contrastive clause
+      information to better understand sentiment in linguistically complex text.
+    </li>
 
-        <li>
-          <strong>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis:</strong> Graph-enhanced
-          sentiment analysis using structural and contextual evidence.
-        </li>
+    <li>
+      <strong>Irony-Aware Multitask Sentiment Learning:</strong> Multitask learning framework that connects
+      sentiment prediction with irony and emotion awareness for social media text.
+    </li>
 
-        <li>
-          <strong>LayerLens:</strong> Task-relevant layer disruption analysis for self-supervised speech encoders.
-        </li>
+    <li>
+      <strong>Hierarchical Severity Classification with CWE Enrichment:</strong> Software vulnerability
+      severity classification using sentence-level evidence and structured security knowledge.
+    </li>
 
-        <li>
-          <strong>Vi-Detect:</strong> Smartphone-based vibration sensing for component looseness detection.
-        </li>
+    <li>
+      <strong>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis:</strong> Graph-enhanced transformer
+      model for aspect-level opinion understanding with structural and contextual evidence.
+    </li>
 
-        <li>
-          <strong>DeepFakeDetect:</strong> Deepfake audio detection using mechanical modeling of vocal folds.
-        </li>
-      </ol>
+    <li>
+      <strong>Discourse-Aware Domain Adaptation for Sentiment Analysis:</strong> Ongoing work on improving
+      sentiment model transfer across domains using discourse-aware and span-level evidence.
+    </li>
+  </ol>
 
-      <h2>Selected Publications and Manuscripts</h2>
+  <h2>Selected Publications and Manuscripts</h2>
 
-      <ol class="pub-list">
-        <li>
-          <strong>Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity.</strong>
-          Dissertation research, Auburn University.
-        </li>
+  <ol class="pub-list">
+    <li>
+      <strong>Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity.</strong>
+      Dissertation research, Auburn University.
+    </li>
 
-        <li>
-          <strong>ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning.</strong>
-        </li>
+    <li>
+      <strong>ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning.</strong>
+    </li>
 
-        <li>
-          <strong>LayerLens: Task-Relevant Layer Disruption Analysis for Self-Supervised Speech Encoders.</strong>
-        </li>
+    <li>
+      <strong>CAGLSAv2: Context-Aware Graph-Based Learning for Sentiment Analysis.</strong>
+    </li>
 
-        <li>
-          <strong>Vi-Detect: Fine-Grained Vibration-Based Component Looseness Detection Using Smartphones.</strong>
-        </li>
+    <li>
+      <strong>Irony-Aware Multitask Sentiment Learning for Social Media Text.</strong>
+    </li>
 
-        <li>
-          <strong>DeepFakeDetect: Fine-Grained Deepfake Audio Detection Using Mechanical Modeling of Vocal Folds.</strong>
-        </li>
-      </ol>
+    <li>
+      <strong>Hierarchical Severity Classification with CWE Enrichment.</strong>
+    </li>
 
-      <h2>Teaching Experience</h2>
+    <li>
+      <strong>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis.</strong>
+    </li>
+  </ol>
 
-      <ul class="teaching-list">
-        <li>
-          <strong>Graduate Teaching Assistant, Senior Design Project, Auburn University.</strong>
-          Supported student teams, project guidance, demonstrations, grading, and course logistics.
-        </li>
+  <h2>Teaching Experience</h2>
 
-        <li>
-          <strong>Graduate Teaching Assistant, Software Quality Assurance, Auburn University.</strong>
-          Supported undergraduate and graduate students through grading, office hours, and course management.
-        </li>
+  <ul class="teaching-list">
+    <li>
+      <strong>Graduate Teaching Assistant, Senior Design Project, Auburn University.</strong>
+      Supported student teams, project guidance, demonstrations, grading, course logistics,
+      and communication with large classes.
+    </li>
 
-        <li>
-          Worked with large classes and supported more than 100 students per semester.
-        </li>
-      </ul>
+    <li>
+      <strong>Graduate Teaching Assistant, Software Quality Assurance, Auburn University.</strong>
+      Supported undergraduate and graduate students through grading, office hours, course management,
+      and technical feedback.
+    </li>
 
-      <h2>News and Updates</h2>
+    <li>
+      Worked with large classes and supported more than 100 students per semester.
+    </li>
+  </ul>
 
-      <ol class="news-list">
-        <li>
-          <span class="date">[June 2026]</span>
-          Preparing for my Ph.D. proposal on reliable and context-aware sentiment analysis under linguistic complexity.
-        </li>
+  <h2>News and Updates</h2>
 
-        <li>
-          <span class="date">[2026]</span>
-          Continuing research on reliable NLP, distribution shift, selective prediction, and context-aware sentiment analysis.
-        </li>
+  <ol class="news-list">
+    <li>
+      <span class="date">[June 2026]</span>
+      Preparing for my Ph.D. proposal on reliable and context-aware sentiment analysis under linguistic complexity.
+    </li>
 
-        <li>
-          <span class="date">[2026]</span>
-          Working on speech representation diagnostics through LayerLens for self-supervised speech encoders.
-        </li>
+    <li>
+      <span class="date">[2026]</span>
+      Continuing dissertation research on distribution shift, selective prediction, discourse complexity,
+      irony awareness, and aspect-level sentiment analysis.
+    </li>
 
-        <li>
-          <span class="date">[2025–2026]</span>
-          Continuing research on smartphone-based vibration sensing for component looseness detection.
-        </li>
+    <li>
+      <span class="date">[2026]</span>
+      Working on hierarchical security severity classification with CWE enrichment for software vulnerability reports.
+    </li>
 
-        <li>
-          <span class="date">[2022–Present]</span>
-          Serving as a Graduate Teaching Assistant at Auburn University for Senior Design Project and Software Quality Assurance.
-        </li>
+    <li>
+      <span class="date">[2025–2026]</span>
+      Continuing work on context-aware and structurally informed sentiment analysis models.
+    </li>
 
-        <li>
-          <span class="date">[2022]</span>
-          Started Ph.D. study in Computer Science and Software Engineering at Auburn University.
-        </li>
-      </ol>
+    <li>
+      <span class="date">[2022–Present]</span>
+      Serving as a Graduate Teaching Assistant at Auburn University for Senior Design Project and Software Quality Assurance.
+    </li>
 
-    </section>
+    <li>
+      <span class="date">[2022]</span>
+      Started Ph.D. study in Computer Science and Software Engineering at Auburn University.
+    </li>
+  </ol>
+
+</section>
 
   </main>
 
