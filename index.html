@@ -1,22 +1,271 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Minarul Islam</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minarul Islam | Ph.D. Candidate</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f6f8fb;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0b1f3a, #1f5f9f);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #0b4f8a;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 24px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      color: #0b1f3a;
+      border-bottom: 2px solid #e4e8ef;
+      padding-bottom: 8px;
+      margin-top: 0;
+    }
+
+    .title {
+      color: #e8f1ff;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 8px 8px 8px 0;
+      padding: 10px 16px;
+      background: #0b4f8a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #08385f;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .publication {
+      margin-bottom: 18px;
+    }
+
+    .publication strong {
+      color: #111;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8f1ff;
+      color: #0b4f8a;
+      padding: 5px 10px;
+      margin: 4px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0b1f3a;
+      color: white;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Minarul Islam</h1>
 
-  <p>
-    Ph.D. Candidate in Computer Science and Software Engineering at Auburn University.
-  </p>
+  <header>
+    <h1>Minarul Islam</h1>
+    <p class="title">Ph.D. Candidate in Computer Science and Software Engineering</p>
+    <p>Auburn University</p>
+    <p>Machine Learning | Natural Language Processing | Deep Learning | Speech Processing | AI Security</p>
 
-  <h2>Research Interests</h2>
-  <p>
-    Machine Learning, Natural Language Processing, Deep Learning, Sentiment Analysis,
-    Speech Processing, and AI Security.
-  </p>
+    <a class="button" href="mailto:mzi0030@auburn.edu">Email Me</a>
+    <a class="button" href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+    <a class="button" href="https://github.com/minarul2526" target="_blank">GitHub</a>
+    <a class="button" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+  </header>
 
-  <h2>Contact</h2>
-  <p>Email: mzi0030@auburn.edu</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a Ph.D. candidate in Computer Science and Software Engineering at Auburn University.
+        My research focuses on reliable and context-aware machine learning methods for natural language,
+        speech, and security applications. I am interested in developing AI systems that are robust,
+        interpretable, and useful in real-world settings.
+      </p>
+      <p>
+        My work spans natural language processing, sentiment analysis, speech processing,
+        software and AI security, and sensor-based systems. I also have extensive teaching experience
+        as a Graduate Teaching Assistant at Auburn University.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Natural Language Processing</span>
+      <span class="tag">Deep Learning</span>
+      <span class="tag">Sentiment Analysis</span>
+      <span class="tag">Speech Processing</span>
+      <span class="tag">AI Security</span>
+      <span class="tag">Software Engineering</span>
+      <span class="tag">Sensor Systems</span>
+
+      <p>
+        My current research investigates how AI models can make more reliable decisions under
+        distribution shift, linguistic complexity, non-literal language, and noisy real-world inputs.
+      </p>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications and Research Projects</h2>
+
+      <div class="publication">
+        <strong>Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity</strong><br />
+        Dissertation research, Auburn University.
+      </div>
+
+      <div class="publication">
+        <strong>ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning</strong><br />
+        Research on selective prediction, uncertainty estimation, and robust NLP classification.
+      </div>
+
+      <div class="publication">
+        <strong>LayerLens: Task-Relevant Layer Disruption Analysis for Self-Supervised Speech Encoders</strong><br />
+        Research on analyzing representation disruption in speech models under acoustic distortion.
+      </div>
+
+      <div class="publication">
+        <strong>Vi-Detect: Fine-Grained Vibration-Based Component Looseness Detection Using Smartphones</strong><br />
+        Research on smartphone-based vibration sensing for structural health monitoring.
+      </div>
+
+      <div class="publication">
+        <strong>DeepFakeDetect: Fine-Grained Deepfake Audio Detection Using Mechanical Modeling of Vocal Folds</strong><br />
+        Research on audio deepfake detection using mechanical modeling and machine learning.
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching Experience</h2>
+      <ul>
+        <li>
+          Graduate Teaching Assistant, Senior Design Project, Auburn University.
+        </li>
+        <li>
+          Graduate Teaching Assistant, Software Quality Assurance, Auburn University.
+        </li>
+        <li>
+          Experience with grading, mentoring student teams, office hours, course logistics,
+          and supporting large undergraduate and graduate classes.
+        </li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p>
+        My CV includes research experience, teaching experience, publications, projects,
+        technical skills, awards, and academic service.
+      </p>
+      <p>
+        A downloadable CV will be added here.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:mzi0030@auburn.edu">mzi0030@auburn.edu</a></p>
+      <p><strong>Department:</strong> Computer Science and Software Engineering</p>
+      <p><strong>University:</strong> Auburn University</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/minarul2526" target="_blank">github.com/minarul2526</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Minarul Islam. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
