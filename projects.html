@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects | Minarul Islam</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: #1f78b4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0b5f95;
+      text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 17px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #555555;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .nav a:first-child {
+      font-weight: 700;
+      color: #444444;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 20px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+    }
+
+    .profile-img {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #d9d9d9;
+      display: block;
+      margin-bottom: 22px;
+      background: #f1f1f1;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    }
+
+    .name {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #444444;
+      margin-bottom: 18px;
+    }
+
+    .side-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .side-links li {
+      margin-bottom: 9px;
+      color: #444444;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 18px;
+      color: #444444;
+      font-weight: 700;
+    }
+
+    .content h2 {
+      font-size: 25px;
+      color: #444444;
+      margin-top: 40px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
+    }
+
+    .intro {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      padding: 18px 22px;
+      margin-bottom: 28px;
+    }
+
+    .intro p {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .blue-text {
+      color: #1f78b4;
+      font-weight: 700;
+    }
+
+    .red-text {
+      color: #a51c1c;
+      font-weight: 700;
+    }
+
+    .purple-text {
+      color: #7a007a;
+      font-weight: 700;
+    }
+
+    .project-card {
+      border: 1px solid #eeeeee;
+      margin-bottom: 22px;
+      background: #ffffff;
+    }
+
+    .project-header {
+      padding: 14px 18px;
+      border-left: 5px solid #1f78b4;
+      background: #f8fbff;
+    }
+
+    .project-card:nth-of-type(2n) .project-header {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .project-card:nth-of-type(3n) .project-header {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .project-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #a51c1c;
+      margin: 0 0 4px;
+    }
+
+    .project-subtitle {
+      color: #666666;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .project-body {
+      padding: 18px 22px 20px;
+    }
+
+    .project-body p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .project-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .label-row {
+      margin-top: 12px;
+    }
+
+    .label {
+      display: inline-block;
+      background: #fafafa;
+      border: 1px solid #dddddd;
+      padding: 4px 9px;
+      margin: 4px 4px 0 0;
+      border-radius: 12px;
+      font-size: 13px;
+      color: #444444;
+    }
+
+    .status {
+      margin-top: 12px;
+      color: #555555;
+      font-size: 14px;
+    }
+
+    .status strong {
+      color: #1f78b4;
+    }
+
+    .footer {
+      border-top: 1px solid #eeeeee;
+      text-align: center;
+      padding: 24px;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .sidebar {
+        position: static;
+        text-align: center;
+      }
+
+      .profile-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .side-links {
+        text-align: center;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    <nav class="nav">
+      <a href="index.html">Minarul Islam</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main class="page">
+<aside class="sidebar">
+  <img src="profile.png" alt="Minarul Islam" class="profile-img" />
+
+  <div class="name">Minarul Islam</div>
+
+  <div class="bio">
+    Ph.D. Candidate<br />
+    Department of Computer Science and Software Engineering<br />
+    Auburn University<br />
+    Research: NLP, Reliable ML, Sentiment Analysis
+  </div>
+
+  <ul class="side-links">
+    <li>📍 Auburn, Alabama, USA</li>
+    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+  </ul>
+</aside>
+
+<section class="content">
+
+  <h1>Projects</h1>
+
+  <div class="intro">
+    <p>
+      My projects examine how machine learning models behave when text is not simple, balanced, or drawn
+      from the same distribution used during training. The work is mainly grounded in
+      <strong class="blue-text">natural language processing</strong>, <strong class="red-text">sentiment analysis</strong>,
+      and <strong class="purple-text">software security</strong>.
+    </p>
+
+    <p>
+      A common theme across these projects is evidence. I study which part of an input supports a prediction,
+      when a model should avoid making an automatic decision, and how contextual or structural information can
+      make the prediction more faithful to the actual meaning of the text.
+    </p>
+  </div>
+
+  <h2>Dissertation Projects</h2>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-title">ShiftAware-Select</div>
+      <div class="project-subtitle">Reliable NLP classification under distribution shift</div>
+    </div>
+
+    <div class="project-body">
+      <p>
+        Text classifiers are often trained and evaluated under a clean experimental setting, but real use is
+        rarely that stable. A model may be asked to classify data from a new domain, a noisier source, or a
+        different writing style. In such cases, the main concern is not only whether the model is accurate,
+        but whether it knows when its own prediction is unreliable.
+      </p>
+
+      <p>
+        ShiftAware-Select addresses this setting through calibration, uncertainty estimation, and selective
+        prediction. The framework allows confident cases to be handled automatically while uncertain cases can
+        be deferred for human review. This makes the model more useful in decision settings where a confident
+        wrong answer is more costly than a cautious abstention.
+      </p>
+
+      <div class="label-row">
+        <span class="label">Distribution Shift</span>
+        <span class="label">Selective Prediction</span>
+        <span class="label">Uncertainty</span>
+        <span class="label">Calibration</span>
+      </div>
+
+      <div class="status">
+        <strong>Status:</strong> Dissertation study / manuscript in progress.
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-title">CAGLSAv2</div>
+      <div class="project-subtitle">Context-aware sentiment analysis with contrastive clauses</div>
+    </div>
+
+    <div class="project-body">
+      <p>
+        Many sentiment mistakes happen when a sentence contains contrast. A user may praise one part of an
+        experience and then reverse the overall judgment with another clause. In these cases, the final
+        sentiment depends on how the clauses interact, not simply on the presence of positive or negative words.
+      </p>
+
+      <p>
+        CAGLSAv2 focuses on this clause-level behavior. It models contrastive information so the representation
+        can better reflect how one part of the sentence modifies another. The project contributes to sentiment
+        analysis by treating linguistic structure as part of the prediction process rather than as background
+        text to be compressed into a single sequence representation.
+      </p>
+
+      <div class="label-row">
+        <span class="label">Context-Aware Learning</span>
+        <span class="label">Contrastive Clauses</span>
+        <span class="label">Sentiment Analysis</span>
+      </div>
+
+      <div class="status">
+        <strong>Status:</strong> Completed dissertation study.
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-title">Irony-Aware Multitask Sentiment Learning</div>
+      <div class="project-subtitle">Sentiment analysis for non-literal social media text</div>
+    </div>
+
+    <div class="project-body">
+      <p>
+        Social media text often carries opinion indirectly. A post may use words that look positive while the
+        actual meaning is negative, especially when irony, sarcasm, or emotional framing is present. This makes
+        sentiment prediction difficult for models that rely heavily on surface wording.
+      </p>
+
+      <p>
+        This project connects sentiment learning with related tasks such as irony and emotion prediction. The
+        motivation is simple: when the intended opinion is not literal, auxiliary information can help the model
+        interpret the text more carefully. The result is a framework designed for opinion-rich social media
+        settings where sentiment depends on more than word polarity.
+      </p>
+
+      <div class="label-row">
+        <span class="label">Irony</span>
+        <span class="label">Emotion</span>
+        <span class="label">Multitask Learning</span>
+        <span class="label">Social Media</span>
+      </div>
+
+      <div class="status">
+        <strong>Status:</strong> Completed dissertation study.
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-title">DualGraph-RoBERTa for Aspect-Based Sentiment Analysis</div>
+      <div class="project-subtitle">Fine-grained opinion modeling with graph structure</div>
+    </div>
+
+    <div class="project-body">
+      <p>
+        Aspect-based sentiment analysis requires a model to connect the correct opinion to the correct target.
+        A sentence may discuss food, service, and price at the same time, with different sentiment toward each
+        aspect. A broad sentence-level representation can mix these opinions and lose the local evidence.
+      </p>
+
+      <p>
+        DualGraph-RoBERTa uses transformer representations together with graph-based structure to preserve
+        aspect-specific relationships. The project is aimed at more precise opinion understanding, where the
+        model must identify not only whether the sentence is positive or negative, but which target the opinion
+        belongs to.
+      </p>
+
+      <div class="label-row">
+        <span class="label">ABSA</span>
+        <span class="label">Graph Learning</span>
+        <span class="label">RoBERTa</span>
+        <span class="label">Opinion Structure</span>
+      </div>
+
+      <div class="status">
+        <strong>Status:</strong> Dissertation project / manuscript in progress.
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-title">Discourse-Aware Domain Adaptation for Sentiment Analysis</div>
+      <div class="project-subtitle">Reliable sentiment transfer across domains</div>
+    </div>
+
+    <div class="project-body">
+      <p>
+        Sentiment models often lose reliability when moved from one domain to another. A model trained on
+        restaurant reviews may not transfer cleanly to product reviews or social media posts because the
+        aspects, writing style, and opinion cues change.
+      </p>
+
+      <p>
+        This project studies domain adaptation using discourse-aware and span-level sentiment evidence. The
+        goal is to make transfer more stable by preserving the local reasoning behind each prediction. Rather
+        than only adapting global representations, this work focuses on how sentiment evidence is expressed
+        and organized across domains.
+      </p>
+
+      <div class="label-row">
+        <span class="label">Domain Adaptation</span>
+        <span class="label">Discourse</span>
+        <span class="label">Span Evidence</span>
+        <span class="label">Generalization</span>
+      </div>
+
+      <div class="status">
+        <strong>Status:</strong> Proposed dissertation study.
+      </div>
+    </div>
+  </div>
+
+  <h2>Security-Focused NLP Project</h2>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-title">Hierarchical Severity Classification with CWE Enrichment</div>
+      <div class="project-subtitle">Evidence-aware classification for software vulnerability reports</div>
+    </div>
+
+    <div class="project-body">
+      <p>
+        Software vulnerability reports are technical and often lengthy. The key evidence for severity may be
+        concentrated in a small part of the report, while other sentences provide context or background. If a
+        model treats the whole report as a flat block of text, it can miss the evidence that matters most.
+      </p>
+
+      <p>
+        This project uses hierarchical modeling to preserve sentence-level information and enriches the
+        representation with CWE-based security knowledge. The work connects NLP with software security by
+        making severity prediction more tied to the technical evidence in the report.
+      </p>
+
+      <div class="label-row">
+        <span class="label">Software Security</span>
+        <span class="label">CWE</span>
+        <span class="label">Severity Classification</span>
+        <span class="label">Hierarchical Evidence</span>
+      </div>
+
+      <div class="status">
+        <strong>Status:</strong> Completed dissertation study.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Minarul Islam. Powered by GitHub Pages.
+  </footer>
+
+</body>
+</html>
