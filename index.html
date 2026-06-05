@@ -63,8 +63,8 @@
       margin: 0 auto;
       padding: 46px 20px;
       display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 55px;
+      grid-template-columns: 250px 760px;
+      gap: 50px;
     }
 
     .sidebar {
@@ -74,8 +74,8 @@
     }
 
     .profile-img {
-      width: 170px;
-      height: 170px;
+      width: 155px;
+      height: 155px;
       object-fit: cover;
       border-radius: 50%;
       border: 1px solid #d9d9d9;
@@ -134,8 +134,26 @@
       margin-bottom: 8px;
     }
 
-    .intro p {
-      margin-bottom: 17px;
+    .section-title {
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
+    }
+
+    .intro-box {
+      background: #f6fbff;
+      border-left: 4px solid #1f78b4;
+      padding: 18px 22px;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+
+    .intro-box p {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .intro-box p:last-child {
+      margin-bottom: 0;
     }
 
     .red-heading {
@@ -162,7 +180,7 @@
     }
 
     .education-box p {
-      margin: 9px 0;
+      margin: 10px 0;
     }
 
     .advisor-box {
@@ -174,7 +192,7 @@
     }
 
     .advisor-box p {
-      margin: 9px 0;
+      margin: 10px 0;
     }
 
     .advisor-title {
@@ -204,6 +222,7 @@
     .research-cloud {
       padding: 18px 10px;
       min-height: 135px;
+      background: #ffffff;
     }
 
     .big-red {
@@ -234,18 +253,64 @@
       font-size: 16px;
       line-height: 1.65;
       font-weight: 500;
+      background: #fff7f7;
+      border-left: 4px solid #a51c1c;
+      padding: 14px 18px;
     }
 
-    .project-list,
-    .pub-list,
-    .teaching-list,
+    .project-list {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    .project-list li {
+      background: #fbfbfb;
+      border-left: 4px solid #1f78b4;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+    }
+
+    .project-list li:nth-child(2n) {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .project-list li:nth-child(3n) {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .pub-list {
+      list-style-position: outside;
+      background: #f8fbff;
+      border-left: 4px solid #1f78b4;
+      padding: 16px 22px 16px 42px;
+      margin-left: 0;
+    }
+
+    .pub-list li {
+      margin-bottom: 12px;
+    }
+
+    .teaching-list {
+      background: #fffdf7;
+      border-left: 4px solid #c77c02;
+      padding: 16px 22px 16px 38px;
+      margin-left: 0;
+    }
+
+    .teaching-list li {
+      margin-bottom: 12px;
+    }
+
     .news-list {
-      padding-left: 22px;
+      background: #f8fff9;
+      border-left: 4px solid #2f8f46;
+      padding: 16px 22px 16px 42px;
+      margin-left: 0;
     }
 
-    .project-list li,
-    .pub-list li,
-    .teaching-list li,
     .news-list li {
       margin-bottom: 12px;
     }
@@ -263,7 +328,7 @@
       font-size: 14px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       .page {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -309,7 +374,7 @@
   </div>
 
   <main class="page">
-    
+
 <aside class="sidebar">
   <img src="profile.png" alt="Minarul Islam" class="profile-img" />
 
@@ -318,7 +383,8 @@
   <div class="bio">
     Ph.D. Candidate<br />
     Department of Computer Science and Software Engineering<br />
-    Auburn University
+    Auburn University<br />
+    Research: NLP, Reliable ML, Sentiment Analysis
   </div>
 
   <ul class="side-links">
@@ -335,12 +401,12 @@
 
   <h1>Welcome to my personal homepage</h1>
 
-  <div class="intro">
+  <div class="intro-box">
     <p>
       My name is <strong>Minarul Islam</strong>. I am a Ph.D. candidate in the Department of
       Computer Science and Software Engineering at <strong class="blue-text">Auburn University</strong>.
       My research focuses on reliable and context-aware machine learning for natural language,
-      speech, software security, and AI systems.
+      software security, and AI systems.
     </p>
 
     <p>
@@ -362,7 +428,7 @@
     </p>
   </div>
 
-  <h2>Academic Background</h2>
+  <h2 class="section-title">Academic Background</h2>
 
   <div class="education-box">
     <p>
@@ -382,7 +448,7 @@
     </p>
   </div>
 
-  <h2>Ph.D. Advisor and Committee</h2>
+  <h2 class="section-title">Ph.D. Advisor and Committee</h2>
 
   <div class="advisor-box">
     <p>
@@ -426,13 +492,13 @@
           2. Dissertation research focuses on linguistic complexity in sentiment analysis.<br />
           3. M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.<br />
           4. Graduate Teaching Assistant with experience supporting large CSSE courses.<br />
-          5. Actively seeking academic, research, and industry opportunities.
+          5. Open to academic, research, and industry collaboration opportunities.
         </div>
       </td>
     </tr>
   </table>
 
-  <h2>Featured Research Projects</h2>
+  <h2 class="section-title">Featured Research Projects</h2>
 
   <ol class="project-list">
     <li>
@@ -466,7 +532,7 @@
     </li>
   </ol>
 
-  <h2>Selected Publications and Manuscripts</h2>
+  <h2 class="section-title">Selected Publications and Manuscripts</h2>
 
   <ol class="pub-list">
     <li>
@@ -495,7 +561,7 @@
     </li>
   </ol>
 
-  <h2>Teaching Experience</h2>
+  <h2 class="section-title">Teaching Experience</h2>
 
   <ul class="teaching-list">
     <li>
@@ -515,7 +581,7 @@
     </li>
   </ul>
 
-  <h2>News and Updates</h2>
+  <h2 class="section-title">News and Updates</h2>
 
   <ol class="news-list">
     <li>
