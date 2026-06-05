@@ -127,18 +127,12 @@
       font-weight: 700;
     }
 
-    .section-title {
-      border-bottom: 2px solid #eeeeee;
-      padding-bottom: 6px;
-    }
-
     .intro-box {
       background: #f7fbff;
       border: 1px solid #e5f0fa;
       padding: 18px 22px;
       margin-top: 8px;
       margin-bottom: 26px;
-      border-radius: 2px;
     }
 
     .intro-box p {
@@ -155,13 +149,13 @@
       font-weight: 700;
     }
 
-    .purple-heading {
-      color: #7a007a;
+    .blue-text {
+      color: #1f78b4;
       font-weight: 700;
     }
 
-    .blue-text {
-      color: #1f78b4;
+    .purple-text {
+      color: #7a007a;
       font-weight: 700;
     }
 
@@ -181,7 +175,6 @@
 
     .info-card h2 {
       margin-top: 0;
-      color: #444444;
       border-bottom: 2px solid #eeeeee;
       padding-bottom: 6px;
     }
@@ -278,50 +271,21 @@
       margin-bottom: 7px;
     }
 
-    .project-list {
-      list-style: none;
-      padding-left: 0;
-      margin-left: 0;
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+      margin-bottom: 34px;
     }
 
-    .project-list li {
-      background: #fbfbfb;
-      border-left: 4px solid #1f78b4;
-      padding: 12px 16px;
-      margin-bottom: 12px;
-    }
-
-    .project-list li:nth-child(2n) {
-      border-left-color: #a51c1c;
-      background: #fffafa;
-    }
-
-    .project-list li:nth-child(3n) {
-      border-left-color: #7a007a;
-      background: #fbf8ff;
-    }
-
-    .pub-list {
-      list-style-position: outside;
+    .quick-links a {
+      display: block;
       background: #f8fbff;
-      border-left: 4px solid #1f78b4;
-      padding: 16px 22px 16px 42px;
-      margin-left: 0;
-    }
-
-    .pub-list li {
-      margin-bottom: 12px;
-    }
-
-    .teaching-list {
-      background: #fffdf7;
-      border-left: 4px solid #c77c02;
-      padding: 16px 22px 16px 38px;
-      margin-left: 0;
-    }
-
-    .teaching-list li {
-      margin-bottom: 12px;
+      border: 1px solid #e5f0fa;
+      padding: 12px 14px;
+      text-align: center;
+      font-weight: 700;
     }
 
     .news-list {
@@ -369,7 +333,8 @@
       }
 
       .info-grid,
-      .research-spotlight-grid {
+      .research-spotlight-grid,
+      .quick-links {
         grid-template-columns: 1fr;
       }
     }
@@ -387,6 +352,7 @@
       <a href="publications.html">Publications</a>
       <a href="teaching.html">Teaching</a>
       <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -409,8 +375,8 @@
     <li>📍 Auburn, Alabama, USA</li>
     <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
     <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
     <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
   </ul>
 </aside>
@@ -429,19 +395,13 @@
 
     <p>
       My dissertation work focuses on <strong class="red-heading">Reliable and Context-Aware Sentiment Analysis
-      under Linguistic Complexity</strong>. Many language models perform well on standard benchmarks,
-      but they can still make confident mistakes when text contains contrast, irony, implicit meaning,
-      aspect-specific opinion, or domain shift. My work studies how to make these models more reliable
-      and easier to understand in such settings.
+      under Linguistic Complexity</strong>. I study how language models behave when text contains contrast,
+      irony, implicit meaning, aspect-specific opinion, or domain shift.
     </p>
 
     <p>
-      My research develops methods that use context, structure, uncertainty, and task-specific evidence
-      to improve model behavior. The broader goal is to build AI systems that are accurate, reliable,
-      interpretable, and useful in real-world applications.
-    </p>
-
-    <p>
+      My broader research goal is to build AI systems that are accurate, reliable, interpretable,
+      and useful in real-world settings.
       You can download my full CV <a href="Minarul_Islam_CV.pdf" target="_blank">here</a>.
     </p>
   </div>
@@ -514,90 +474,19 @@
     </div>
   </div>
 
-  <h2 class="section-title">Featured Research Projects</h2>
+  <h2>Explore</h2>
 
-  <ol class="project-list">
-    <li>
-      <strong>ShiftAware-Select:</strong> Reliable NLP classification under distribution shift using
-      uncertainty estimation, calibration, and abstain-to-human decisioning to reduce confident errors.
-    </li>
+  <div class="quick-links">
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="cv.html">Academic CV</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <li>
-      <strong>CAGLSAv2:</strong> Context-aware sentiment analysis method that models contrastive clause
-      information to better understand sentiment in linguistically complex text.
-    </li>
-
-    <li>
-      <strong>Irony-Aware Multitask Sentiment Learning:</strong> Multitask learning framework that connects
-      sentiment prediction with irony and emotion awareness for social media text.
-    </li>
-
-    <li>
-      <strong>Hierarchical Severity Classification with CWE Enrichment:</strong> Software vulnerability
-      severity classification using sentence-level evidence and structured security knowledge.
-    </li>
-
-    <li>
-      <strong>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis:</strong> Graph-enhanced transformer
-      model for aspect-level opinion understanding with structural and contextual evidence.
-    </li>
-
-    <li>
-      <strong>Discourse-Aware Domain Adaptation for Sentiment Analysis:</strong> Ongoing work on improving
-      sentiment model transfer across domains using discourse-aware and span-level evidence.
-    </li>
-  </ol>
-
-  <h2 class="section-title">Selected Publications and Manuscripts</h2>
-
-  <ol class="pub-list">
-    <li>
-      <strong>Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity.</strong>
-      Dissertation research, Auburn University.
-    </li>
-
-    <li>
-      <strong>ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning.</strong>
-    </li>
-
-    <li>
-      <strong>CAGLSAv2: Context-Aware Graph-Based Learning for Sentiment Analysis.</strong>
-    </li>
-
-    <li>
-      <strong>Irony-Aware Multitask Sentiment Learning for Social Media Text.</strong>
-    </li>
-
-    <li>
-      <strong>Hierarchical Severity Classification with CWE Enrichment.</strong>
-    </li>
-
-    <li>
-      <strong>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis.</strong>
-    </li>
-  </ol>
-
-  <h2 class="section-title">Teaching Experience</h2>
-
-  <ul class="teaching-list">
-    <li>
-      <strong>Graduate Teaching Assistant, Senior Design Project, Auburn University.</strong>
-      Supported student teams, project guidance, demonstrations, grading, course logistics,
-      and communication with large classes.
-    </li>
-
-    <li>
-      <strong>Graduate Teaching Assistant, Software Quality Assurance, Auburn University.</strong>
-      Supported undergraduate and graduate students through grading, office hours, course management,
-      and technical feedback.
-    </li>
-
-    <li>
-      Worked with large classes and supported more than 100 students per semester.
-    </li>
-  </ul>
-
-  <h2 class="section-title">News and Updates</h2>
+  <h2>News and Updates</h2>
 
   <ol class="news-list">
     <li>
@@ -607,28 +496,12 @@
 
     <li>
       <span class="date">[2026]</span>
-      Continuing dissertation research on distribution shift, selective prediction, discourse complexity,
-      irony awareness, and aspect-level sentiment analysis.
-    </li>
-
-    <li>
-      <span class="date">[2026]</span>
-      Working on hierarchical security severity classification with CWE enrichment for software vulnerability reports.
-    </li>
-
-    <li>
-      <span class="date">[2025–2026]</span>
-      Continuing work on context-aware and structurally informed sentiment analysis models.
+      Continuing dissertation research on distribution shift, discourse complexity, irony awareness, and aspect-level sentiment analysis.
     </li>
 
     <li>
       <span class="date">[2022–Present]</span>
       Serving as a Graduate Teaching Assistant at Auburn University for Senior Design Project and Software Quality Assurance.
-    </li>
-
-    <li>
-      <span class="date">[2022]</span>
-      Started Ph.D. study in Computer Science and Software Engineering at Auburn University.
     </li>
   </ol>
 
