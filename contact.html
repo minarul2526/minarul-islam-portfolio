@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Minarul Islam</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: #1f78b4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0b5f95;
+      text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 17px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #555555;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .nav a:first-child {
+      font-weight: 700;
+      color: #444444;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 20px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+    }
+
+    .profile-img {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #d9d9d9;
+      display: block;
+      margin-bottom: 22px;
+      background: #f1f1f1;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    }
+
+    .name {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #444444;
+      margin-bottom: 18px;
+    }
+
+    .side-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .side-links li {
+      margin-bottom: 9px;
+      color: #444444;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 18px;
+      color: #444444;
+      font-weight: 700;
+    }
+
+    .content h2 {
+      font-size: 25px;
+      color: #444444;
+      margin-top: 38px;
+      margin-bottom: 16px;
+      font-weight: 700;
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
+    }
+
+    .intro {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      max-width: 900px;
+    }
+
+    .intro p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .blue-text {
+      color: #1f78b4;
+      font-weight: 700;
+    }
+
+    .red-text {
+      color: #a51c1c;
+      font-weight: 700;
+    }
+
+    .purple-text {
+      color: #7a007a;
+      font-weight: 700;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 900px;
+      margin-top: 18px;
+    }
+
+    .contact-card {
+      background: #fbfbfb;
+      border: 1px solid #eeeeee;
+      border-left: 4px solid #1f78b4;
+      padding: 16px 18px;
+      min-height: 95px;
+    }
+
+    .contact-card:nth-child(2n) {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .contact-card:nth-child(3n) {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .contact-card strong {
+      display: block;
+      color: #333333;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: #444444;
+    }
+
+    .collaboration-box {
+      max-width: 900px;
+      background: #fffdf7;
+      border: 1px solid #f0e4c8;
+      border-left: 4px solid #c77c02;
+      padding: 18px 22px;
+      margin-top: 20px;
+    }
+
+    .collaboration-box p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .collaboration-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer {
+      border-top: 1px solid #eeeeee;
+      text-align: center;
+      padding: 24px;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .sidebar {
+        position: static;
+        text-align: center;
+      }
+
+      .profile-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .side-links {
+        text-align: center;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    <nav class="nav">
+      <a href="index.html">Minarul Islam</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main class="page">
+<aside class="sidebar">
+  <img src="profile.png" alt="Minarul Islam" class="profile-img" />
+
+  <div class="name">Minarul Islam</div>
+
+  <div class="bio">
+    Ph.D. Candidate<br />
+    Department of Computer Science and Software Engineering<br />
+    Auburn University<br />
+    Research: NLP, Reliable ML, Sentiment Analysis
+  </div>
+
+  <ul class="side-links">
+    <li>📍 Auburn, Alabama, USA</li>
+    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+  </ul>
+</aside>
+
+<section class="content">
+
+  <h1>Contact</h1>
+
+  <div class="intro">
+    <p>
+      I am currently a Ph.D. candidate in the Department of Computer Science and Software Engineering at
+      <strong class="blue-text">Auburn University</strong>. My research interests include
+      <strong class="red-text">natural language processing</strong>,
+      <strong class="purple-text">reliable machine learning</strong>, sentiment analysis, software security,
+      and applied AI systems.
+    </p>
+
+    <p>
+      I welcome communication about research collaboration, academic opportunities, teaching, mentoring,
+      and industry research roles related to NLP, ML, AI security, and software engineering.
+    </p>
+  </div>
+
+  <h2>Contact Information</h2>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <strong>Email</strong>
+      <p><a href="mailto:mzi0030@auburn.edu">mzi0030@auburn.edu</a></p>
+    </div>
+
+    <div class="contact-card">
+      <strong>Affiliation</strong>
+      <p>Department of Computer Science and Software Engineering<br />Auburn University</p>
+    </div>
+
+    <div class="contact-card">
+      <strong>Location</strong>
+      <p>Auburn, Alabama, USA</p>
+    </div>
+
+    <div class="contact-card">
+      <strong>GitHub</strong>
+      <p><a href="https://github.com/minarul2526" target="_blank">github.com/minarul2526</a></p>
+    </div>
+
+    <div class="contact-card">
+      <strong>Google Scholar</strong>
+      <p><a href="#" target="_blank">Google Scholar Profile</a></p>
+    </div>
+
+    <div class="contact-card">
+      <strong>LinkedIn</strong>
+      <p><a href="#" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </div>
+
+  <h2>Collaboration and Opportunities</h2>
+
+  <div class="collaboration-box">
+    <p>
+      I am interested in research and professional opportunities related to reliable NLP, sentiment analysis,
+      distribution shift, uncertainty-aware machine learning, software security, speech processing, and applied AI.
+    </p>
+
+    <p>
+      I am also open to academic collaboration, teaching-focused opportunities, and interdisciplinary projects
+      involving machine learning, software engineering, data science, and real-world AI systems.
+    </p>
+  </div>
+
+</section>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Minarul Islam. Powered by GitHub Pages.
+  </footer>
+
+</body>
+</html>
