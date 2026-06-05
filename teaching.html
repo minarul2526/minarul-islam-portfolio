@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Teaching | Minarul Islam</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: #1f78b4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0b5f95;
+      text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 17px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #555555;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .nav a:first-child {
+      font-weight: 700;
+      color: #444444;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 20px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+    }
+
+    .profile-img {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #d9d9d9;
+      display: block;
+      margin-bottom: 22px;
+      background: #f1f1f1;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    }
+
+    .name {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #444444;
+      margin-bottom: 18px;
+    }
+
+    .side-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .side-links li {
+      margin-bottom: 9px;
+      color: #444444;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 22px;
+      color: #444444;
+      font-weight: 700;
+    }
+
+    .content h2 {
+      font-size: 25px;
+      color: #444444;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-weight: 700;
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
+    }
+
+    .intro {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      padding: 18px 22px;
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
+
+    .intro p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .blue-text {
+      color: #1f78b4;
+      font-weight: 700;
+    }
+
+    .red-text {
+      color: #a51c1c;
+      font-weight: 700;
+    }
+
+    .purple-text {
+      color: #7a007a;
+      font-weight: 700;
+    }
+
+    .teach-item {
+      margin-bottom: 34px;
+      max-width: 900px;
+    }
+
+    .teach-title {
+      font-size: 23px;
+      font-weight: 700;
+      color: #45a8c4;
+      text-decoration: underline;
+      margin-bottom: 8px;
+    }
+
+    .teach-meta {
+      font-size: 17px;
+      color: #444444;
+      margin-bottom: 14px;
+    }
+
+    .teach-meta em {
+      font-style: italic;
+    }
+
+    .teach-item p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .detail-list {
+      margin-top: 10px;
+      padding-left: 22px;
+    }
+
+    .detail-list li {
+      margin-bottom: 7px;
+    }
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+      max-width: 900px;
+    }
+
+    .strength-card {
+      background: #fbfbfb;
+      border: 1px solid #eeeeee;
+      border-left: 4px solid #1f78b4;
+      padding: 14px 16px;
+    }
+
+    .strength-card:nth-child(2n) {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .strength-card:nth-child(3n) {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .strength-card strong {
+      color: #333333;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      border-top: 1px solid #eeeeee;
+      text-align: center;
+      padding: 24px;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .sidebar {
+        position: static;
+        text-align: center;
+      }
+
+      .profile-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .side-links {
+        text-align: center;
+      }
+
+      .strength-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    <nav class="nav">
+      <a href="index.html">Minarul Islam</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main class="page">
+<aside class="sidebar">
+  <img src="profile.png" alt="Minarul Islam" class="profile-img" />
+
+  <div class="name">Minarul Islam</div>
+
+  <div class="bio">
+    Ph.D. Candidate<br />
+    Department of Computer Science and Software Engineering<br />
+    Auburn University<br />
+    Research: NLP, Reliable ML, Sentiment Analysis
+  </div>
+
+  <ul class="side-links">
+    <li>📍 Auburn, Alabama, USA</li>
+    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+  </ul>
+</aside>
+
+<section class="content">
+
+  <h1>Teaching</h1>
+
+  <div class="intro">
+    <p>
+      My teaching experience spans <strong class="blue-text">computer science, software engineering, project-based learning,
+      grading, mentoring, and academic support</strong>. At Auburn University, I have served as a Graduate Teaching
+      Assistant for multiple semesters while supporting large undergraduate and graduate courses.
+    </p>
+
+    <p>
+      My teaching work focuses on helping students move from technical concepts to working systems. I have supported
+      student teams, reviewed project progress, graded technical assignments, held office hours, managed course logistics,
+      and helped students communicate their design and implementation decisions more clearly.
+    </p>
+  </div>
+
+  <h2>Teaching Experience</h2>
+
+  <div class="teach-item">
+    <div class="teach-title">Graduate Teaching Assistant: Senior Design Project</div>
+    <div class="teach-meta">Undergraduate capstone course, <em>Auburn University</em>, 2022–Present</div>
+
+    <p>
+      I have supported Senior Design Project for eight consecutive semesters at Auburn University. This course requires
+      students to work in teams, interact with project sponsors, develop working software systems, and present their
+      progress through design reviews, demonstrations, and final deliverables.
+    </p>
+
+    <p>
+      My role has involved mentoring student teams, supporting project planning, reviewing progress, grading technical
+      submissions, helping with demonstrations, managing course logistics, and communicating expectations across large
+      classes. This experience has strengthened my ability to guide students through open-ended software engineering
+      problems where technical work, teamwork, documentation, and communication all matter.
+    </p>
+
+    <ul class="detail-list">
+      <li>Supported large classes with more than 100 students per semester.</li>
+      <li>Guided student teams through project planning, milestones, demonstrations, and final presentations.</li>
+      <li>Reviewed technical reports, design documents, implementation progress, and sponsor-facing deliverables.</li>
+      <li>Helped students improve teamwork, communication, and software engineering practice.</li>
+    </ul>
+  </div>
+
+  <div class="teach-item">
+    <div class="teach-title">Graduate Teaching Assistant: Software Quality Assurance</div>
+    <div class="teach-meta">Undergraduate and graduate course, <em>Auburn University</em>, multiple semesters</div>
+
+    <p>
+      I have served as a Graduate Teaching Assistant for Software Quality Assurance for three semesters. The course
+      covers software testing, quality processes, verification, validation, and practical techniques for improving
+      software reliability.
+    </p>
+
+    <p>
+      My responsibilities included grading assignments and exams, holding office hours, answering student questions,
+      supporting course logistics, and providing feedback on technical work. This role gave me direct experience with
+      both undergraduate and graduate students and helped me develop a clear, student-centered style for explaining
+      software engineering concepts.
+    </p>
+
+    <ul class="detail-list">
+      <li>Supported grading for assignments, exams, and course activities.</li>
+      <li>Held office hours and helped students understand testing and quality assurance concepts.</li>
+      <li>Provided feedback on technical work and helped students connect course ideas to practical software development.</li>
+      <li>Assisted with Canvas updates, course communication, and student support.</li>
+    </ul>
+  </div>
+
+  <div class="teach-item">
+    <div class="teach-title">Teaching and Academic Support Experience</div>
+    <div class="teach-meta">Graduate study period, <em>Universiti Malaysia Pahang</em>, Malaysia</div>
+
+    <p>
+      During my graduate study at Universiti Malaysia Pahang, I gained early experience in academic support, research-based
+      learning, and student-facing technical discussion. This period helped me build the foundation for my later teaching
+      work in computer science and software engineering.
+    </p>
+
+    <p>
+      The experience was especially useful for developing patience in explaining technical ideas, organizing research tasks,
+      and communicating engineering concepts to students and peers from different backgrounds.
+    </p>
+  </div>
+
+  <h2>Teaching Strengths</h2>
+
+  <div class="strength-grid">
+    <div class="strength-card">
+      <strong>Project-Based Mentoring</strong>
+      Experience guiding student teams through open-ended software engineering projects, progress reviews, and final deliverables.
+    </div>
+
+    <div class="strength-card">
+      <strong>Large-Class Support</strong>
+      Experience supporting more than 100 students per semester through grading, communication, logistics, and office hours.
+    </div>
+
+    <div class="strength-card">
+      <strong>Software Engineering Practice</strong>
+      Experience helping students connect requirements, design, implementation, testing, and quality assurance.
+    </div>
+
+    <div class="strength-card">
+      <strong>Student-Centered Explanation</strong>
+      Focus on clear explanations, practical examples, and step-by-step support for students with different levels of preparation.
+    </div>
+  </div>
+
+  <h2>Teaching Interests</h2>
+
+  <div class="teach-item">
+    <p>
+      I am interested in teaching courses in machine learning, natural language processing, deep learning, software
+      engineering, software quality assurance, data science, programming, and AI security. I am also interested in
+      project-based courses where students can connect technical ideas with real systems and real users.
+    </p>
+  </div>
+
+</section>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Minarul Islam. Powered by GitHub Pages.
+  </footer>
+
+</body>
+</html>
