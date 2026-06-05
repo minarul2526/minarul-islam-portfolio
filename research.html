@@ -1,0 +1,105 @@
+```html
+<h1>Research Overview</h1>
+
+<p>
+  My research studies how machine learning models can make more reliable decisions when language is
+  complex, noisy, or different from the data used during training. Many current NLP models perform well
+  on standard benchmarks, but they can still fail when text contains contrast, irony, hidden sentiment,
+  aspect-specific opinion, or domain shift. These failures are important because they can lead to confident
+  but wrong predictions in real-world applications.
+</p>
+
+<p>
+  To address this problem, my work develops context-aware and reliability-focused learning methods for
+  sentiment analysis, text classification, and software security. The goal is not only to improve prediction
+  accuracy, but also to make model behavior easier to understand across difficult linguistic and security
+  settings.
+</p>
+
+<div class="research-figure">
+  <div class="research-center">Reliable and Context-Aware NLP</div>
+  <div class="research-sub">Sentiment Analysis, Distribution Shift, and Security Intelligence</div>
+
+  <div class="research-tags">
+    <span>Context-Aware Learning</span>
+    <span>Distribution Shift</span>
+    <span>Selective Prediction</span>
+    <span>Irony and Emotion</span>
+    <span>Aspect-Level Opinion</span>
+    <span>Hierarchical Evidence</span>
+    <span>Software Security</span>
+    <span>Transformer Models</span>
+  </div>
+</div>
+
+<h2>Current Research Projects</h2>
+
+<div class="project">
+  <h3>ShiftAware-Select</h3>
+  <div class="date">Reliable NLP classification under distribution shift</div>
+  <p>
+    Standard text classifiers often become overconfident when test data comes from a different distribution
+    than the training data. This project addresses that problem by combining uncertainty estimation,
+    calibration, and selective prediction. Instead of forcing the model to answer every input, the method
+    allows the model to abstain on uncertain cases and defer them for human review. This improves reliability
+    under out-of-domain and noisy conditions and reduces high-confidence errors.
+  </p>
+</div>
+
+<div class="project">
+  <h3>CAGLSAv2</h3>
+  <div class="date">Context-aware sentiment analysis with contrastive clauses</div>
+  <p>
+    Sentiment in real text is often shaped by contrast, such as when one clause reverses or weakens the
+    meaning of another. A sentence-level model can miss this structure and assign the wrong sentiment.
+    This project models contrastive clause information so the model can better understand how different
+    parts of a sentence contribute to the final opinion. The benefit is more reliable sentiment prediction
+    in linguistically complex text.
+  </p>
+</div>
+
+<div class="project">
+  <h3>Irony-Aware Multitask Sentiment Learning</h3>
+  <div class="date">Sentiment prediction with irony and emotion awareness</div>
+  <p>
+    Social media text often expresses opinion indirectly. A positive word may carry a negative meaning when
+    the post is ironic, sarcastic, or emotionally charged. This project uses multitask learning to connect
+    sentiment prediction with related signals such as irony and emotion. By learning these related tasks
+    together, the model can better handle cases where surface-level words do not match the intended meaning.
+  </p>
+</div>
+
+<div class="project">
+  <h3>Hierarchical Severity Classification with CWE Enrichment</h3>
+  <div class="date">Software vulnerability severity prediction</div>
+  <p>
+    Security reports contain technical descriptions where the most important evidence may appear in only
+    a few sentences. Flat text classification can hide this evidence. This project uses hierarchical modeling
+    to capture sentence-level information and enriches the representation with CWE-based security knowledge.
+    The goal is to support more accurate and interpretable severity classification for software vulnerabilities.
+  </p>
+</div>
+
+<div class="project">
+  <h3>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis</h3>
+  <div class="date">Structurally informed aspect-level opinion modeling</div>
+  <p>
+    In aspect-based sentiment analysis, the same sentence may contain different opinions about different
+    targets. A broad sentence representation can mix these opinions together. This project combines transformer
+    representations with graph-based structure so the model can focus on the words and relations most relevant
+    to each aspect. The method is designed to improve fine-grained opinion understanding when sentiment depends
+    on local context and dependency structure.
+  </p>
+</div>
+
+<div class="project">
+  <h3>Discourse-Aware Domain Adaptation for Sentiment Analysis</h3>
+  <div class="date">Generalizing sentiment models across domains</div>
+  <p>
+    Sentiment models trained in one domain often lose accuracy when applied to another domain because opinion
+    expressions, aspect terms, and writing styles change. This project studies domain adaptation through
+    discourse-aware and span-level sentiment evidence. The goal is to help sentiment models transfer more
+    reliably across domains while preserving the contextual evidence behind each prediction.
+  </p>
+</div>
+```
