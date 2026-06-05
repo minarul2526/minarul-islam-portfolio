@@ -1,105 +1,568 @@
+<!DOCTYPE html>
 
-<h1>Research Overview</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<p>
-  My research studies how machine learning models can make more reliable decisions when language is
-  complex, noisy, or different from the data used during training. Many current NLP models perform well
-  on standard benchmarks, but they can still fail when text contains contrast, irony, hidden sentiment,
-  aspect-specific opinion, or domain shift. These failures are important because they can lead to confident
-  but wrong predictions in real-world applications.
-</p>
+  <title>Research | Minarul Islam</title>
 
-<p>
-  To address this problem, my work develops context-aware and reliability-focused learning methods for
-  sentiment analysis, text classification, and software security. The goal is not only to improve prediction
-  accuracy, but also to make model behavior easier to understand across difficult linguistic and security
-  settings.
-</p>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+      font-size: 16px;
+      line-height: 1.65;
+    }
 
-<div class="research-figure">
-  <div class="research-center">Reliable and Context-Aware NLP</div>
-  <div class="research-sub">Sentiment Analysis, Distribution Shift, and Security Intelligence</div>
+    a {
+      color: #1f78b4;
+      text-decoration: none;
+    }
 
-  <div class="research-tags">
-    <span>Context-Aware Learning</span>
-    <span>Distribution Shift</span>
-    <span>Selective Prediction</span>
-    <span>Irony and Emotion</span>
-    <span>Aspect-Level Opinion</span>
-    <span>Hierarchical Evidence</span>
-    <span>Software Security</span>
-    <span>Transformer Models</span>
+    a:hover {
+      color: #0b5f95;
+      text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 17px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #555555;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .nav a:first-child {
+      font-weight: 700;
+      color: #444444;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 20px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+    }
+
+    .profile-img {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #d9d9d9;
+      display: block;
+      margin-bottom: 22px;
+      background: #f1f1f1;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    }
+
+    .name {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #444444;
+      margin-bottom: 18px;
+    }
+
+    .side-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .side-links li {
+      margin-bottom: 9px;
+      color: #444444;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 18px;
+      color: #444444;
+      font-weight: 700;
+    }
+
+    .content h2 {
+      font-size: 25px;
+      color: #444444;
+      margin-top: 40px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .content h3 {
+      font-size: 22px;
+      color: #a51c1c;
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .overview {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      padding: 18px 22px;
+      margin-bottom: 26px;
+    }
+
+    .overview p {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .overview p:last-child {
+      margin-bottom: 0;
+    }
+
+    .red-text {
+      color: #a51c1c;
+      font-weight: 700;
+    }
+
+    .blue-text {
+      color: #1f78b4;
+      font-weight: 700;
+    }
+
+    .purple-text {
+      color: #7a007a;
+      font-weight: 700;
+    }
+
+    .research-map {
+      margin: 28px 0 36px;
+      padding: 28px 26px;
+      background: #fbfbfb;
+      border: 1px solid #eeeeee;
+      text-align: center;
+    }
+
+    .map-title {
+      font-size: 27px;
+      font-weight: 700;
+      color: #b00000;
+      margin-bottom: 4px;
+    }
+
+    .map-subtitle {
+      font-size: 22px;
+      font-weight: 700;
+      color: #4b2e83;
+      margin-bottom: 22px;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .map-box {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      padding: 13px 12px;
+      min-height: 74px;
+    }
+
+    .map-box strong {
+      display: block;
+      color: #a51c1c;
+      margin-bottom: 4px;
+    }
+
+    .map-box span {
+      font-size: 13.5px;
+      color: #444444;
+    }
+
+    .section-title {
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
+    }
+
+    .year {
+      color: #777777;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #eeeeee;
+      padding-bottom: 5px;
+    }
+
+    .project {
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      border-left: 4px solid #1f78b4;
+      background: #f8fbff;
+    }
+
+    .project:nth-of-type(2n) {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .project:nth-of-type(3n) {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .project-meta {
+      color: #777777;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      margin: 0 0 10px;
+    }
+
+    .project p:last-child {
+      margin-bottom: 0;
+    }
+
+    .keywords {
+      margin-top: 9px;
+      font-size: 14px;
+      color: #555555;
+    }
+
+    .keywords span {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      padding: 3px 8px;
+      margin: 4px 4px 0 0;
+      border-radius: 12px;
+      font-size: 13px;
+    }
+
+    .footer {
+      border-top: 1px solid #eeeeee;
+      text-align: center;
+      padding: 24px;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .sidebar {
+        position: static;
+        text-align: center;
+      }
+
+      .profile-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .side-links {
+        text-align: center;
+      }
+
+      .map-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    <nav class="nav">
+      <a href="index.html">Minarul Islam</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
-</div>
 
-<h2>Current Research Projects</h2>
+  <main class="page">
 
-<div class="project">
-  <h3>ShiftAware-Select</h3>
-  <div class="date">Reliable NLP classification under distribution shift</div>
-  <p>
-    Standard text classifiers often become overconfident when test data comes from a different distribution
-    than the training data. This project addresses that problem by combining uncertainty estimation,
-    calibration, and selective prediction. Instead of forcing the model to answer every input, the method
-    allows the model to abstain on uncertain cases and defer them for human review. This improves reliability
-    under out-of-domain and noisy conditions and reduces high-confidence errors.
-  </p>
-</div>
+```
+<aside class="sidebar">
+  <img src="profile.png" alt="Minarul Islam" class="profile-img" />
 
-<div class="project">
-  <h3>CAGLSAv2</h3>
-  <div class="date">Context-aware sentiment analysis with contrastive clauses</div>
-  <p>
-    Sentiment in real text is often shaped by contrast, such as when one clause reverses or weakens the
-    meaning of another. A sentence-level model can miss this structure and assign the wrong sentiment.
-    This project models contrastive clause information so the model can better understand how different
-    parts of a sentence contribute to the final opinion. The benefit is more reliable sentiment prediction
-    in linguistically complex text.
-  </p>
-</div>
+  <div class="name">Minarul Islam</div>
 
-<div class="project">
-  <h3>Irony-Aware Multitask Sentiment Learning</h3>
-  <div class="date">Sentiment prediction with irony and emotion awareness</div>
-  <p>
-    Social media text often expresses opinion indirectly. A positive word may carry a negative meaning when
-    the post is ironic, sarcastic, or emotionally charged. This project uses multitask learning to connect
-    sentiment prediction with related signals such as irony and emotion. By learning these related tasks
-    together, the model can better handle cases where surface-level words do not match the intended meaning.
-  </p>
-</div>
+  <div class="bio">
+    Ph.D. Candidate<br />
+    Department of Computer Science and Software Engineering<br />
+    Auburn University<br />
+    Research: NLP, Reliable ML, Sentiment Analysis
+  </div>
 
-<div class="project">
-  <h3>Hierarchical Severity Classification with CWE Enrichment</h3>
-  <div class="date">Software vulnerability severity prediction</div>
-  <p>
-    Security reports contain technical descriptions where the most important evidence may appear in only
-    a few sentences. Flat text classification can hide this evidence. This project uses hierarchical modeling
-    to capture sentence-level information and enriches the representation with CWE-based security knowledge.
-    The goal is to support more accurate and interpretable severity classification for software vulnerabilities.
-  </p>
-</div>
+  <ul class="side-links">
+    <li>📍 Auburn, Alabama, USA</li>
+    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+  </ul>
+</aside>
 
-<div class="project">
-  <h3>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis</h3>
-  <div class="date">Structurally informed aspect-level opinion modeling</div>
-  <p>
-    In aspect-based sentiment analysis, the same sentence may contain different opinions about different
-    targets. A broad sentence representation can mix these opinions together. This project combines transformer
-    representations with graph-based structure so the model can focus on the words and relations most relevant
-    to each aspect. The method is designed to improve fine-grained opinion understanding when sentiment depends
-    on local context and dependency structure.
-  </p>
-</div>
+<section class="content">
 
-<div class="project">
-  <h3>Discourse-Aware Domain Adaptation for Sentiment Analysis</h3>
-  <div class="date">Generalizing sentiment models across domains</div>
-  <p>
-    Sentiment models trained in one domain often lose accuracy when applied to another domain because opinion
-    expressions, aspect terms, and writing styles change. This project studies domain adaptation through
-    discourse-aware and span-level sentiment evidence. The goal is to help sentiment models transfer more
-    reliably across domains while preserving the contextual evidence behind each prediction.
-  </p>
-</div>
+  <h1>Research Overview</h1>
 
+  <div class="overview">
+    <p>
+      My research is centered on a practical question: how can language technologies remain reliable
+      when the input text is complex, shifted, or only partially explicit? Modern transformer models
+      perform strongly on many benchmark datasets, but their predictions can become less dependable
+      when sentiment is shaped by contrast, discourse flow, irony, domain-specific wording, or
+      aspect-level opinion.
+    </p>
+
+    <p>
+      I study these limitations through the lens of <strong class="red-text">reliable and context-aware
+      sentiment analysis</strong>. Rather than treating a text instance as a single flat sequence, my work
+      examines the linguistic and structural evidence that supports a prediction. This includes clause-level
+      contrast, task-related auxiliary information, sentence-level security evidence, graph-based aspect
+      structure, and uncertainty under distribution shift.
+    </p>
+
+    <p>
+      The broader goal is to develop NLP methods that are not only accurate, but also more careful in
+      uncertain settings and more faithful to the evidence in the input. This direction connects sentiment
+      analysis, reliable classification, and software security, with emphasis on model behavior in real-world
+      conditions where data rarely follows a clean benchmark setting.
+    </p>
+  </div>
+
+  <div class="research-map">
+    <div class="map-title">Reliable and Context-Aware NLP</div>
+    <div class="map-subtitle">Linguistic Complexity, Distribution Shift, and Security Intelligence</div>
+
+    <div class="map-grid">
+      <div class="map-box">
+        <strong>Reliability under Shift</strong>
+        <span>When test inputs differ from training data, models need uncertainty-aware decision rules.</span>
+      </div>
+
+      <div class="map-box">
+        <strong>Contextual Sentiment</strong>
+        <span>Contrast, discourse order, irony, and emotion can change the intended meaning of text.</span>
+      </div>
+
+      <div class="map-box">
+        <strong>Aspect-Level Opinion</strong>
+        <span>Fine-grained sentiment requires linking opinion evidence to the correct target.</span>
+      </div>
+
+      <div class="map-box">
+        <strong>Security Evidence</strong>
+        <span>Vulnerability severity often depends on a small set of important technical sentences.</span>
+      </div>
+
+      <div class="map-box">
+        <strong>Domain Transfer</strong>
+        <span>Sentiment expressions and aspect terms vary across domains, reducing model robustness.</span>
+      </div>
+
+      <div class="map-box">
+        <strong>Transformer Learning</strong>
+        <span>Language models become more useful when paired with task-aware structure and evidence.</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Current and Recent Projects</h2>
+
+  <div class="year">Reliable NLP under Distribution Shift</div>
+
+  <div class="project">
+    <h3>ShiftAware-Select</h3>
+    <div class="project-meta">Selective prediction for safer text classification</div>
+    <p>
+      Text classifiers are often evaluated as if every input must receive an automatic label. In practice,
+      this assumption is risky when deployment data changes. A model trained on one distribution may still
+      produce confident predictions on unfamiliar or noisy inputs, even when those predictions are wrong.
+    </p>
+    <p>
+      ShiftAware-Select studies this reliability problem by combining calibration, uncertainty estimation,
+      and coverage-controlled selective prediction. The method gives the classifier a way to answer when
+      confidence is supported and to defer uncertain cases for review. This makes the system better aligned
+      with real decision settings where an incorrect automatic answer may be more costly than asking for
+      human judgment.
+    </p>
+    <div class="keywords">
+      <span>Distribution Shift</span>
+      <span>Uncertainty</span>
+      <span>Calibration</span>
+      <span>Selective Prediction</span>
+    </div>
+  </div>
+
+  <div class="year">Context-Aware Sentiment Analysis</div>
+
+  <div class="project">
+    <h3>CAGLSAv2</h3>
+    <div class="project-meta">Modeling contrastive clause information</div>
+    <p>
+      Many sentiment errors occur because the final opinion of a sentence is not simply the average of
+      its words. A review may begin positively and end with a negative contrast, or it may use one clause
+      to qualify the meaning of another. These cases are difficult for models that rely mainly on broad
+      sentence representations.
+    </p>
+    <p>
+      CAGLSAv2 focuses on this clause-level structure. It uses contrastive information to represent how
+      different parts of a sentence interact before the final sentiment decision is made. The work supports
+      a more context-sensitive view of sentiment, especially for text where contrast changes the direction
+      or strength of the expressed opinion.
+    </p>
+    <div class="keywords">
+      <span>Contrastive Clauses</span>
+      <span>Context-Aware Learning</span>
+      <span>Sentiment Analysis</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Irony-Aware Multitask Sentiment Learning</h3>
+    <div class="project-meta">Handling non-literal opinion in social media text</div>
+    <p>
+      Social media sentiment is often indirect. A post may contain positive words but communicate criticism,
+      frustration, or negative opinion through irony or emotional framing. When a model reads only the
+      surface wording, it can miss the intended sentiment.
+    </p>
+    <p>
+      This work treats irony and emotion as related sources of supervision rather than separate afterthoughts.
+      By learning sentiment together with these auxiliary tasks, the model receives additional context about
+      how opinion is expressed. The resulting framework is designed for settings where literal word meaning
+      and intended sentiment do not always match.
+    </p>
+    <div class="keywords">
+      <span>Irony</span>
+      <span>Emotion</span>
+      <span>Multitask Learning</span>
+      <span>Social Media Text</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>DualGraph-RoBERTa for Aspect-Based Sentiment Analysis</h3>
+    <div class="project-meta">Linking opinion evidence to the correct aspect</div>
+    <p>
+      Aspect-based sentiment analysis becomes difficult when a sentence discusses multiple targets.
+      The same sentence may praise one aspect and criticize another, so a single sentence-level label is
+      not enough. The model needs to know which words support the opinion toward each specific target.
+    </p>
+    <p>
+      DualGraph-RoBERTa combines transformer representations with graph-based structure to preserve these
+      aspect-specific relationships. The goal is to separate overlapping opinions and identify the local
+      evidence that matters for each aspect. This supports more fine-grained sentiment understanding than
+      standard sentence-level classification.
+    </p>
+    <div class="keywords">
+      <span>ABSA</span>
+      <span>Graph Learning</span>
+      <span>RoBERTa</span>
+      <span>Opinion Structure</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Discourse-Aware Domain Adaptation for Sentiment Analysis</h3>
+    <div class="project-meta">Improving transfer across domains</div>
+    <p>
+      A sentiment model trained on one domain often becomes less reliable in another. The challenge is not
+      only that the vocabulary changes. Domains also differ in how people describe aspects, qualify opinions,
+      and organize sentiment-bearing spans.
+    </p>
+    <p>
+      This research direction studies domain adaptation through discourse-aware and span-level evidence.
+      The aim is to preserve the context behind a prediction while helping the model transfer to new domains
+      where opinion expressions and aspect terminology may be different.
+    </p>
+    <div class="keywords">
+      <span>Domain Adaptation</span>
+      <span>Discourse Evidence</span>
+      <span>Span-Level Sentiment</span>
+      <span>Generalization</span>
+    </div>
+  </div>
+
+  <div class="year">NLP for Software Security</div>
+
+  <div class="project">
+    <h3>Hierarchical Severity Classification with CWE Enrichment</h3>
+    <div class="project-meta">Structured severity prediction for vulnerability reports</div>
+    <p>
+      Software vulnerability reports contain dense technical descriptions. Important severity evidence may
+      appear in a few sentences, while the rest of the report provides background or contextual information.
+      A flat document representation can obscure this structure and make the prediction harder to interpret.
+    </p>
+    <p>
+      This work uses hierarchical modeling to retain sentence-level evidence and enriches the representation
+      with CWE-based security knowledge. The approach is designed to make severity classification more
+      evidence-aware, so the prediction is better connected to the technical details that support it.
+    </p>
+    <div class="keywords">
+      <span>Software Security</span>
+      <span>CWE</span>
+      <span>Severity Classification</span>
+      <span>Sentence Evidence</span>
+    </div>
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Minarul Islam. Powered by GitHub Pages.
+  </footer>
+
+</body>
+</html>
