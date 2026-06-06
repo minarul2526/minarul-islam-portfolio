@@ -37,64 +37,64 @@
     }
 
     .nav {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 17px 20px;
+      padding: 19px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 27px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
     .nav a {
-      color: #555555;
-      font-weight: 500;
-      font-size: 15px;
+      color: #505965;
+      font-weight: 650;
+      font-size: 16.5px;
     }
 
     .nav a:first-child {
-      font-weight: 700;
-      color: #444444;
+      font-weight: 800;
+      color: #222222;
     }
 
     .page {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 42px 20px;
+      padding: 46px 20px;
       display: grid;
       grid-template-columns: 250px 1fr;
-      gap: 48px;
+      gap: 50px;
     }
 
     .sidebar {
       position: sticky;
-      top: 92px;
+      top: 96px;
       align-self: start;
     }
 
     .profile-img {
-      width: 155px;
-      height: 155px;
+      width: 165px;
+      height: 165px;
       object-fit: cover;
       border-radius: 50%;
       border: 1px solid #d9d9d9;
       display: block;
       margin-bottom: 22px;
       background: #f1f1f1;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
     }
 
     .name {
-      font-size: 21px;
-      font-weight: 700;
+      font-size: 23px;
+      font-weight: 800;
       line-height: 1.2;
       color: #333333;
       margin-bottom: 8px;
     }
 
     .bio {
-      font-size: 14px;
+      font-size: 14.5px;
       color: #444444;
       margin-bottom: 18px;
     }
@@ -103,7 +103,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 14px;
+      font-size: 14.5px;
     }
 
     .side-links li {
@@ -112,11 +112,11 @@
     }
 
     .content h1 {
-      font-size: 32px;
+      font-size: 34px;
       line-height: 1.2;
       margin: 0 0 12px;
       color: #444444;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .download-line {
@@ -131,7 +131,7 @@
       background: #1f78b4;
       color: #ffffff;
       border-radius: 3px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .download-button:hover {
@@ -145,7 +145,7 @@
       color: #444444;
       margin-top: 38px;
       margin-bottom: 18px;
-      font-weight: 700;
+      font-weight: 800;
       border-bottom: 2px solid #eeeeee;
       padding-bottom: 6px;
     }
@@ -191,7 +191,7 @@
 
     .training-title {
       font-size: 23px;
-      font-weight: 700;
+      font-weight: 800;
       color: #7a007a;
       margin-bottom: 4px;
     }
@@ -199,21 +199,21 @@
     .training-meta {
       font-size: 16px;
       color: #222222;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
     .training-meta strong {
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .blue-text {
       color: #1f78b4;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .red-text {
       color: #a51c1c;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .summary-grid {
@@ -244,6 +244,39 @@
       display: block;
       margin-bottom: 5px;
       color: #333333;
+    }
+
+    .tag-row {
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      padding: 3px 9px;
+      margin: 4px 4px 0 0;
+      border-radius: 12px;
+      font-size: 13px;
+      color: #444444;
+      font-weight: 600;
+    }
+
+    .cv-box {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      border-left: 4px solid #1f78b4;
+      padding: 18px 20px;
+      margin-bottom: 30px;
+    }
+
+    .cv-box p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .cv-box p:last-child {
+      margin-bottom: 0;
     }
 
     .footer {
@@ -295,12 +328,13 @@
 
   <div class="topbar">
     <nav class="nav">
-      <a href="index.html">Minarul Islam</a>
-      <a href="research.html">Research</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.html">Home Page</a>
+      <a href="research.html">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
       <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching</a>
+      <a href="teaching.html">Teaching Experience</a>
       <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -313,17 +347,17 @@
 
   <div class="bio">
     Ph.D. Candidate<br />
-    Department of Computer Science and Software Engineering<br />
+    Computer Science and Software Engineering<br />
     Auburn University<br />
-    Research: NLP, Reliable ML, Sentiment Analysis
+    Reliable NLP • Sentiment Analysis • AI Security
   </div>
 
   <ul class="side-links">
     <li>📍 Auburn, Alabama, USA</li>
     <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
     <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
     <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
   </ul>
 </aside>
@@ -335,6 +369,16 @@
   <div class="download-line">
     You can download my full CV
     <a class="download-button" href="Minarul_Islam_CV.pdf" target="_blank">here</a>
+  </div>
+
+  <div class="cv-box">
+    <p>
+      I am a Ph.D. candidate in Computer Science and Software Engineering at Auburn University. My work focuses on reliable NLP, context-aware sentiment analysis, software security, applied AI, and machine learning for real-world decision support.
+    </p>
+
+    <p>
+      This page provides a short academic CV summary. The full PDF version includes my complete education, publications, research experience, teaching experience, technical skills, and service activities.
+    </p>
   </div>
 
   <h2 class="section-title">Academic Training</h2>
@@ -369,7 +413,7 @@
         <strong>M.Sc. by Research in Electrical and Electronic Engineering</strong> [2018 – 2021]
       </div>
       <div class="training-meta">
-        Research focus: Machine learning, biomedical signal applications, ultra-wideband systems, and non-invasive monitoring
+        Research focus: Machine Learning, Biomedical Signal Applications, Ultra-Wideband Systems, and Non-Invasive Monitoring
       </div>
       <div class="training-meta">
         This training strengthened my foundation in research design, experimental evaluation, signal processing, and applied machine learning.
@@ -385,9 +429,22 @@
         <strong>B.Sc. in Computer Science and Engineering</strong>
       </div>
       <div class="training-meta">
-        Undergraduate training in computer science, programming, algorithms, software development, database systems, and computing fundamentals.
+        Undergraduate training in programming, algorithms, database systems, software development, networking, and computing fundamentals.
       </div>
     </div>
+  </div>
+
+  <h2 class="section-title">Selected Graduate Coursework</h2>
+
+  <div class="tag-row">
+    <span class="tag">Advanced Topics in Algorithms</span>
+    <span class="tag">Machine Learning</span>
+    <span class="tag">Data Mining</span>
+    <span class="tag">Advanced Computer Architecture</span>
+    <span class="tag">Advanced Operating Systems</span>
+    <span class="tag">Computer Networks</span>
+    <span class="tag">Experimental Statistics I</span>
+    <span class="tag">Research and Dissertation</span>
   </div>
 
   <h2 class="section-title">CV Summary</h2>
@@ -395,22 +452,22 @@
   <div class="summary-grid">
     <div class="summary-card">
       <strong>Research Profile</strong>
-      My research focuses on reliable NLP, context-aware sentiment analysis, distribution shift, software security, and AI systems.
+      Reliable NLP, context-aware sentiment analysis, distribution shift, software security, speech processing, sensing systems, and biomedical AI.
     </div>
 
     <div class="summary-card">
       <strong>Teaching Profile</strong>
-      Graduate Teaching Assistant experience at Auburn University in Senior Design Project and Software Quality Assurance.
+      Graduate Teaching Assistant experience at Auburn University in Senior Design Project and Software Quality Assurance, with additional teaching support experience in Malaysia and Bangladesh.
     </div>
 
     <div class="summary-card">
       <strong>Technical Areas</strong>
-      Machine learning, deep learning, transformer-based NLP, sentiment analysis, software security, data analysis, and speech processing.
+      Machine learning, deep learning, transformer-based NLP, sentiment analysis, software security, data analysis, signal processing, and speech processing.
     </div>
 
     <div class="summary-card">
       <strong>Professional Direction</strong>
-      Interested in academic, research, and industry roles focused on AI, NLP, ML, software security, and applied intelligent systems.
+      Interested in academic, research, and industry roles focused on AI, NLP, machine learning, software security, and applied intelligent systems.
     </div>
   </div>
 
