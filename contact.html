@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -37,64 +36,64 @@
     }
 
     .nav {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 17px 20px;
+      padding: 19px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 27px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
     .nav a {
-      color: #555555;
-      font-weight: 500;
-      font-size: 15px;
+      color: #505965;
+      font-weight: 650;
+      font-size: 16.5px;
     }
 
     .nav a:first-child {
-      font-weight: 700;
-      color: #444444;
+      font-weight: 800;
+      color: #222222;
     }
 
     .page {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 42px 20px;
+      padding: 46px 20px;
       display: grid;
       grid-template-columns: 250px 1fr;
-      gap: 48px;
+      gap: 50px;
     }
 
     .sidebar {
       position: sticky;
-      top: 92px;
+      top: 96px;
       align-self: start;
     }
 
     .profile-img {
-      width: 155px;
-      height: 155px;
+      width: 165px;
+      height: 165px;
       object-fit: cover;
       border-radius: 50%;
       border: 1px solid #d9d9d9;
       display: block;
       margin-bottom: 22px;
       background: #f1f1f1;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
     }
 
     .name {
-      font-size: 21px;
-      font-weight: 700;
+      font-size: 23px;
+      font-weight: 800;
       line-height: 1.2;
       color: #333333;
       margin-bottom: 8px;
     }
 
     .bio {
-      font-size: 14px;
+      font-size: 14.5px;
       color: #444444;
       margin-bottom: 18px;
     }
@@ -103,7 +102,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 14px;
+      font-size: 14.5px;
     }
 
     .side-links li {
@@ -112,11 +111,11 @@
     }
 
     .content h1 {
-      font-size: 32px;
+      font-size: 34px;
       line-height: 1.2;
-      margin: 0 0 18px;
+      margin: 0 0 20px;
       color: #444444;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .content h2 {
@@ -124,7 +123,7 @@
       color: #444444;
       margin-top: 38px;
       margin-bottom: 16px;
-      font-weight: 700;
+      font-weight: 800;
       border-bottom: 2px solid #eeeeee;
       padding-bottom: 6px;
     }
@@ -132,14 +131,15 @@
     .intro {
       background: #f7fbff;
       border: 1px solid #e5f0fa;
-      padding: 18px 22px;
-      margin-bottom: 28px;
-      max-width: 900px;
+      border-left: 4px solid #1f78b4;
+      padding: 20px 24px;
+      max-width: 940px;
+      margin-bottom: 34px;
     }
 
     .intro p {
       margin-top: 0;
-      margin-bottom: 13px;
+      margin-bottom: 14px;
     }
 
     .intro p:last-child {
@@ -148,50 +148,51 @@
 
     .blue-text {
       color: #1f78b4;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .red-text {
       color: #a51c1c;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .purple-text {
       color: #7a007a;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
-      max-width: 900px;
+      max-width: 940px;
       margin-top: 18px;
+      margin-bottom: 34px;
     }
 
     .contact-card {
       background: #fbfbfb;
       border: 1px solid #eeeeee;
       border-left: 4px solid #1f78b4;
-      padding: 16px 18px;
-      min-height: 95px;
+      padding: 18px 20px;
+      min-height: 105px;
     }
 
     .contact-card:nth-child(2n) {
-      border-left-color: #a51c1c;
       background: #fffafa;
+      border-left-color: #a51c1c;
     }
 
     .contact-card:nth-child(3n) {
-      border-left-color: #7a007a;
       background: #fbf8ff;
+      border-left-color: #7a007a;
     }
 
-    .contact-card strong {
-      display: block;
+    .contact-card h3 {
+      margin: 0 0 8px;
       color: #333333;
-      margin-bottom: 6px;
-      font-size: 17px;
+      font-size: 19px;
+      font-weight: 800;
     }
 
     .contact-card p {
@@ -199,22 +200,39 @@
       color: #444444;
     }
 
-    .collaboration-box {
-      max-width: 900px;
+    .collab-box {
+      max-width: 940px;
       background: #fffdf7;
       border: 1px solid #f0e4c8;
-      border-left: 4px solid #c77c02;
-      padding: 18px 22px;
-      margin-top: 20px;
+      border-left: 4px solid #c77700;
+      padding: 20px 24px;
+      margin-top: 18px;
+      margin-bottom: 34px;
     }
 
-    .collaboration-box p {
+    .collab-box p {
       margin-top: 0;
-      margin-bottom: 13px;
+      margin-bottom: 14px;
     }
 
-    .collaboration-box p:last-child {
+    .collab-box p:last-child {
       margin-bottom: 0;
+    }
+
+    .tag-row {
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      padding: 3px 9px;
+      margin: 4px 4px 0 0;
+      border-radius: 12px;
+      font-size: 13px;
+      color: #444444;
+      font-weight: 600;
     }
 
     .footer {
@@ -250,113 +268,120 @@
       }
     }
   </style>
-
 </head>
 
 <body>
 
   <div class="topbar">
     <nav class="nav">
-      <a href="index.html">Minarul Islam</a>
-      <a href="research.html">Research</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.html">Home Page</a>
+      <a href="research.html">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
       <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching</a>
+      <a href="teaching.html">Teaching Experience</a>
       <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 
   <main class="page">
-<aside class="sidebar">
-  <img src="profile.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="name">Minarul Islam</div>
+    <aside class="sidebar">
+      <img src="profile.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="bio">
-    Ph.D. Candidate<br />
-    Department of Computer Science and Software Engineering<br />
-    Auburn University<br />
-    Research: NLP, Reliable ML, Sentiment Analysis
-  </div>
+      <div class="name">Minarul Islam</div>
 
-  <ul class="side-links">
-    <li>📍 Auburn, Alabama, USA</li>
-    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
-    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
-    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
-  </ul>
-</aside>
+      <div class="bio">
+        Ph.D. Candidate<br />
+        Computer Science and Software Engineering<br />
+        Auburn University<br />
+        Reliable NLP • Sentiment Analysis • AI Security
+      </div>
 
-<section class="content">
+      <ul class="side-links">
+        <li>📍 Auburn, Alabama, USA</li>
+        <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+        <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
+        <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
+        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+      </ul>
+    </aside>
 
-  <h1>Contact</h1>
+    <section class="content">
 
-  <div class="intro">
-    <p>
-      I am currently a Ph.D. candidate in the Department of Computer Science and Software Engineering at
-      <strong class="blue-text">Auburn University</strong>. My research interests include
-      <strong class="red-text">natural language processing</strong>,
-      <strong class="purple-text">reliable machine learning</strong>, sentiment analysis, software security,
-      and applied AI systems.
-    </p>
+      <h1>Contact</h1>
 
-    <p>
-      I welcome communication about research collaboration, academic opportunities, teaching, mentoring,
-      and industry research roles related to NLP, ML, AI security, and software engineering.
-    </p>
-  </div>
+      <div class="intro">
+        <p>
+          I am a Ph.D. candidate in Computer Science and Software Engineering at <strong class="blue-text">Auburn University</strong>. My research interests include <strong class="red-text">natural language processing</strong>, <strong class="purple-text">reliable machine learning</strong>, sentiment analysis, software security, and applied AI systems.
+        </p>
 
-  <h2>Contact Information</h2>
+        <p>
+          I welcome communication about research collaboration, academic opportunities, teaching, mentoring, and industry research roles related to NLP, machine learning, AI security, and software engineering.
+        </p>
+      </div>
 
-  <div class="contact-grid">
-    <div class="contact-card">
-      <strong>Email</strong>
-      <p><a href="mailto:mzi0030@auburn.edu">mzi0030@auburn.edu</a></p>
-    </div>
+      <h2>Contact Information</h2>
 
-    <div class="contact-card">
-      <strong>Affiliation</strong>
-      <p>Department of Computer Science and Software Engineering<br />Auburn University</p>
-    </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:mzi0030@auburn.edu">mzi0030@auburn.edu</a></p>
+        </div>
 
-    <div class="contact-card">
-      <strong>Location</strong>
-      <p>Auburn, Alabama, USA</p>
-    </div>
+        <div class="contact-card">
+          <h3>Affiliation</h3>
+          <p>
+            Department of Computer Science and Software Engineering<br />
+            Auburn University
+          </p>
+        </div>
 
-    <div class="contact-card">
-      <strong>GitHub</strong>
-      <p><a href="https://github.com/minarul2526" target="_blank">github.com/minarul2526</a></p>
-    </div>
+        <div class="contact-card">
+          <h3>Location</h3>
+          <p>Auburn, Alabama, USA</p>
+        </div>
 
-<div class="contact-card">
-  <strong>Google Scholar</strong>
-  <p><a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar Profile</a></p>
-</div>
+        <div class="contact-card">
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/minarul2526" target="_blank">github.com/minarul2526</a></p>
+        </div>
 
-<div class="contact-card">
-  <strong>LinkedIn</strong>
-  <p><a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn Profile</a></p>
-</div>
+        <div class="contact-card">
+          <h3>Google Scholar</h3>
+          <p><a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar Profile</a></p>
+        </div>
 
-  <h2>Collaboration and Opportunities</h2>
+        <div class="contact-card">
+          <h3>LinkedIn</h3>
+          <p><a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn Profile</a></p>
+        </div>
+      </div>
 
-  <div class="collaboration-box">
-    <p>
-      I am interested in research and professional opportunities related to reliable NLP, sentiment analysis,
-      distribution shift, uncertainty-aware machine learning, software security, speech processing, and applied AI.
-    </p>
+      <h2>Collaboration and Opportunities</h2>
 
-    <p>
-      I am also open to academic collaboration, teaching-focused opportunities, and interdisciplinary projects
-      involving machine learning, software engineering, data science, and real-world AI systems.
-    </p>
-  </div>
+      <div class="collab-box">
+        <p>
+          I am interested in academic, research, and professional opportunities related to reliable NLP, context-aware sentiment analysis, distribution shift, uncertainty-aware machine learning, software security, speech processing, and applied AI.
+        </p>
 
-</section>
+        <p>
+          I am also open to collaboration on interdisciplinary projects involving machine learning, software engineering, data science, AI security, and real-world intelligent systems.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag">Research Collaboration</span>
+          <span class="tag">Academic Opportunities</span>
+          <span class="tag">Teaching</span>
+          <span class="tag">Industry Research</span>
+          <span class="tag">Reliable NLP</span>
+          <span class="tag">AI Security</span>
+        </div>
+      </div>
+
+    </section>
 
   </main>
 
