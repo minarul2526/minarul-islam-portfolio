@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Teaching | Minarul Islam</title>
+  <title>Teaching Experience | Minarul Islam</title>
 
   <style>
     body {
@@ -37,64 +37,64 @@
     }
 
     .nav {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 17px 20px;
+      padding: 19px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 27px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
     .nav a {
-      color: #555555;
-      font-weight: 500;
-      font-size: 15px;
+      color: #505965;
+      font-weight: 650;
+      font-size: 16.5px;
     }
 
     .nav a:first-child {
-      font-weight: 700;
-      color: #444444;
+      font-weight: 800;
+      color: #222222;
     }
 
     .page {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 42px 20px;
+      padding: 46px 20px;
       display: grid;
       grid-template-columns: 250px 1fr;
-      gap: 48px;
+      gap: 50px;
     }
 
     .sidebar {
       position: sticky;
-      top: 92px;
+      top: 96px;
       align-self: start;
     }
 
     .profile-img {
-      width: 155px;
-      height: 155px;
+      width: 165px;
+      height: 165px;
       object-fit: cover;
       border-radius: 50%;
       border: 1px solid #d9d9d9;
       display: block;
       margin-bottom: 22px;
       background: #f1f1f1;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
     }
 
     .name {
-      font-size: 21px;
-      font-weight: 700;
+      font-size: 23px;
+      font-weight: 800;
       line-height: 1.2;
       color: #333333;
       margin-bottom: 8px;
     }
 
     .bio {
-      font-size: 14px;
+      font-size: 14.5px;
       color: #444444;
       margin-bottom: 18px;
     }
@@ -103,7 +103,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 14px;
+      font-size: 14.5px;
     }
 
     .side-links li {
@@ -112,11 +112,11 @@
     }
 
     .content h1 {
-      font-size: 32px;
+      font-size: 34px;
       line-height: 1.2;
-      margin: 0 0 22px;
+      margin: 0 0 18px;
       color: #444444;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .content h2 {
@@ -124,7 +124,7 @@
       color: #444444;
       margin-top: 40px;
       margin-bottom: 16px;
-      font-weight: 700;
+      font-weight: 800;
       border-bottom: 2px solid #eeeeee;
       padding-bottom: 6px;
     }
@@ -132,14 +132,14 @@
     .intro {
       background: #f7fbff;
       border: 1px solid #e5f0fa;
-      padding: 18px 22px;
+      padding: 20px 24px;
       margin-bottom: 30px;
-      max-width: 900px;
+      max-width: 940px;
     }
 
     .intro p {
       margin-top: 0;
-      margin-bottom: 13px;
+      margin-bottom: 14px;
     }
 
     .intro p:last-child {
@@ -148,43 +148,60 @@
 
     .blue-text {
       color: #1f78b4;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .red-text {
       color: #a51c1c;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .purple-text {
       color: #7a007a;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .teach-item {
       margin-bottom: 34px;
-      max-width: 900px;
+      max-width: 940px;
+      border: 1px solid #eeeeee;
+      background: #ffffff;
+    }
+
+    .teach-header {
+      padding: 16px 20px;
+      background: #f8fbff;
+      border-left: 5px solid #1f78b4;
+    }
+
+    .teach-item:nth-of-type(2n) .teach-header {
+      background: #fffafa;
+      border-left-color: #a51c1c;
+    }
+
+    .teach-item:nth-of-type(3n) .teach-header {
+      background: #fbf8ff;
+      border-left-color: #7a007a;
     }
 
     .teach-title {
       font-size: 23px;
-      font-weight: 700;
-      color: #45a8c4;
-      text-decoration: underline;
-      margin-bottom: 8px;
+      font-weight: 800;
+      color: #a51c1c;
+      margin-bottom: 4px;
     }
 
     .teach-meta {
-      font-size: 17px;
-      color: #444444;
-      margin-bottom: 14px;
+      font-size: 16px;
+      color: #555555;
+      font-weight: 700;
     }
 
-    .teach-meta em {
-      font-style: italic;
+    .teach-body {
+      padding: 18px 22px 20px;
     }
 
-    .teach-item p {
+    .teach-body p {
       margin-top: 0;
       margin-bottom: 13px;
     }
@@ -198,12 +215,47 @@
       margin-bottom: 7px;
     }
 
+    .course-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .course-card {
+      background: #fbfbfb;
+      border: 1px solid #eeeeee;
+      border-left: 4px solid #1f78b4;
+      padding: 13px 15px;
+    }
+
+    .course-card:nth-child(2n) {
+      background: #fffafa;
+      border-left-color: #a51c1c;
+    }
+
+    .course-card:nth-child(3n) {
+      background: #fbf8ff;
+      border-left-color: #7a007a;
+    }
+
+    .course-card strong {
+      display: block;
+      color: #333333;
+      margin-bottom: 4px;
+    }
+
+    .course-card span {
+      color: #555555;
+      font-size: 14.5px;
+    }
+
     .strength-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin-top: 18px;
-      max-width: 900px;
+      max-width: 940px;
     }
 
     .strength-card {
@@ -227,6 +279,40 @@
       color: #333333;
       display: block;
       margin-bottom: 5px;
+    }
+
+    .tag-row {
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      padding: 3px 9px;
+      margin: 4px 4px 0 0;
+      border-radius: 12px;
+      font-size: 13px;
+      color: #444444;
+      font-weight: 600;
+    }
+
+    .interest-box {
+      background: #fffdf7;
+      border: 1px solid #f0e4c8;
+      border-left: 4px solid #c77700;
+      padding: 18px 22px;
+      max-width: 940px;
+      margin-top: 18px;
+    }
+
+    .interest-box p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .interest-box p:last-child {
+      margin-bottom: 0;
     }
 
     .footer {
@@ -257,7 +343,8 @@
         text-align: center;
       }
 
-      .strength-grid {
+      .strength-grid,
+      .course-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -269,12 +356,13 @@
 
   <div class="topbar">
     <nav class="nav">
-      <a href="index.html">Minarul Islam</a>
-      <a href="research.html">Research</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.html">Home Page</a>
+      <a href="research.html">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
       <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching</a>
+      <a href="teaching.html">Teaching Experience</a>
       <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -287,105 +375,206 @@
 
   <div class="bio">
     Ph.D. Candidate<br />
-    Department of Computer Science and Software Engineering<br />
+    Computer Science and Software Engineering<br />
     Auburn University<br />
-    Research: NLP, Reliable ML, Sentiment Analysis
+    Reliable NLP • Sentiment Analysis • AI Security
   </div>
 
   <ul class="side-links">
     <li>📍 Auburn, Alabama, USA</li>
     <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
     <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="#" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="#" target="_blank">LinkedIn</a></li>
+    <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
+    <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
     <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
   </ul>
 </aside>
 
 <section class="content">
 
-  <h1>Teaching</h1>
+  <h1>Teaching Experience</h1>
 
   <div class="intro">
     <p>
-      My teaching experience spans <strong class="blue-text">computer science, software engineering, project-based learning,
-      grading, mentoring, and academic support</strong>. At Auburn University, I have served as a Graduate Teaching
-      Assistant for multiple semesters while supporting large undergraduate and graduate courses.
+      My teaching experience spans computer science, software engineering, project-based learning, laboratory instruction, grading, office hours, and student mentoring. I have worked with students in the United States, Malaysia, and Bangladesh.
     </p>
 
     <p>
-      My teaching work focuses on helping students move from technical concepts to working systems. I have supported
-      student teams, reviewed project progress, graded technical assignments, held office hours, managed course logistics,
-      and helped students communicate their design and implementation decisions more clearly.
+      My teaching style is practical and student-centered. I focus on clear explanation, guided practice, timely feedback, and helping students connect concepts with working systems.
     </p>
   </div>
 
-  <h2>Teaching Experience</h2>
+  <h2>University Teaching and Assistantship Experience</h2>
 
   <div class="teach-item">
-    <div class="teach-title">Graduate Teaching Assistant: Senior Design Project</div>
-    <div class="teach-meta">Undergraduate capstone course, <em>Auburn University</em>, 2022–Present</div>
+    <div class="teach-header">
+      <div class="teach-title">Graduate Teaching Assistant: Senior Design Project</div>
+      <div class="teach-meta">Undergraduate capstone course, Auburn University, 2022–Present</div>
+    </div>
 
-    <p>
-      I have supported Senior Design Project for eight consecutive semesters at Auburn University. This course requires
-      students to work in teams, interact with project sponsors, develop working software systems, and present their
-      progress through design reviews, demonstrations, and final deliverables.
-    </p>
+    <div class="teach-body">
+      <p>
+        I have supported Senior Design Project for eight consecutive semesters at Auburn University. The course guides students through team-based software engineering projects. Students work with sponsors, prepare design documents, build working systems, and present final demonstrations.
+      </p>
 
-    <p>
-      My role has involved mentoring student teams, supporting project planning, reviewing progress, grading technical
-      submissions, helping with demonstrations, managing course logistics, and communicating expectations across large
-      classes. This experience has strengthened my ability to guide students through open-ended software engineering
-      problems where technical work, teamwork, documentation, and communication all matter.
-    </p>
+      <p>
+        My role includes project mentoring, milestone review, grading, demonstration support, course logistics, and communication with large student teams. This experience strengthened my ability to support open-ended technical work where planning, implementation, testing, documentation, and communication all matter.
+      </p>
 
-    <ul class="detail-list">
-      <li>Supported large classes with more than 100 students per semester.</li>
-      <li>Guided student teams through project planning, milestones, demonstrations, and final presentations.</li>
-      <li>Reviewed technical reports, design documents, implementation progress, and sponsor-facing deliverables.</li>
-      <li>Helped students improve teamwork, communication, and software engineering practice.</li>
-    </ul>
+      <ul class="detail-list">
+        <li>Supported large classes with more than 100 students per semester.</li>
+        <li>Guided student teams through project planning, milestone reviews, demonstrations, and final presentations.</li>
+        <li>Reviewed technical reports, design documents, implementation progress, and sponsor-facing deliverables.</li>
+        <li>Helped students improve teamwork, technical communication, and software engineering practice.</li>
+      </ul>
+
+      <div class="tag-row">
+        <span class="tag">Capstone Projects</span>
+        <span class="tag">Student Mentoring</span>
+        <span class="tag">Software Engineering</span>
+        <span class="tag">Large Classes</span>
+      </div>
+    </div>
   </div>
 
   <div class="teach-item">
-    <div class="teach-title">Graduate Teaching Assistant: Software Quality Assurance</div>
-    <div class="teach-meta">Undergraduate and graduate course, <em>Auburn University</em>, multiple semesters</div>
+    <div class="teach-header">
+      <div class="teach-title">Graduate Teaching Assistant: Software Quality Assurance</div>
+      <div class="teach-meta">Undergraduate and graduate course, Auburn University, Fall 2022, Spring 2023, Fall 2023</div>
+    </div>
 
-    <p>
-      I have served as a Graduate Teaching Assistant for Software Quality Assurance for three semesters. The course
-      covers software testing, quality processes, verification, validation, and practical techniques for improving
-      software reliability.
-    </p>
+    <div class="teach-body">
+      <p>
+        I served as a Graduate Teaching Assistant for Software Quality Assurance across undergraduate and graduate sections. The course covers testing methods, verification, validation, defect analysis, and software reliability.
+      </p>
 
-    <p>
-      My responsibilities included grading assignments and exams, holding office hours, answering student questions,
-      supporting course logistics, and providing feedback on technical work. This role gave me direct experience with
-      both undergraduate and graduate students and helped me develop a clear, student-centered style for explaining
-      software engineering concepts.
-    </p>
+      <p>
+        I supported grading, office hours, student questions, course logistics, and feedback on technical work. This role gave me direct experience helping students understand both the theory and practice of software quality.
+      </p>
 
-    <ul class="detail-list">
-      <li>Supported grading for assignments, exams, and course activities.</li>
-      <li>Held office hours and helped students understand testing and quality assurance concepts.</li>
-      <li>Provided feedback on technical work and helped students connect course ideas to practical software development.</li>
-      <li>Assisted with Canvas updates, course communication, and student support.</li>
-    </ul>
+      <ul class="detail-list">
+        <li>Graded programming assignments, reports, exams, and course activities.</li>
+        <li>Held office hours to support students with testing concepts and implementation issues.</li>
+        <li>Helped students connect software quality concepts with practical development workflows.</li>
+        <li>Assisted with Canvas updates, course communication, grading schedules, and student support.</li>
+      </ul>
+
+      <div class="tag-row">
+        <span class="tag">Software Testing</span>
+        <span class="tag">Quality Assurance</span>
+        <span class="tag">Verification</span>
+        <span class="tag">Office Hours</span>
+      </div>
+    </div>
   </div>
 
   <div class="teach-item">
-    <div class="teach-title">Teaching and Academic Support Experience</div>
-    <div class="teach-meta">Graduate study period, <em>Universiti Malaysia Pahang</em>, Malaysia</div>
+    <div class="teach-header">
+      <div class="teach-title">Graduate Teaching Assistant: Engineering and Computing Courses</div>
+      <div class="teach-meta">Universiti Malaysia Pahang, Malaysia, 2018–2021</div>
+    </div>
 
-    <p>
-      During my graduate study at Universiti Malaysia Pahang, I gained early experience in academic support, research-based
-      learning, and student-facing technical discussion. This period helped me build the foundation for my later teaching
-      work in computer science and software engineering.
-    </p>
+    <div class="teach-body">
+      <p>
+        During my M.Sc. by Research at Universiti Malaysia Pahang, I supported teaching and laboratory instruction in engineering and computing courses. The work involved helping students understand signal processing, database systems, deep learning, and final-year design projects.
+      </p>
 
-    <p>
-      The experience was especially useful for developing patience in explaining technical ideas, organizing research tasks,
-      and communicating engineering concepts to students and peers from different backgrounds.
-    </p>
+      <div class="course-grid">
+        <div class="course-card">
+          <strong>Digital Signal Processing</strong>
+          <span>Supported signal analysis, filtering, frequency-domain processing, MATLAB, Python, FFT, and filter design.</span>
+        </div>
+
+        <div class="course-card">
+          <strong>Senior Design Project</strong>
+          <span>Mentored student teams on problem definition, design planning, prototype development, reports, and final presentation.</span>
+        </div>
+
+        <div class="course-card">
+          <strong>Database Management</strong>
+          <span>Assisted students with schema design, normalization, SQL, transactions, and database project work.</span>
+        </div>
+
+        <div class="course-card">
+          <strong>Deep Learning</strong>
+          <span>Supported neural network concepts, CNNs, RNNs, LSTMs, TensorFlow, Keras, model training, and evaluation.</span>
+        </div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">MATLAB</span>
+        <span class="tag">Python</span>
+        <span class="tag">Databases</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Lab Instruction</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="teach-item">
+    <div class="teach-header">
+      <div class="teach-title">Lecturer: Computer Technology Courses</div>
+      <div class="teach-meta">Model Polytechnique Institute, Jessore, Bangladesh, 2017–2018</div>
+    </div>
+
+    <div class="teach-body">
+      <p>
+        Before my graduate studies, I worked as a Lecturer at Model Polytechnique Institute. I taught theory and laboratory courses in computer technology. This role gave me early full-classroom teaching experience and helped me develop a strong foundation in course delivery and student assessment.
+      </p>
+
+      <div class="course-grid">
+        <div class="course-card">
+          <strong>Programming in C and Data Structures</strong>
+          <span>Taught programming logic, syntax, algorithms, linked lists, stacks, queues, and sorting methods.</span>
+        </div>
+
+        <div class="course-card">
+          <strong>Database Management Systems</strong>
+          <span>Guided students through relational design, normalization, SQL queries, and practical database exercises.</span>
+        </div>
+
+        <div class="course-card">
+          <strong>Computer Networks and Operating Systems</strong>
+          <span>Explained layered network architecture, protocols, process scheduling, and file system concepts.</span>
+        </div>
+
+        <div class="course-card">
+          <strong>Computer Fundamentals, AI, DSP, and Basic Electrical Engineering</strong>
+          <span>Delivered foundational computing and engineering instruction through lectures, labs, assignments, and exams.</span>
+        </div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">Lecturing</span>
+        <span class="tag">Laboratory Teaching</span>
+        <span class="tag">Assessment</span>
+        <span class="tag">Student Support</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="teach-item">
+    <div class="teach-header">
+      <div class="teach-title">Private Tutor and Coaching Instructor</div>
+      <div class="teach-meta">Jessore, Bangladesh, during undergraduate study</div>
+    </div>
+
+    <div class="teach-body">
+      <p>
+        I also have long-term tutoring and coaching experience from my undergraduate years. I taught Physics, Chemistry, Mathematics, and Information Technology to secondary and higher-secondary students. I also taught Information Technology in a local coaching center with large student groups.
+      </p>
+
+      <p>
+        This experience helped me develop patience, classroom confidence, and the ability to explain technical ideas to students with different levels of preparation.
+      </p>
+
+      <div class="tag-row">
+        <span class="tag">Tutoring</span>
+        <span class="tag">Information Technology</span>
+        <span class="tag">Mathematics</span>
+        <span class="tag">Classroom Communication</span>
+      </div>
+    </div>
   </div>
 
   <h2>Teaching Strengths</h2>
@@ -398,28 +587,42 @@
 
     <div class="strength-card">
       <strong>Large-Class Support</strong>
-      Experience supporting more than 100 students per semester through grading, communication, logistics, and office hours.
+      Experience supporting more than 100 students per semester through grading, course communication, office hours, and logistics.
     </div>
 
     <div class="strength-card">
-      <strong>Software Engineering Practice</strong>
-      Experience helping students connect requirements, design, implementation, testing, and quality assurance.
+      <strong>Laboratory and Technical Instruction</strong>
+      Experience supporting hands-on learning in programming, databases, signal processing, deep learning, and software testing.
     </div>
 
     <div class="strength-card">
-      <strong>Student-Centered Explanation</strong>
-      Focus on clear explanations, practical examples, and step-by-step support for students with different levels of preparation.
+      <strong>Clear Student-Centered Explanation</strong>
+      Focus on practical examples, step-by-step support, and constructive feedback for students with different preparation levels.
     </div>
   </div>
 
   <h2>Teaching Interests</h2>
 
-  <div class="teach-item">
+  <div class="interest-box">
     <p>
-      I am interested in teaching courses in machine learning, natural language processing, deep learning, software
-      engineering, software quality assurance, data science, programming, and AI security. I am also interested in
-      project-based courses where students can connect technical ideas with real systems and real users.
+      I am interested in teaching foundational courses such as Introduction to Computing, Programming Fundamentals, Data Structures and Algorithms, Database Systems, Computer Networks, Software Engineering, and Computer Organization.
     </p>
+
+    <p>
+      I am also interested in teaching advanced courses in Machine Learning, Deep Learning, Natural Language Processing, Data Science, Data Mining, Software Quality Assurance, Artificial Intelligence, Predictive Modeling, AI Security, and Senior Capstone Project Supervision.
+    </p>
+  </div>
+
+  <h2>Educational Software Familiarity</h2>
+
+  <div class="interest-box">
+    <span class="tag">Canvas</span>
+    <span class="tag">Blackboard</span>
+    <span class="tag">Zoom</span>
+    <span class="tag">Microsoft Teams</span>
+    <span class="tag">Google Classroom</span>
+    <span class="tag">Turnitin</span>
+    <span class="tag">Overleaf</span>
   </div>
 
 </section>
