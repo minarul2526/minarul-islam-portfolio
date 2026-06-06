@@ -129,20 +129,13 @@
     }
 
     .intro {
-      background: #f7fbff;
-      border: 1px solid #e5f0fa;
-      padding: 20px 24px;
-      margin-bottom: 30px;
       max-width: 940px;
+      margin-bottom: 34px;
     }
 
     .intro p {
       margin-top: 0;
-      margin-bottom: 14px;
-    }
-
-    .intro p:last-child {
-      margin-bottom: 0;
+      margin-bottom: 15px;
     }
 
     .blue-text {
@@ -160,42 +153,27 @@
       font-weight: 800;
     }
 
-    .service-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      max-width: 940px;
-      margin-top: 18px;
-      margin-bottom: 32px;
-    }
-
-    .service-card {
-      background: #fbfbfb;
-      border: 1px solid #eeeeee;
-      border-left: 4px solid #1f78b4;
-      padding: 16px 18px;
-    }
-
-    .service-card:nth-child(2n) {
-      border-left-color: #a51c1c;
-      background: #fffafa;
-    }
-
-    .service-card:nth-child(3n) {
-      border-left-color: #7a007a;
-      background: #fbf8ff;
-    }
-
-    .service-card h3 {
-      margin: 0 0 8px;
-      color: #333333;
-      font-size: 20px;
+    .green-text {
+      color: #006b5f;
       font-weight: 800;
     }
 
-    .service-card p {
-      margin: 0;
-      color: #555555;
+    .service-summary {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      border-left: 4px solid #1f78b4;
+      padding: 18px 22px;
+      max-width: 940px;
+      margin-bottom: 34px;
+    }
+
+    .service-summary p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .service-summary p:last-child {
+      margin-bottom: 0;
     }
 
     .two-column {
@@ -203,27 +181,12 @@
       grid-template-columns: 1fr 1fr;
       gap: 34px;
       max-width: 940px;
-      margin-top: 18px;
-    }
-
-    .column-box {
-      border: 1px solid #eeeeee;
-      background: #ffffff;
-      padding: 18px 20px;
-    }
-
-    .column-box.left {
-      border-left: 4px solid #1f78b4;
-      background: #f8fbff;
-    }
-
-    .column-box.right {
-      border-left: 4px solid #a51c1c;
-      background: #fffafa;
+      margin-top: 20px;
+      margin-bottom: 36px;
     }
 
     .column-title {
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 800;
       color: #444444;
       margin-bottom: 14px;
@@ -232,11 +195,109 @@
 
     .service-list {
       margin-top: 0;
-      padding-left: 22px;
+      padding-left: 24px;
     }
 
     .service-list li {
       margin-bottom: 11px;
+    }
+
+    .service-list strong {
+      color: #333333;
+      font-weight: 800;
+    }
+
+    .reviewing-box {
+      max-width: 940px;
+      margin-top: 20px;
+      margin-bottom: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .review-card {
+      border: 1px solid #eeeeee;
+      background: #fbfbfb;
+      border-left: 4px solid #1f78b4;
+      padding: 18px 20px;
+    }
+
+    .review-card.red {
+      background: #fffafa;
+      border-left-color: #a51c1c;
+    }
+
+    .review-card.purple {
+      background: #fbf8ff;
+      border-left-color: #7a007a;
+    }
+
+    .review-card.green {
+      background: #f7fffb;
+      border-left-color: #006b5f;
+    }
+
+    .review-card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      color: #444444;
+      font-weight: 800;
+    }
+
+    .review-card ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .review-card li {
+      margin-bottom: 9px;
+    }
+
+    .committee-section {
+      max-width: 940px;
+      margin-top: 20px;
+      margin-bottom: 36px;
+    }
+
+    .committee-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 24px;
+      margin-bottom: 26px;
+      align-items: start;
+    }
+
+    .year-box {
+      font-weight: 800;
+      color: #ffffff;
+      background: #1f78b4;
+      border-radius: 4px;
+      padding: 8px 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .year-box.red {
+      background: #a51c1c;
+    }
+
+    .year-box.purple {
+      background: #7a007a;
+    }
+
+    .year-box.green {
+      background: #006b5f;
+    }
+
+    .committee-text strong {
+      color: #a51c1c;
+      font-size: 18px;
+    }
+
+    .committee-text p {
+      margin-top: 4px;
+      margin-bottom: 0;
     }
 
     .highlight-box {
@@ -301,9 +362,18 @@
         text-align: center;
       }
 
-      .service-grid,
-      .two-column {
+      .two-column,
+      .reviewing-box {
         grid-template-columns: 1fr;
+      }
+
+      .committee-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .year-box {
+        width: fit-content;
       }
     }
   </style>
@@ -354,71 +424,113 @@
 
       <div class="intro">
         <p>
-          My service work is closely connected to teaching, mentoring, course support, manuscript development, and collaborative research. At <strong class="blue-text">Auburn University</strong>, I have supported large CSSE courses and helped students move from project requirements to working software systems.
+          My service work includes <strong class="blue-text">student mentoring</strong>, <strong class="red-text">course support</strong>, <strong class="purple-text">manuscript reviewing</strong>, conference support, research group service, and collaborative academic work.
         </p>
 
         <p>
-          I am interested in service activities that connect <strong class="red-text">student success</strong>, <strong class="purple-text">research collaboration</strong>, and practical computing problems in natural language processing, machine learning, software engineering, and AI security.
+          I value service that helps students, supports research communities, and improves the quality of technical communication.
         </p>
       </div>
 
-      <h2>Service Focus</h2>
+      <div class="service-summary">
+        <p>
+          At <strong class="blue-text">Auburn University</strong>, I have supported large CSSE courses, mentored student teams, helped with project demonstrations, and provided technical feedback. Earlier at <strong class="green-text">Universiti Malaysia Pahang</strong>, I contributed to academic events, research group activities, and graduate teaching support.
+        </p>
 
-      <div class="service-grid">
-        <div class="service-card">
-          <h3>Student Mentoring</h3>
-          <p>
-            Supported student teams in planning, implementation, technical writing, demonstrations, and final project delivery.
-          </p>
+        <p>
+          My service interests are closely connected to <strong class="red-text">natural language processing</strong>, <strong class="purple-text">machine learning</strong>, software engineering, software security, AI security, and applied intelligent systems.
+        </p>
+      </div>
+
+      <h2>Conference Organization and Reviewing</h2>
+
+      <div class="reviewing-box">
+        <div class="review-card">
+          <h3>Journal Reviewing</h3>
+          <ol>
+            <li>Reviewer, <strong>Journal of Applied Artificial Intelligence</strong>.</li>
+            <li>Reviewer, <strong>IEEE Access</strong>.</li>
+            <li>Reviewer, <strong>Cloud Computing, Springer</strong>.</li>
+          </ol>
         </div>
 
-        <div class="service-card">
-          <h3>Course Support</h3>
-          <p>
-            Assisted with grading, office hours, Canvas updates, course communication, and feedback for undergraduate and graduate students.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>Research Collaboration</h3>
-          <p>
-            Contributed to multi-institution research work involving NLP, sentiment analysis, software security, sensing systems, and applied AI.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>Manuscript Development</h3>
-          <p>
-            Supported paper preparation, revision, literature organization, experiment documentation, and response-to-review processes.
-          </p>
+        <div class="review-card red">
+          <h3>Conference Reviewing</h3>
+          <ol>
+            <li>Reviewer, <strong>IEEE INFOCOM</strong>.</li>
+            <li>Committee and website support, <strong>8th IEEE Symposium on Acoustics, Speech and Signal Processing</strong>, UMP, 2020.</li>
+          </ol>
         </div>
       </div>
 
-      <h2>Teaching and Research Service</h2>
+      <h2>Teaching and Academic Service</h2>
 
       <div class="two-column">
-        <div class="column-box left">
-          <div class="column-title">Teaching and Academic Service</div>
+        <div>
+          <div class="column-title">Course and Student Support</div>
 
           <ol class="service-list">
-            <li>Graduate Teaching Assistant, Senior Design Project, Auburn University.</li>
-            <li>Graduate Teaching Assistant, Software Quality Assurance, Auburn University.</li>
+            <li><strong>Graduate Teaching Assistant</strong>, Senior Design Project, Auburn University.</li>
+            <li><strong>Graduate Teaching Assistant</strong>, Software Quality Assurance, Auburn University.</li>
             <li>Supported large CSSE courses with more than 100 students per semester.</li>
             <li>Mentored student teams on project planning, implementation, demonstrations, and final deliverables.</li>
             <li>Provided grading support, office hours, technical feedback, course communication, and Canvas support.</li>
           </ol>
         </div>
 
-        <div class="column-box right">
-          <div class="column-title">Research and Professional Service</div>
+        <div>
+          <div class="column-title">Research and Collaboration Service</div>
 
           <ol class="service-list">
-            <li>Contributed to collaborative research projects in NLP, sentiment analysis, software security, speech, and sensing systems.</li>
             <li>Supported manuscript preparation, revision, literature organization, and experimental documentation.</li>
-            <li>Participated in interdisciplinary academic collaboration with researchers from Auburn University, Tuskegee University, and other institutions.</li>
-            <li>Interested in future service as a reviewer for NLP, ML, software engineering, AI security, and applied AI venues.</li>
+            <li>Contributed to collaborative research projects in NLP, sentiment analysis, software security, speech, sensing systems, and biomedical AI.</li>
+            <li>Participated in interdisciplinary collaboration with researchers from Auburn University, Tuskegee University, University of West Florida, and other institutions.</li>
             <li>Open to academic and industry collaboration on reliable AI, context-aware NLP, and applied intelligent systems.</li>
           </ol>
+        </div>
+      </div>
+
+      <h2>Committee, Volunteer, and Academic Community Activities</h2>
+
+      <div class="committee-section">
+        <div class="committee-item">
+          <div class="year-box">2020</div>
+          <div class="committee-text">
+            <strong>8th IEEE Symposium on Acoustics, Speech and Signal Processing</strong>
+            <p>
+              Served as presenter and website committee support for SASSP 2020, hosted by FTKEE, Universiti Malaysia Pahang.
+            </p>
+          </div>
+        </div>
+
+        <div class="committee-item">
+          <div class="year-box red">2019–2021</div>
+          <div class="committee-text">
+            <strong>AppECE Research Group</strong>
+            <p>
+              Served as a committee member in the Applied Electronics and Computer Engineering research group in Malaysia.
+            </p>
+          </div>
+        </div>
+
+        <div class="committee-item">
+          <div class="year-box purple">2019</div>
+          <div class="committee-text">
+            <strong>Research Colloquium Participation</strong>
+            <p>
+              Participated in Colloquium 2019 at FTKEE, Universiti Malaysia Pahang.
+            </p>
+          </div>
+        </div>
+
+        <div class="committee-item">
+          <div class="year-box green">2018</div>
+          <div class="committee-text">
+            <strong>Volunteer Service</strong>
+            <p>
+              Volunteered for FOX HUNTING 2018 at FTKEE, Universiti Malaysia Pahang.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -432,10 +544,11 @@
         </p>
 
         <div class="tag-row">
+          <span class="tag">Journal Reviewing</span>
+          <span class="tag">Conference Reviewing</span>
           <span class="tag">Student Mentoring</span>
           <span class="tag">Course Support</span>
           <span class="tag">Research Collaboration</span>
-          <span class="tag">Manuscript Preparation</span>
           <span class="tag">Academic Service</span>
         </div>
       </div>
