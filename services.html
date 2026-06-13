@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -47,16 +49,25 @@
     }
 
     .nav a {
-  color: #505965;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.1px;
-}
+      color: #505965;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.1px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid transparent;
+    }
 
-.nav a:first-child {
-  font-weight: 600;
-  color: #222222;
-}
+    .nav a:hover {
+      color: #0b5f95;
+      text-decoration: none;
+      border-bottom: 3px solid #d6e8f7;
+    }
+
+    .nav a.active {
+      color: #a51c1c;
+      font-weight: 800;
+      border-bottom: 3px solid #a51c1c;
+    }
 
     .page {
       max-width: 1220px;
@@ -177,37 +188,6 @@
       margin-bottom: 0;
     }
 
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      max-width: 940px;
-      margin-top: 20px;
-      margin-bottom: 36px;
-    }
-
-    .column-title {
-      font-size: 23px;
-      font-weight: 800;
-      color: #444444;
-      margin-bottom: 14px;
-      line-height: 1.25;
-    }
-
-    .service-list {
-      margin-top: 0;
-      padding-left: 24px;
-    }
-
-    .service-list li {
-      margin-bottom: 11px;
-    }
-
-    .service-list strong {
-      color: #333333;
-      font-weight: 800;
-    }
-
     .reviewing-box {
       max-width: 940px;
       margin-top: 20px;
@@ -246,7 +226,8 @@
       font-weight: 800;
     }
 
-    .review-card ol {
+    .review-card ol,
+    .review-card ul {
       margin: 0;
       padding-left: 22px;
     }
@@ -255,13 +236,13 @@
       margin-bottom: 9px;
     }
 
-    .committee-section {
+    .activity-section {
       max-width: 940px;
       margin-top: 20px;
       margin-bottom: 36px;
     }
 
-    .committee-item {
+    .activity-item {
       display: grid;
       grid-template-columns: 130px 1fr;
       gap: 24px;
@@ -291,14 +272,54 @@
       background: #006b5f;
     }
 
-    .committee-text strong {
+    .year-box.gold {
+      background: #c77700;
+    }
+
+    .activity-text strong {
       color: #a51c1c;
       font-size: 18px;
     }
 
-    .committee-text p {
+    .activity-text p {
       margin-top: 4px;
       margin-bottom: 0;
+    }
+
+    .collab-box {
+      max-width: 940px;
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .collab-card {
+      background: #fbfbfb;
+      border: 1px solid #eeeeee;
+      border-left: 4px solid #1f78b4;
+      padding: 15px 17px;
+    }
+
+    .collab-card:nth-child(2n) {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .collab-card:nth-child(3n) {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .collab-card:nth-child(4n) {
+      border-left-color: #006b5f;
+      background: #f7fffb;
+    }
+
+    .collab-card strong {
+      display: block;
+      color: #333333;
+      margin-bottom: 5px;
     }
 
     .highlight-box {
@@ -363,12 +384,12 @@
         text-align: center;
       }
 
-      .two-column,
-      .reviewing-box {
+      .reviewing-box,
+      .collab-box {
         grid-template-columns: 1fr;
       }
 
-      .committee-item {
+      .activity-item {
         grid-template-columns: 1fr;
         gap: 10px;
       }
@@ -376,30 +397,35 @@
       .year-box {
         width: fit-content;
       }
+
+      .content h1 {
+        font-size: 31px;
+      }
     }
   </style>
+
 </head>
 
 <body>
 
   <div class="topbar">
     <nav class="nav">
-  <a href="index.html">Home Page</a>
-  <a href="research.html">Research Experience</a>
-  <a href="projects.html">Notable Projects</a>
-  <a href="publications.html">Publications</a>
-  <a href="teaching.html">Teaching Experience</a>
-  <a href="awards.html">Honors & Awards</a>
-  <a href="cv.html">Academic CV</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <a href="index.html">Home Page</a>
+      <a href="research.html">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching Experience</a>
+      <a href="awards.html">Honors & Awards</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 
   <main class="page">
 
     <aside class="sidebar">
-      <img src="minarul photo.png" alt="Minarul Islam" class="profile-img" />
+      <img src="minar_photo.png" alt="Minarul Islam" class="profile-img" />
 
       <div class="name">Minarul Islam</div>
 
@@ -413,10 +439,10 @@
       <ul class="side-links">
         <li>📍 Auburn, Alabama, USA</li>
         <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
-        <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-        <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
-        <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
-        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
+        <li>💻 <a href="https://github.com/minarul2526" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></li>
       </ul>
     </aside>
 
@@ -426,33 +452,26 @@
 
       <div class="intro">
         <p>
-          My service work includes <strong class="blue-text">student mentoring</strong>, <strong class="red-text">course support</strong>, <strong class="purple-text">manuscript reviewing</strong>, conference support, research group service, and collaborative academic work.
-        </p>
-
-        <p>
-          I value service that helps students, supports research communities, and improves the quality of technical communication.
+          My service work includes <strong class="blue-text">journal reviewing</strong>, <strong class="red-text">conference reviewing</strong>, research collaboration, academic outreach, poster presentation, and support for research community activities. I value service that improves manuscript quality, supports students and collaborators, and strengthens research communities in AI, NLP, AI for Cybersecurity, sensing systems, and applied machine learning.
         </p>
       </div>
 
-      <div class="service-summary">
-        <p>
-          At <strong class="blue-text">Auburn University</strong>, I have supported large CSSE courses, mentored student teams, helped with project demonstrations, and provided technical feedback. Earlier at <strong class="green-text">Universiti Malaysia Pahang</strong>, I contributed to academic events, research group activities, and graduate teaching support.
-        </p>
-
-        <p>
-          My service interests are closely connected to <strong class="red-text">natural language processing</strong>, <strong class="purple-text">machine learning</strong>, software engineering, AI security, and applied intelligent systems.
-        </p>
-      </div>
-
-      <h2>Conference Organization and Reviewing</h2>
+      <h2>Journal and Conference Reviewing</h2>
 
       <div class="reviewing-box">
         <div class="review-card">
           <h3>Journal Reviewing</h3>
           <ol>
-            <li>Reviewer, <strong>Journal of Applied Artificial Intelligence</strong>.</li>
-            <li>Reviewer, <strong>IEEE Access</strong>.</li>
-            <li>Reviewer, <strong>Cloud Computing, Springer</strong>.</li>
+<li>Reviewer, <strong>IEEE Access</strong>.</li>
+  <li>Reviewer, <strong>Journal of Applied Artificial Intelligence</strong>.</li>
+  <li>Reviewer, <strong>Cloud Computing, Springer</strong>.</li>
+  <li>Reviewer, <strong>Scientific Reports, Nature Portfolio</strong>.</li>
+  <li>Reviewer, <strong>Artificial Intelligence Review, Springer</strong>.</li>
+  <li>Reviewer, <strong>Neural Computing and Applications, Springer</strong>.</li>
+  <li>Reviewer, <strong>Journal of Big Data, Springer</strong>.</li>
+  <li>Reviewer, <strong>Information Systems Frontiers, Springer</strong>.</li>
+  <li>Reviewer, <strong>Computers and Electrical Engineering, Elsevier</strong>.</li>
+  <li>Reviewer, <strong>Expert Systems with Applications, Elsevier</strong>.</li>
           </ol>
         </div>
 
@@ -460,44 +479,40 @@
           <h3>Conference Reviewing</h3>
           <ol>
             <li>Reviewer, <strong>IEEE ICMLA</strong>.</li>
+            <li>Reviewer, <strong>IEEE iWAT</strong>.</li>
+            <li>Reviewer, <strong>IEEE ICONCS</strong>.</li>
+            <li>Reviewer, <strong>IEEE INFOCOM</strong>.</li>
             <li>Committee and website support, <strong>8th IEEE Symposium on Acoustics, Speech and Signal Processing</strong>, UMP, 2020.</li>
           </ol>
         </div>
-      </div>
 
-      <h2>Teaching and Academic Service</h2>
-
-      <div class="two-column">
-        <div>
-          <div class="column-title">Course and Student Support</div>
-
-          <ol class="service-list">
-            <li><strong>Graduate Teaching Assistant</strong>, Senior Design Project, Auburn University.</li>
-            <li><strong>Graduate Teaching Assistant</strong>, Software Quality Assurance, Auburn University.</li>
-            <li>Supported large CSSE courses with more than 100 students per semester.</li>
-            <li>Mentored student teams on project planning, implementation, demonstrations, and final deliverables.</li>
-            <li>Provided grading support, office hours, technical feedback, course communication, and Canvas support.</li>
-          </ol>
-        </div>
-
-        <div>
-          <div class="column-title">Research and Collaboration Service</div>
-
-          <ol class="service-list">
-            <li>Supported manuscript preparation, revision, literature organization, and experimental documentation.</li>
-            <li>Contributed to collaborative research projects in NLP, sentiment analysis, software security, speech, sensing systems, and biomedical AI.</li>
-            <li>Participated in interdisciplinary collaboration with researchers from Auburn University, Tuskegee University, University of West Florida, and other institutions.</li>
-            <li>Open to academic and industry collaboration on reliable AI, context-aware NLP, and applied intelligent systems.</li>
-          </ol>
+        <div class="review-card purple">
+          <h3>Reviewing Areas</h3>
+          <ul>
+            <li>Reliable machine learning and model evaluation.</li>
+            <li>Natural language processing and sentiment analysis.</li>
+            <li>AI for cybersecurity and software vulnerability analysis.</li>
+            <li>Speech, sensing systems, and biomedical applications.</li>
+          </ul>
         </div>
       </div>
 
-      <h2>Committee, Volunteer, and Academic Community Activities</h2>
+      <h2>Presentations, Outreach, and Academic Activities</h2>
 
-      <div class="committee-section">
-        <div class="committee-item">
-          <div class="year-box">2020</div>
-          <div class="committee-text">
+      <div class="activity-section">
+        <div class="activity-item">
+          <div class="year-box">2026</div>
+          <div class="activity-text">
+            <strong>Poster Presentation and Academic Visit, Alabama State University</strong>
+            <p>
+              Presented research work during an academic visit to Alabama State University. The visit supported research communication, academic exchange, and broader engagement with AI and computing research.
+            </p>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="year-box red">2020</div>
+          <div class="activity-text">
             <strong>8th IEEE Symposium on Acoustics, Speech and Signal Processing</strong>
             <p>
               Served as presenter and website committee support for SASSP 2020, hosted by FTKEE, Universiti Malaysia Pahang.
@@ -505,9 +520,9 @@
           </div>
         </div>
 
-        <div class="committee-item">
-          <div class="year-box red">2019–2021</div>
-          <div class="committee-text">
+        <div class="activity-item">
+          <div class="year-box purple">2019–2021</div>
+          <div class="activity-text">
             <strong>AppECE Research Group</strong>
             <p>
               Served as a committee member in the Applied Electronics and Computer Engineering research group in Malaysia.
@@ -515,9 +530,9 @@
           </div>
         </div>
 
-        <div class="committee-item">
-          <div class="year-box purple">2019</div>
-          <div class="committee-text">
+        <div class="activity-item">
+          <div class="year-box green">2019</div>
+          <div class="activity-text">
             <strong>Research Colloquium Participation</strong>
             <p>
               Participated in Colloquium 2019 at FTKEE, Universiti Malaysia Pahang.
@@ -525,9 +540,9 @@
           </div>
         </div>
 
-        <div class="committee-item">
-          <div class="year-box green">2018</div>
-          <div class="committee-text">
+        <div class="activity-item">
+          <div class="year-box gold">2018</div>
+          <div class="activity-text">
             <strong>Volunteer Service</strong>
             <p>
               Volunteered for FOX HUNTING 2018 at FTKEE, Universiti Malaysia Pahang.
@@ -536,25 +551,19 @@
         </div>
       </div>
 
-      <div class="highlight-box">
-        <p>
-          <strong>Service Goal:</strong> I aim to support students and collaborators through clear communication, careful feedback, and reliable project organization.
-        </p>
+      <h2>Research and Collaboration Service</h2>
 
-        <p>
-          I especially value service work that connects research, teaching, and real-world computing needs.
-        </p>
+      <div class="collab-box">
+        <div class="collab-card">
+          <strong>Manuscript and Revision Support</strong>
+          Supported manuscript preparation, revision, literature organization, experimental documentation, and response preparation.
+        </div>
 
-        <div class="tag-row">
-          <span class="tag">Journal Reviewing</span>
-          <span class="tag">Conference Reviewing</span>
-          <span class="tag">Student Mentoring</span>
-          <span class="tag">Course Support</span>
-          <span class="tag">Research Collaboration</span>
-          <span class="tag">Academic Service</span>
+        <div class="collab-card">
+          <strong>Academic and Industry Collaboration</strong>
+          Open to collaboration on reliable AI, LLM security, context-aware NLP, AI for cybersecurity, and applied intelligent systems.
         </div>
       </div>
-
     </section>
 
   </main>
