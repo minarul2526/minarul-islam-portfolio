@@ -47,17 +47,17 @@
       flex-wrap: wrap;
     }
 
-  .nav a {
-  color: #505965;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.1px;
-}
+    .nav a {
+      color: #505965;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.1px;
+    }
 
-.nav a:first-child {
-  font-weight: 600;
-  color: #222222;
-}
+    .nav a:first-child {
+      font-weight: 600;
+      color: #222222;
+    }
 
     .page {
       max-width: 1220px;
@@ -133,7 +133,7 @@
       border: 1px solid #e5f0fa;
       padding: 20px 24px;
       margin-top: 8px;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     .intro-box p {
@@ -143,6 +143,52 @@
 
     .intro-box p:last-child {
       margin-bottom: 0;
+    }
+
+    .impact-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 0 0 28px;
+    }
+
+    .impact-item {
+      background: linear-gradient(135deg, #f7fbff, #ffffff);
+      border: 1px solid #dcecf8;
+      border-left: 4px solid #1f78b4;
+      padding: 12px 10px;
+      text-align: center;
+      font-weight: 800;
+      color: #333333;
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
+    }
+
+    .impact-item:nth-child(2) {
+      border-left-color: #7a007a;
+    }
+
+    .impact-item:nth-child(3) {
+      border-left-color: #a51c1c;
+    }
+
+    .impact-item:nth-child(4) {
+      border-left-color: #2f8f46;
+    }
+
+    .impact-number {
+      display: block;
+      font-size: 25px;
+      line-height: 1.1;
+      color: #a51c1c;
+      font-weight: 900;
+    }
+
+    .impact-label {
+      display: block;
+      font-size: 13.5px;
+      line-height: 1.25;
+      color: #444444;
+      margin-top: 4px;
     }
 
     .red-heading {
@@ -260,6 +306,45 @@
 
     .info-card p {
       margin: 10px 0;
+    }
+
+    .edu-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin: 16px 0;
+    }
+
+    .edu-logo-link {
+      display: inline-flex;
+      width: 58px;
+      height: 58px;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid #e3e6ea;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .edu-logo-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+      text-decoration: none;
+    }
+
+    .edu-logo {
+      max-width: 48px;
+      max-height: 48px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .edu-text {
+      flex: 1;
+      line-height: 1.45;
     }
 
     .advisor-title {
@@ -397,12 +482,23 @@
       .info-grid,
       .expertise-grid,
       .research-spotlight-grid,
-      .quick-links {
+      .quick-links,
+      .impact-strip {
         grid-template-columns: 1fr;
       }
 
       .content h1 {
         font-size: 31px;
+      }
+
+      .edu-logo-link {
+        width: 52px;
+        height: 52px;
+      }
+
+      .edu-logo {
+        max-width: 43px;
+        max-height: 43px;
       }
     }
   </style>
@@ -413,196 +509,200 @@
 
   <div class="topbar">
     <nav class="nav">
-  <a href="index.html">Home Page</a>
-  <a href="research.html">Research Experience</a>
-  <a href="projects.html">Notable Projects</a>
-  <a href="publications.html">Publications</a>
-  <a href="teaching.html">Teaching Experience</a>
-  <a href="awards.html">Honors & Awards</a>
-  <a href="cv.html">Academic CV</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <a href="index.html">Home Page</a>
+      <a href="research.html">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching Experience</a>
+      <a href="awards.html">Honors & Awards</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 
   <main class="page">
 
-<aside class="sidebar">
-  <img src="minar_photo.png" alt="Minarul Islam" class="profile-img" />
+    <aside class="sidebar">
+      <img src="minar_photo.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="name">Minarul Islam</div>
+      <div class="name">Minarul Islam</div>
 
-  <div class="bio">
-    Ph.D. Candidate<br />
-    Computer Science and Software Engineering<br />
-    Auburn University<br />
-    Reliable NLP • Sentiment Analysis • AI Security
-  </div>
+      <div class="bio">
+        Ph.D. Candidate<br />
+        Computer Science and Software Engineering<br />
+        Auburn University<br />
+        Reliable NLP • Sentiment Analysis • AI Security
+      </div>
 
-  <ul class="side-links">
-    <li>📍 Auburn, Alabama, USA</li>
-    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
-    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
-    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
-  </ul>
-</aside>
+      <ul class="side-links">
+        <li>📍 Auburn, Alabama, USA</li>
+        <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+        <li>💻 <a href="https://github.com/minarul2526" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></li>
+      </ul>
+    </aside>
 
-<section class="content">
+    <section class="content">
 
-  <h1>Welcome to my personal homepage</h1>
+      <h1>Welcome to my personal homepage</h1>
 
-  <div class="intro-box">
-    <p>
-      My name is <strong>Minarul Islam</strong>. I am a Ph.D. candidate in the Department of Computer Science and Software Engineering at
-      <strong class="blue-text">Auburn University</strong>. My research focuses on reliable and context-aware machine learning for natural language processing (NLP), large language models (LLMs), AI security, and reliable AI systems.
-    </p>
+      <div class="intro-box">
+        <p>
+          My name is <strong>Minarul Islam</strong>. I am a Ph.D. candidate in the Department of Computer Science and Software Engineering at
+          <strong class="blue-text">Auburn University</strong>. My research focuses on reliable and context-aware machine learning for natural language processing (NLP), large language models (LLMs), and AI for cybersecurity.
+        </p>
 
-    <p>
-      My dissertation focuses on <strong class="red-heading">Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity</strong>. I study how language models behave when text contains contrast, irony, implicit meaning, aspect-specific opinion, and domain shift.
-    </p>
+        <p>
+          My dissertation focuses on <strong class="red-heading">Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity</strong>. I study how language models behave when text contains contrast, irony, implicit meaning, aspect-specific opinion, and domain shift.
+        </p>
 
-    <p>
-      My broader goal is to build AI systems that are accurate, careful under uncertainty, interpretable, and useful in real-world settings. You can download my full CV
-      <a href="Minarul_Islam_CV.pdf" target="_blank">here</a>.
-    </p>
-  </div>
+        <p>
+          My broader goal is to build AI systems that are accurate, careful under uncertainty, interpretable, and useful in real-world settings. You can download my full CV
+          <a href="Minarul_CV.pdf" target="_blank" rel="noopener noreferrer">here</a>.
+        </p>
+      </div>
 
-  <div class="info-grid">
-    <div class="info-card education-card">
-      <h2>Academic Background</h2>
+      <div class="impact-strip">
+        <div class="impact-item">
+          <span class="impact-number">360+</span>
+          <span class="impact-label">Google Scholar Citations</span>
+        </div>
 
-      <p>
-        <strong class="red-heading">Ph.D. in Computer Science and Software Engineering</strong><br />
-        <span class="blue-text">Auburn University</span>, Auburn, Alabama, USA<br />
-        Expected completion: Fall 2026
-      </p>
+        <div class="impact-item">
+          <span class="impact-number">300+</span>
+          <span class="impact-label">Research Articles Reviewed</span>
+        </div>
 
-      <p>
-        <strong class="red-heading">M.Sc. by Research in Electrical and Electronic Engineering</strong><br />
-        <span class="blue-text">Universiti Malaysia Pahang</span>, Malaysia
-      </p>
+        <div class="impact-item">
+          <span class="impact-number">12+</span>
+          <span class="impact-label">Presentations and Talks</span>
+        </div>
 
-      <p>
-        <strong class="red-heading">B.Sc. in Computer Science and Engineering</strong><br />
-        <span class="blue-text">Jessore University of Science and Technology</span>, Bangladesh
-      </p>
-    </div>
+        <div class="impact-item">
+          <span class="impact-number">5+</span>
+          <span class="impact-label">Distinctions and Awards</span>
+        </div>
+      </div>
 
-    <div class="info-card advisor-card">
-      <h2>Ph.D. Advisor and Committee</h2>
+      <div class="info-grid">
+        <div class="info-card education-card">
+          <h2>Academic Background</h2>
 
-      <p>
-        <span class="advisor-title">Ph.D. Advisor:</span><br />
-        Dr. Cheryl D. Seals, Committee Chair, Professor of Computer Science and Software Engineering
-      </p>
+          <p class="edu-item">
+            <a class="edu-logo-link" href="https://www.auburn.edu/" target="_blank" rel="noopener noreferrer" aria-label="Auburn University official website">
+              <img src="auburn_logo.png" alt="Auburn University logo" class="edu-logo" />
+            </a>
+            <span class="edu-text">
+              <strong class="red-heading">Ph.D. in Computer Science and Software Engineering</strong><br />
+              <span class="blue-text">Auburn University</span>, Auburn, Alabama, USA<br />
+              Expected completion: Fall 2026
+            </span>
+          </p>
 
-      <p>
-        <span class="committee-title">Ph.D. Committee:</span><br />
-        Dr. Richard Chapman, Associate Chair and Director of Undergraduate Studies, Associate Professor of Computer Science and Software Engineering<br />
-        Dr. Jakita O. Thomas, Philpott-West Point Stevens Associate Professor of Computer Science and Software Engineering<br />
-        Dr. Daniela Marghitu, Faculty \& Director Education and Assistive Technology Laboratory, Coordinator of Computer Science and Software Engineering<br />
-        Dr. Shazibul Islam Shamim, Department of Software Engineering and Game Design and Development, Kennesaw State University<br />
-      </p>
-    </div>
-  </div>
+          <p class="edu-item">
+            <a class="edu-logo-link" href="https://www.umpsa.edu.my/" target="_blank" rel="noopener noreferrer" aria-label="UMPSA official website">
+              <img src="ump_logo.png" alt="Universiti Malaysia Pahang Al-Sultan Abdullah logo" class="edu-logo" />
+            </a>
+            <span class="edu-text">
+              <strong class="red-heading">M.Sc. by Research in Electrical and Electronic Engineering</strong><br />
+              <span class="blue-text">Universiti Malaysia Pahang</span>, Malaysia
+            </span>
+          </p>
 
-  <div class="research-spotlight-grid">
-    <div class="research-card">
-      <h2>Research Interests</h2>
+          <p class="edu-item">
+            <a class="edu-logo-link" href="https://just.edu.bd/" target="_blank" rel="noopener noreferrer" aria-label="Jashore University of Science and Technology official website">
+              <img src="just_logo.png" alt="Jashore University of Science and Technology logo" class="edu-logo" />
+            </a>
+            <span class="edu-text">
+              <strong class="red-heading">B.Sc. in Computer Science and Engineering</strong><br />
+              <span class="blue-text">Jashore University of Science and Technology</span>, Bangladesh
+            </span>
+          </p>
+        </div>
 
-      <div class="big-red">Natural Language Processing</div>
-      <div class="big-purple">Machine Learning</div>
-      <div class="big-purple">Deep Learning</div>
-      <div class="big-purple">Large Language Models</div>
-      
-      <span class="small-topic">Sentiment Analysis</span>
-      <span class="small-topic">LLM as-a-judge Systems</span>
-      <span class="small-topic">Digital Signal Processing</span>
-      <span class="small-topic">Distribution Shift</span>
-      <span class="small-topic">Selective Prediction</span>
-      <span class="small-topic">Cyber-Physical Systems</span>
-      <span class="small-topic">Mobile Sensing</span>
-      <span class="small-topic">AI Security</span>
-    </div>
+        <div class="info-card advisor-card">
+          <h2>Ph.D. Advisor and Committee</h2>
 
-    <div class="spotlight-card">
-      <h2>Spotlight</h2>
+          <p>
+            <span class="advisor-title">Ph.D. Advisor:</span><br />
+            Dr. Cheryl D. Seals, Committee Chair, Professor of Computer Science and Software Engineering
+          </p>
 
-      <ol class="spotlight-list">
-        <li>Ph.D. candidate at Auburn University working on reliable NLP and sentiment analysis.</li>
-        <li>Dissertation research studies linguistic complexity, distribution shift, irony, and aspect-level opinion.</li>
-        <li>M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.</li>
-        <li>Graduate Teaching Assistant with experience supporting CSSE courses.</li>
+          <p>
+            <span class="committee-title">Ph.D. Committee:</span><br />
+            Dr. Richard Chapman, Associate Chair and Director of Undergraduate Studies, Associate Professor of Computer Science and Software Engineering<br />
+            Dr. Jakita O. Thomas, Philpott-West Point Stevens Associate Professor of Computer Science and Software Engineering<br />
+            Dr. Daniela Marghitu, Faculty &amp; Director Education and Assistive Technology Laboratory, Coordinator of Computer Science and Software Engineering<br />
+            Dr. Shazibul Islam Shamim, Department of Software Engineering and Game Design and Development, Kennesaw State University<br />
+          </p>
+        </div>
+      </div>
+
+      <div class="research-spotlight-grid">
+        <div class="research-card">
+          <h2>Research Interests</h2>
+
+          <div class="big-red">Natural Language Processing</div>
+          <div class="big-purple">Machine Learning</div>
+          <div class="big-purple">Deep Learning</div>
+          <div class="big-purple">Large Language Models</div>
+
+          <span class="small-topic">Sentiment Analysis</span>
+          <span class="small-topic">LLM-as-a-Judge Systems</span>
+          <span class="small-topic">Digital Signal Processing</span>
+          <span class="small-topic">Distribution Shift</span>
+          <span class="small-topic">Selective Prediction</span>
+          <span class="small-topic">Cyber-Physical Systems</span>
+          <span class="small-topic">Mobile Sensing</span>
+          <span class="small-topic">AI Security</span>
+        </div>
+
+        <div class="spotlight-card">
+          <h2>Spotlight</h2>
+
+          <ol class="spotlight-list">
+            <li>Ph.D. candidate at Auburn University working on reliable NLP and sentiment analysis.</li>
+            <li>Dissertation research studies linguistic complexity, distribution shift, irony, and aspect-level opinion.</li>
+            <li>M.Sc. by Research background from Universiti Malaysia Pahang, Malaysia.</li>
+            <li>Served as a Graduate Teaching Assistant at Auburn University for Senior Design Project and Software Quality Assurance.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="course-box">
+        <h2>Selected Graduate Coursework</h2>
+        <span class="tag">Advanced Topics in Algorithms</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Data Mining</span>
+        <span class="tag">Advanced Computer Architecture</span>
+        <span class="tag">Advanced Operating Systems</span>
+        <span class="tag">Computer Networks</span>
+        <span class="tag">Experimental Statistics I</span>
+      </div>
+
+      <h2>News and Updates</h2>
+
+      <ol class="news-list">
+        <li>
+          <span class="date">[June 2026]</span>
+          Completed my Ph.D. proposal defense on reliable and context-aware sentiment analysis under linguistic complexity.
+        </li>
+
+        <li>
+          <span class="date">[2026]</span>
+          Submitted three (3) full-length research articles to IEEE AIBThings 2026.
+        </li>
+
+        <li>
+          <span class="date">[2026]</span>
+          Submitted two (2) full-length research articles to IEEE ICMLA 2026.
+        </li>
       </ol>
-    </div>
-  </div>
 
-  <h2>Research and Teaching Profile</h2>
-
-  <div class="expertise-grid">
-    <div class="expertise-card">
-      <h3>Reliable NLP</h3>
-      <p>
-        I study how NLP models behave when language is complex, shifted, or uncertain.
-      </p>
-      <span class="tag">Distribution Shift</span>
-      <span class="tag">Calibration</span>
-      <span class="tag">Selective Prediction</span>
-    </div>
-
-    <div class="expertise-card">
-      <h3>Context-Aware Sentiment</h3>
-      <p>
-        I develop methods that use clause structure, aspect evidence, discourse patterns, and task-specific context.
-      </p>
-      <span class="tag">Contrast</span>
-      <span class="tag">Irony</span>
-      <span class="tag">ABSA</span>
-    </div>
-
-    <div class="expertise-card">
-      <h3>Teaching and Mentoring</h3>
-      <p>
-        I support project-based learning, grading, demonstrations, office hours, and student team mentoring.
-      </p>
-      <span class="tag">Senior Design Project</span>
-      <span class="tag">Software Quality Assurance</span>
-    </div>
-  </div>
-
-  <div class="course-box">
-    <h2>Selected Graduate Coursework</h2>
-    <span class="tag">Advanced Topics in Algorithms</span>
-    <span class="tag">Machine Learning</span>
-    <span class="tag">Data Mining</span>
-    <span class="tag">Advanced Computer Architecture</span>
-    <span class="tag">Advanced Operating Systems</span>
-    <span class="tag">Computer Networks</span>
-    <span class="tag">Experimental Statistics I</span>
-  </div>
-
-  <h2>News and Updates</h2>
-
-  <ol class="news-list">
-    <li>
-      <span class="date">[June 2026]</span>
-      I have done my Ph.D. proposal defense on reliable and context-aware sentiment analysis under linguistic complexity.
-    </li>
-
-    <li>
-      <span class="date">[2026]</span>
-      Continuing dissertation research on distribution shift, discourse complexity, irony awareness, aspect-level sentiment analysis, and security-oriented NLP.
-    </li>
-
-    <li>
-      <span class="date">[2022–Present]</span>
-      Served as a Graduate Teaching Assistant at Auburn University for Senior Design Project and Software Quality Assurance.
-    </li>
-  </ol>
-
-</section>
+    </section>
 
   </main>
 
