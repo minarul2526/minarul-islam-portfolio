@@ -49,14 +49,23 @@
 
     .nav a {
       color: #505965;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 18px;
       letter-spacing: 0.1px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid transparent;
     }
 
-    .nav a:first-child {
-      font-weight: 600;
-      color: #222222;
+    .nav a:hover {
+      color: #0b5f95;
+      text-decoration: none;
+      border-bottom: 3px solid #d6e8f7;
+    }
+
+    .nav a.active {
+      color: #a51c1c;
+      font-weight: 800;
+      border-bottom: 3px solid #a51c1c;
     }
 
     .page {
@@ -357,39 +366,13 @@
       font-weight: 800;
     }
 
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 12px;
-      margin-bottom: 32px;
-    }
-
-    .expertise-card {
-      background: #ffffff;
-      border: 1px solid #eeeeee;
-      padding: 18px 20px;
-      min-height: 180px;
-      border-left: 4px solid #1f78b4;
-    }
-
-    .expertise-card:nth-child(2) {
-      border-left-color: #7a007a;
-    }
-
-    .expertise-card:nth-child(3) {
-      border-left-color: #a51c1c;
-    }
-
-    .expertise-card h3 {
-      margin: 0 0 9px;
-      font-size: 19px;
+    .faculty-link {
+      font-weight: 700;
       color: #333333;
     }
 
-    .expertise-card p {
-      margin: 0 0 13px;
-      color: #5f6b7a;
+    .faculty-link:hover {
+      color: #0b5f95;
     }
 
     .tag {
@@ -416,23 +399,6 @@
       margin-top: 0;
       border-bottom: 2px solid #e7eef8;
       padding-bottom: 6px;
-    }
-
-    .quick-links {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 12px;
-      margin-bottom: 34px;
-    }
-
-    .quick-links a {
-      display: block;
-      background: #f8fbff;
-      border: 1px solid #e5f0fa;
-      padding: 12px 14px;
-      text-align: center;
-      font-weight: 800;
     }
 
     .news-list {
@@ -480,9 +446,7 @@
       }
 
       .info-grid,
-      .expertise-grid,
       .research-spotlight-grid,
-      .quick-links,
       .impact-strip {
         grid-template-columns: 1fr;
       }
@@ -509,7 +473,7 @@
 
   <div class="topbar">
     <nav class="nav">
-      <a href="index.html">Home Page</a>
+      <a href="index.html" class="active">Home Page</a>
       <a href="research.html">Research Experience</a>
       <a href="projects.html">Notable Projects</a>
       <a href="publications.html">Publications</a>
@@ -628,15 +592,28 @@
 
           <p>
             <span class="advisor-title">Ph.D. Advisor:</span><br />
-            Dr. Cheryl D. Seals, Committee Chair, Professor of Computer Science and Software Engineering
+            <a class="faculty-link" href="https://eng.auburn.edu/directory/sealscd" target="_blank" rel="noopener noreferrer">
+              Dr. Cheryl D. Seals
+            </a>, Committee Chair, Professor of Computer Science and Software Engineering
           </p>
 
           <p>
             <span class="committee-title">Ph.D. Committee:</span><br />
-            Dr. Richard Chapman, Associate Chair and Director of Undergraduate Studies, Associate Professor of Computer Science and Software Engineering<br />
-            Dr. Jakita O. Thomas, Philpott-West Point Stevens Associate Professor of Computer Science and Software Engineering<br />
-            Dr. Daniela Marghitu, Faculty &amp; Director Education and Assistive Technology Laboratory, Coordinator of Computer Science and Software Engineering<br />
-            Dr. Shazibul Islam Shamim, Department of Software Engineering and Game Design and Development, Kennesaw State University<br />
+            <a class="faculty-link" href="https://eng.auburn.edu/directory/chapmro" target="_blank" rel="noopener noreferrer">
+              Dr. Richard Chapman
+            </a>, Associate Chair and Director of Undergraduate Studies, Associate Professor of Computer Science and Software Engineering<br />
+
+            <a class="faculty-link" href="https://eng.auburn.edu/directory/jnt0020" target="_blank" rel="noopener noreferrer">
+              Dr. Jakita O. Thomas
+            </a>, Philpott-WestPoint Stevens Associate Professor of Computer Science and Software Engineering<br />
+
+            <a class="faculty-link" href="https://eng.auburn.edu/directory/marghda" target="_blank" rel="noopener noreferrer">
+              Dr. Daniela Marghitu
+            </a>, Faculty and Director, Education and Assistive Technology Laboratory, Coordinator of Computer Science and Software Engineering<br />
+
+            <a class="faculty-link" href="https://shazibulislam.github.io/" target="_blank" rel="noopener noreferrer">
+              Dr. Shazibul Islam Shamim
+            </a>, Department of Software Engineering and Game Design and Development, Kennesaw State University
           </p>
         </div>
       </div>
@@ -652,7 +629,7 @@
 
           <span class="small-topic">Sentiment Analysis</span>
           <span class="small-topic">LLM-as-a-Judge Systems</span>
-           <span class="small-topic">AI for Cybersecurity</span>
+          <span class="small-topic">AI for Cybersecurity</span>
           <span class="small-topic">Digital Signal Processing</span>
           <span class="small-topic">Cyber-Physical Systems</span>
           <span class="small-topic">Mobile Sensing</span>
@@ -700,7 +677,7 @@
 
         <li>
           <span class="date">[April 2026]</span>
-          Submitted one (1) full-length research articles to IEEE TASLP.
+          Submitted one (1) full-length research article to IEEE/ACM TASLP.
         </li>
       </ol>
 
