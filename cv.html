@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -48,16 +49,25 @@
     }
 
     .nav a {
-  color: #505965;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.1px;
-}
+      color: #505965;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.1px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid transparent;
+    }
 
-.nav a:first-child {
-  font-weight: 600;
-  color: #222222;
-}
+    .nav a:hover {
+      color: #0b5f95;
+      text-decoration: none;
+      border-bottom: 3px solid #d6e8f7;
+    }
+
+    .nav a.active {
+      color: #a51c1c;
+      font-weight: 800;
+      border-bottom: 3px solid #a51c1c;
+    }
 
     .page {
       max-width: 1220px;
@@ -122,13 +132,13 @@
 
     .download-line {
       font-size: 17px;
-      margin-bottom: 34px;
+      margin-bottom: 26px;
     }
 
     .download-button {
       display: inline-block;
       margin-left: 8px;
-      padding: 5px 12px;
+      padding: 6px 13px;
       background: #1f78b4;
       color: #ffffff;
       border-radius: 3px;
@@ -151,12 +161,68 @@
       padding-bottom: 6px;
     }
 
+    .cv-box {
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      border-left: 4px solid #1f78b4;
+      padding: 18px 20px;
+      margin-bottom: 30px;
+      max-width: 940px;
+    }
+
+    .cv-box p {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    .cv-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+      max-width: 940px;
+    }
+
+    .summary-card {
+      background: #fbfbfb;
+      border: 1px solid #eeeeee;
+      border-left: 4px solid #1f78b4;
+      padding: 14px 16px;
+    }
+
+    .summary-card:nth-child(2n) {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .summary-card:nth-child(3n) {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .summary-card:nth-child(4n) {
+      border-left-color: #006b5f;
+      background: #f7fffb;
+    }
+
+    .summary-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #333333;
+      font-size: 17px;
+    }
+
     .training-item {
       display: grid;
       grid-template-columns: 115px 1fr;
       gap: 30px;
-      margin-bottom: 34px;
+      margin-bottom: 32px;
       align-items: start;
+      max-width: 940px;
     }
 
     .logo-box {
@@ -217,38 +283,14 @@
       font-weight: 800;
     }
 
-    .summary-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .summary-card {
-      background: #fbfbfb;
-      border: 1px solid #eeeeee;
-      border-left: 4px solid #1f78b4;
-      padding: 14px 16px;
-    }
-
-    .summary-card:nth-child(2n) {
-      border-left-color: #a51c1c;
-      background: #fffafa;
-    }
-
-    .summary-card:nth-child(3n) {
-      border-left-color: #7a007a;
-      background: #fbf8ff;
-    }
-
-    .summary-card strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #333333;
+    .purple-text {
+      color: #7a007a;
+      font-weight: 800;
     }
 
     .tag-row {
       margin-top: 10px;
+      max-width: 940px;
     }
 
     .tag {
@@ -263,20 +305,48 @@
       font-weight: 600;
     }
 
-    .cv-box {
-      background: #f7fbff;
-      border: 1px solid #e5f0fa;
+    .doc-list {
+      max-width: 940px;
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .doc-card {
+      border: 1px solid #eeeeee;
+      background: #fbfbfb;
       border-left: 4px solid #1f78b4;
-      padding: 18px 20px;
-      margin-bottom: 30px;
+      padding: 14px 16px;
     }
 
-    .cv-box p {
+    .doc-card:nth-child(2n) {
+      border-left-color: #a51c1c;
+      background: #fffafa;
+    }
+
+    .doc-card:nth-child(3n) {
+      border-left-color: #7a007a;
+      background: #fbf8ff;
+    }
+
+    .doc-card strong {
+      display: block;
+      color: #333333;
+      margin-bottom: 4px;
+    }
+
+    .note-box {
+      background: #fffdf7;
+      border: 1px solid #f0e4c8;
+      border-left: 4px solid #c77700;
+      padding: 17px 21px;
+      max-width: 940px;
+      margin-top: 28px;
+    }
+
+    .note-box p {
       margin-top: 0;
-      margin-bottom: 13px;
-    }
-
-    .cv-box p:last-child {
       margin-bottom: 0;
     }
 
@@ -317,8 +387,13 @@
         margin-bottom: 4px;
       }
 
-      .summary-grid {
+      .summary-grid,
+      .doc-list {
         grid-template-columns: 1fr;
+      }
+
+      .content h1 {
+        font-size: 31px;
       }
     }
   </style>
@@ -329,123 +404,51 @@
 
   <div class="topbar">
     <nav class="nav">
-  <a href="index.html">Home Page</a>
-  <a href="research.html">Research Experience</a>
-  <a href="projects.html">Notable Projects</a>
-  <a href="publications.html">Publications</a>
-  <a href="teaching.html">Teaching Experience</a>
-  <a href="awards.html">Honors & Awards</a>
-  <a href="cv.html">Academic CV</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <a href="index.html">Home Page</a>
+      <a href="research.html">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching Experience</a>
+      <a href="awards.html">Honors & Awards</a>
+      <a href="cv.html" class="active">Academic CV</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 
   <main class="page">
-<aside class="sidebar">
-  <img src="minarul photo.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="name">Minarul Islam</div>
+    <aside class="sidebar">
+      <img src="minar_photo.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="bio">
-    Ph.D. Candidate<br />
-    Computer Science and Software Engineering<br />
-    Auburn University<br />
-    Reliable NLP • Sentiment Analysis • AI Security
-  </div>
+      <div class="name">Minarul Islam</div>
 
-  <ul class="side-links">
-    <li>📍 Auburn, Alabama, USA</li>
-    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
-    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
-    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
-  </ul>
-</aside>
-
-<section class="content">
-
-  <h1>Academic CV</h1>
-
-  <div class="download-line">
-    You can download my full CV
-    <a class="download-button" href="Minarul_Islam_CV.pdf" target="_blank">here</a>
-  </div>
-
-  <div class="cv-box">
-    <p>
-      In this page, I provided a short academic CV summary. The full PDF version includes my complete education, publications, research experience, teaching experience, technical skills, and service activities.
-    </p>
-  </div>
-
-  <h2 class="section-title">Academic Training</h2>
-
-  <div class="training-item">
-    <div class="logo-box auburn">AU</div>
-    <div>
-      <div class="training-title">Auburn University</div>
-      <div class="training-meta">
-        <strong>Ph.D. in Computer Science and Software Engineering</strong> [August 2022 – Expected Fall 2026]
+      <div class="bio">
+        Ph.D. Candidate<br />
+        Computer Science and Software Engineering<br />
+        Auburn University<br />
+        Reliable NLP • Sentiment Analysis • AI Security
       </div>
-      <div class="training-meta">
-        Department: Computer Science and Software Engineering
-      </div>
-      <div class="training-meta">
-        Advisor: <span class="blue-text">Dr. Cheryl D. Seals</span>
-      </div>
-      <div class="training-meta">
-        Dissertation: <span class="red-text">Reliable and Context-Aware Sentiment Analysis under Linguistic Complexity</span>
-      </div>
-      <div class="training-meta">
-        Research areas: Natural Language Processing, Reliable Machine Learning, Sentiment Analysis, AI Security, Applied Machine Learning
-      </div>
-    </div>
-  </div>
 
-  <div class="training-item">
-    <div class="logo-box ump">UMP</div>
-    <div>
-      <div class="training-title">Universiti Malaysia Pahang</div>
-      <div class="training-meta">
-        <strong>M.Sc. by Research in Electrical and Electronic Engineering</strong> [2018 – 2021]
-      </div>
-      <div class="training-meta">
-        Thesis: <span class="red-text">Non-Invasive Blood Glucose Estimation Using Ultra-Wideband Sensing and Machine Learning</span>
-      </div>
-      <div class="training-meta">
-        This training strengthened my foundation in research design, experimental evaluation, signal processing, and applied machine learning.
-      </div>
-    </div>
-  </div>
+      <ul class="side-links">
+        <li>📍 Auburn, Alabama, USA</li>
+        <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+        <li>💻 <a href="https://github.com/minarul2526" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></li>
+      </ul>
+    </aside>
 
-  <div class="training-item">
-    <div class="logo-box just">JUST</div>
-    <div>
-      <div class="training-title">Jessore University of Science and Technology</div>
-      <div class="training-meta">
-        <strong>B.Sc. in Computer Science and Engineering</strong>
+    <section class="content">
+
+      <h1>Academic CV</h1>
+
+      <div class="download-line">
+        For full details, please download the PDF CV. Separate pages on this website provide expanded information about publications, research projects, and teaching experience. Download the full academic CV:
+        <a class="download-button" href="Minarul_CV.pdf" target="_blank" rel="noopener noreferrer">PDF CV</a>
       </div>
-      <div class="training-meta">
-        Thesis: <span class="red-text">Ransomware File Encryption Attacks and Data Protection Framework</span>
-      </div>
-    </div>
-  </div>
-
-  <h2 class="section-title">Selected Graduate Coursework</h2>
-
-  <div class="tag-row">
-    <span class="tag">Advanced Topics in Algorithms</span>
-    <span class="tag">Machine Learning</span>
-    <span class="tag">Data Mining</span>
-    <span class="tag">Advanced Computer Architecture</span>
-    <span class="tag">Advanced Operating Systems</span>
-    <span class="tag">Computer Networks</span>
-    <span class="tag">Experimental Statistics I</span>
-    <span class="tag">Research and Dissertation</span>
-  </div>
-
-</section>
+    </section>
 
   </main>
 
@@ -455,3 +458,4 @@
 
 </body>
 </html>
+
