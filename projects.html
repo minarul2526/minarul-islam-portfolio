@@ -218,6 +218,11 @@
       margin-bottom: 0;
     }
 
+    .label {
+      color: #333333;
+      font-weight: 800;
+    }
+
     .project-note {
       background: #fbfbfb;
       border-left: 4px solid #1f78b4;
@@ -247,42 +252,6 @@
       font-weight: 600;
     }
 
-    .compact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 16px;
-    }
-
-    .small-card {
-      border: 1px solid #eeeeee;
-      background: #fbfbfb;
-      border-left: 4px solid #1f78b4;
-      padding: 15px 17px;
-    }
-
-    .small-card:nth-child(2n) {
-      border-left-color: #a51c1c;
-      background: #fffafa;
-    }
-
-    .small-card:nth-child(3n) {
-      border-left-color: #7a007a;
-      background: #fbf8ff;
-    }
-
-    .small-card strong {
-      display: block;
-      color: #333333;
-      font-size: 16.5px;
-      margin-bottom: 5px;
-    }
-
-    .small-card span {
-      color: #555555;
-      font-size: 14.5px;
-    }
-
     .footer {
       border-top: 1px solid #eeeeee;
       text-align: center;
@@ -309,10 +278,6 @@
 
       .side-links {
         text-align: center;
-      }
-
-      .compact-grid {
-        grid-template-columns: 1fr;
       }
 
       .content h1 {
@@ -377,300 +342,146 @@
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">ShiftAware-Select</div>
-          <div class="project-subtitle">Reliable NLP classification under distribution shift</div>
+          <div class="project-title">ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning</div>
+          <div class="project-subtitle">Under review: IEEE ICMLA 2026</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> NLP classifiers can make confident mistakes when test data are noisy, shifted, or out of domain.</p>
-          <p><strong>Outcome:</strong> The framework combines calibration, uncertainty estimation, and selective prediction so uncertain cases can be deferred for human review.</p>
-
-          <div class="project-note">
-            <strong>Venue / Status:</strong> Under review, IEEE ICMLA 2026.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Distribution Shift</span>
-            <span class="tag">Calibration</span>
-            <span class="tag">Selective Prediction</span>
-            <span class="tag">Reliable NLP</span>
-          </div>
+          <p><span class="label">Problem and Importance:</span> NLP classifiers can work well on training-like data but become unreliable when deployed on text from a different domain, platform, or writing style. Overconfident wrong predictions can harm moderation, safety, and decision-support systems.</p>
+          <p><span class="label">Method:</span> Developed a post-hoc reliability layer using calibrated confidence, entropy-based uncertainty, and abstain-to-human decisioning.</p>
+          <p><span class="label">Results and Contribution:</span> Reduced overconfident errors by up to <strong>13.7%</strong>, improved selective risk by up to <strong>49.9%</strong>, and maintained a stable <strong>65%</strong> automatic acceptance rate on shifted and noisy text datasets.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">CAGLSAv2</div>
-          <div class="project-subtitle">Discourse-span attention for length-robust sentiment analysis</div>
+          <div class="project-title">CAGLSAv2: Position-Invariant Discourse-Span Attention for Length-Robust Sentiment Analysis</div>
+          <div class="project-subtitle">Under review: IEEE ICMLA 2026</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> Sentiment can change across clauses, and long text can hide the real opinion evidence.</p>
-          <p><strong>Outcome:</strong> CAGLSAv2 uses discourse-span attention to capture contrast, span-level evidence, and length variation in sentiment analysis.</p>
-
-          <div class="project-note">
-            <strong>Venue / Status:</strong> Under review, IEEE ICMLA 2026.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Sentiment Analysis</span>
-            <span class="tag">Discourse Span</span>
-            <span class="tag">Contrastive Clauses</span>
-            <span class="tag">Context-Aware Learning</span>
-          </div>
+          <p><span class="label">Problem and Importance:</span> Sentiment models often fail on contrastive language, such as “good, but expensive,” where the final opinion depends on how clauses interact.</p>
+          <p><span class="label">Method:</span> Designed a discourse-aware transformer architecture with full-sentence, pre-marker, and post-marker views.</p>
+          <p><span class="label">Results and Contribution:</span> Achieved <strong>0.8661</strong>, <strong>0.9621</strong>, and <strong>0.9071</strong> Macro-F1 on TweetEval, SST-2, and MR.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">Irony-Aware Twitter Sentiment Analysis</div>
-          <div class="project-subtitle">Multi-task learning for non-literal social media text</div>
+          <div class="project-title">Irony-Aware Twitter Sentiment Analysis via Multi-Task Learning</div>
+          <div class="project-subtitle">Under review: IEEE AIBThings 2026</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> Social media posts often use irony, emotion, and indirect meaning, which can mislead sentiment models.</p>
-          <p><strong>Outcome:</strong> The model learns sentiment with irony and emotion signals to improve understanding of non-literal Twitter-style text.</p>
-
-          <div class="project-note">
-            <strong>Venue / Status:</strong> Submitted, IEEE AIBThings 2026.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Irony</span>
-            <span class="tag">Emotion</span>
-            <span class="tag">Multi-Task Learning</span>
-            <span class="tag">Social Media NLP</span>
-          </div>
+          <p><span class="label">Problem and Importance:</span> Social media users often express opinions through irony or sarcasm, where literal words do not match the intended sentiment.</p>
+          <p><span class="label">Method:</span> Built a multi-task learning framework that learns sentiment, irony, and emotion together using a shared Twitter-RoBERTa encoder.</p>
+          <p><span class="label">Results and Contribution:</span> Achieved <strong>0.7241 Macro-F1</strong> on TweetEval Sentiment and <strong>0.869 AUROC</strong> for irony transfer with only <strong>0.474%</strong> added parameters.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">DualGraph-RoBERTa</div>
-          <div class="project-subtitle">Syntactic and semantic graph fusion for aspect-based sentiment analysis</div>
+          <div class="project-title">DualGraph-RoBERTa: Fusing Syntactic and Semantic Graphs for Aspect-Based Sentiment Analysis</div>
+          <div class="project-subtitle">Under review: IEEE AIBThings 2026</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> A sentence can praise one aspect and criticize another, so the model must connect each opinion to the correct target.</p>
-          <p><strong>Outcome:</strong> DualGraph-RoBERTa combines syntactic and semantic graph evidence with RoBERTa to support aspect-specific sentiment prediction.</p>
+          <p><span class="label">Problem and Importance:</span> Aspect-based sentiment analysis requires a model to identify sentiment toward a specific target, not only the overall sentiment of a sentence.</p>
+          <p><span class="label">Method:</span> Developed a dual-graph framework that combines syntactic dependency graphs and semantic co-occurrence graphs.</p>
+          <p><span class="label">Results and Contribution:</span> Achieved <strong>0.8994</strong>, <strong>0.8763</strong>, and <strong>0.8403</strong> Macro-F1 on SemEval-2014 Laptop, SemEval-2014 Restaurant, and SemEval-2016 benchmarks.</p>
+        </div>
+      </div>
 
-          <div class="project-note">
-            <strong>Venue / Status:</strong> Submitted, IEEE AIBThings 2026.
-          </div>
+      <h2>Cybersecurity, Speech, and Transportation Projects</h2>
 
-          <div class="tag-row">
-            <span class="tag">ABSA</span>
-            <span class="tag">Graph Learning</span>
-            <span class="tag">RoBERTa</span>
-            <span class="tag">Opinion Structure</span>
-          </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Hierarchical Severity Classification of Vulnerability Disclosures with Automatic Common Weakness Enumeration Enrichment</div>
+          <div class="project-subtitle">Under review: IEEE AIBThings 2026</div>
+        </div>
+
+        <div class="project-body">
+          <p><span class="label">Problem and Importance:</span> Cybersecurity teams must prioritize vulnerability reports, but short vulnerability descriptions may not provide enough context for accurate severity classification.</p>
+          <p><span class="label">Method:</span> Built a hierarchical classification framework that enriches vulnerability descriptions using Common Weakness Enumeration information.</p>
+          <p><span class="label">Results and Contribution:</span> Evaluated <strong>158,379</strong> NVD vulnerability records, enriched <strong>84.3%</strong> with CWE context, and achieved <strong>0.7658 Macro-F1</strong>.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">Discourse-Aware Domain Adaptation</div>
-          <div class="project-subtitle">Sentiment transfer across domains</div>
+          <div class="project-title">LayerLens: Task-Relevant Layer Disruption Analysis for Self-Supervised Speech Encoders</div>
+          <div class="project-subtitle">Under review: IEEE/ACM Transactions on Audio, Speech, and Language Processing</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> Sentiment models often lose reliability when moved from one domain to another.</p>
-          <p><strong>Outcome:</strong> The project studies discourse and span-level evidence to support more reliable sentiment transfer across domains.</p>
-
-          <div class="project-note">
-            <strong>Venue / Status:</strong> In progress.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Domain Adaptation</span>
-            <span class="tag">Discourse Evidence</span>
-            <span class="tag">Span-Level Sentiment</span>
-            <span class="tag">Generalization</span>
-          </div>
-        </div>
-      </div>
-
-      <h2>Security, Speech, and Sensing Projects</h2>
-
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-title">Hierarchical Severity Classification with CWE Enrichment</div>
-          <div class="project-subtitle">Evidence-aware classification for vulnerability disclosures</div>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Problem:</strong> Vulnerability reports are dense, and severity evidence may appear in only a few sentences.</p>
-          <p><strong>Outcome:</strong> The method combines hierarchical sentence modeling with CWE enrichment to support evidence-aware severity classification.</p>
-
-          <div class="project-note">
-            <strong>Venue / Status:</strong> Submitted, IEEE AIBThings 2026.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Software Security</span>
-            <span class="tag">CWE</span>
-            <span class="tag">Severity Classification</span>
-            <span class="tag">Sentence Evidence</span>
-          </div>
+          <p><span class="label">Problem and Importance:</span> Self-supervised speech models perform well on clean audio but can become unreliable when speech is distorted by noise, reverberation, or enhancement artifacts.</p>
+          <p><span class="label">Method:</span> Developed a task-relevant layer disruption analysis framework that compares clean and distorted hidden representations across transformer layers using CKA-based similarity and task-specific layer weights.</p>
+          <p><span class="label">Results and Contribution:</span> Built an interpretable diagnostic framework that connects acoustic distortion with task-relevant representation disruption for ASR, speaker verification, and speech emotion recognition.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">LayerLens</div>
-          <div class="project-subtitle">Task-relevant layer disruption analysis for self-supervised speech encoders</div>
+          <div class="project-title">Reconstruction Accuracy and Forecasting Utility in Traffic Data Imputation: A Downstream Evaluation Study</div>
+          <div class="project-subtitle">Under review: IEEE Transactions on Intelligent Transportation Systems</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> Global audio quality scores do not show which speech encoder layers are disrupted by noise or reverberation.</p>
-          <p><strong>Outcome:</strong> LayerLens compares clean and distorted representations across layers and links disruption to downstream speech tasks.</p>
+          <p><span class="label">Problem and Importance:</span> Traffic sensor data often contain missing values, and imputation methods are usually evaluated only by reconstruction error. Low reconstruction error does not always mean better downstream forecasting.</p>
+          <p><span class="label">Method:</span> Designed a downstream evaluation study that compares imputation quality using both reconstruction accuracy and forecasting utility.</p>
+          <p><span class="label">Results and Contribution:</span> Provided a practical evaluation framework for understanding when traffic data imputation helps or hurts intelligent transportation forecasting tasks.</p>
+        </div>
+      </div>
 
-          <div class="project-note">
-            <strong>Venue / Status:</strong> Under review, IEEE/ACM TASLP.
-          </div>
+      <h2>Sensing, Audio Security, and Thesis Projects</h2>
 
-          <div class="tag-row">
-            <span class="tag">Speech Processing</span>
-            <span class="tag">Self-Supervised Learning</span>
-            <span class="tag">Layer Analysis</span>
-            <span class="tag">Model Diagnostics</span>
-          </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Vi-Detect: Fine-Grained Vibration-Based Component Looseness Detection Using Smartphones</div>
+          <div class="project-subtitle">ACM SenSys poster published; full article under minor revision at ACM TOSN</div>
+        </div>
+
+        <div class="project-body">
+          <p><span class="label">Problem and Importance:</span> Fine-grained looseness detection often requires dedicated sensors, which limits scalability and increases inspection cost.</p>
+          <p><span class="label">Method:</span> Used smartphone accelerometers and vibration-based mechanical modeling to estimate component looseness.</p>
+          <p><span class="label">Results and Contribution:</span> Showed how everyday mobile devices can support low-cost structural health monitoring.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">Vi-Detect</div>
-          <div class="project-subtitle">Smartphone-based vibration sensing for component looseness detection</div>
+          <div class="project-title">DeepFakeDetect: Fine-Grained Deepfake Audio Detection Using Mechanical Modeling of Vocal Folds</div>
+          <div class="project-subtitle">Under review: Journal of Information Security and Applications</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> Fine-grained looseness detection often requires dedicated sensors, which limits scalability.</p>
-          <p><strong>Outcome:</strong> Vi-Detect uses smartphone accelerometers and vibration modeling to support low-cost structural health monitoring.</p>
-
-          <div class="project-note">
-            <strong>Venue / Status:</strong> ACM SenSys poster published; full article under minor revision at ACM TOSN.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Mobile Sensing</span>
-            <span class="tag">Structural Health Monitoring</span>
-            <span class="tag">Vibration Analysis</span>
-            <span class="tag">Smartphones</span>
-          </div>
+          <p><span class="label">Problem and Importance:</span> Deepfake speech can sound natural, and standard acoustic features may miss subtle physical differences in how speech is produced.</p>
+          <p><span class="label">Method:</span> Modeled speech through vocal-fold mechanical parameters and used physically motivated features for audio authenticity analysis.</p>
+          <p><span class="label">Results and Contribution:</span> Connected speech security with interpretable modeling of the speech production process.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">DeepFakeDetect</div>
-          <div class="project-subtitle">Deepfake audio detection using mechanical modeling of vocal folds</div>
+          <div class="project-title">M.S. Thesis, Universiti Malaysia Pahang: Non-Invasive Blood Glucose Estimation Using Ultra-Wideband Sensing and Machine Learning</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> Deepfake speech can sound natural, and standard acoustic features may miss subtle production differences.</p>
-          <p><strong>Outcome:</strong> DeepFakeDetect uses vocal-fold mechanical parameters to support interpretable audio authenticity analysis.</p>
-
-          <div class="project-note">
-            <strong>Venue / Status:</strong> Under review, Journal of Information Security and Applications.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Deepfake Audio</span>
-            <span class="tag">Speech Security</span>
-            <span class="tag">Vocal Fold Modeling</span>
-            <span class="tag">Machine Learning</span>
-          </div>
+          <p><span class="label">Problem and Importance:</span> Frequent blood glucose monitoring often requires invasive blood sampling, which can be uncomfortable for repeated use.</p>
+          <p><span class="label">Method:</span> Developed a machine learning-based framework using ultra-wideband sensing data for non-invasive glucose estimation.</p>
+          <p><span class="label">Outcome:</span> Produced an applied biomedical AI framework connecting sensing data with glucose-level prediction.</p>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-title">B.Sc. Thesis: Ransomware File Encryption Attacks and Data Protection</div>
-          <div class="project-subtitle">Undergraduate thesis in cybersecurity and software systems</div>
+          <div class="project-title">Undergraduate Thesis, Jashore University of Science and Technology: Ransomware File Encryption Attacks and Data Protection Framework</div>
         </div>
 
         <div class="project-body">
-          <p><strong>Problem:</strong> Ransomware attacks encrypt user files and create serious data-loss risks for individuals and organizations.</p>
-          <p><strong>Outcome:</strong> The thesis studied ransomware behavior, file encryption attacks, user-level security weaknesses, and data protection strategies.</p>
-
-          <div class="project-note">
-            <strong>Institution:</strong> Jashore University of Science and Technology.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Cybersecurity</span>
-            <span class="tag">Ransomware</span>
-            <span class="tag">Data Protection</span>
-            <span class="tag">Software Systems</span>
-          </div>
-        </div>
-      </div>
-
-      <h2>Applied AI and Biomedical Projects</h2>
-
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-title">M.Sc. Thesis: Non-Invasive Blood Glucose Estimation</div>
-          <div class="project-subtitle">Machine learning with ultra-wideband sensing</div>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Problem:</strong> Conventional glucose monitoring can be invasive and uncomfortable for frequent use.</p>
-          <p><strong>Outcome:</strong> The thesis used ultra-wideband sensing and machine learning to study non-invasive glucose-level estimation.</p>
-
-          <div class="project-note">
-            <strong>Institution:</strong> Universiti Malaysia Pahang.
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">M.Sc. Thesis</span>
-            <span class="tag">UWB</span>
-            <span class="tag">Biomedical AI</span>
-            <span class="tag">Machine Learning</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="compact-grid">
-        <div class="small-card">
-          <strong>Non-Invasive Diabetes Monitoring</strong>
-          <span><strong>Problem:</strong> Diabetes monitoring needs safer and easier sensing options. <strong>Outcome:</strong> Built AI and UWB-based modeling for non-invasive monitoring support.</span>
-          <div class="tag-row">
-            <span class="tag">AI</span>
-            <span class="tag">Health Monitoring</span>
-            <span class="tag">Signal Processing</span>
-          </div>
-        </div>
-
-        <div class="small-card">
-          <strong>UWB Biomedical Antenna Systems</strong>
-          <span><strong>Problem:</strong> Biomedical sensing needs compact and reliable signal capture. <strong>Outcome:</strong> Studied UWB antenna and signal-based sensing for health applications.</span>
-          <div class="tag-row">
-            <span class="tag">UWB Antenna</span>
-            <span class="tag">Sensing</span>
-            <span class="tag">Biomedical Systems</span>
-          </div>
-        </div>
-
-        <div class="small-card">
-          <strong>Grape Leaf Disease Detection</strong>
-          <span><strong>Problem:</strong> Visual crop disease inspection can be slow and inconsistent. <strong>Outcome:</strong> Applied deep learning for image-based grape leaf disease recognition.</span>
-          <div class="tag-row">
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Image Classification</span>
-            <span class="tag">Agricultural AI</span>
-          </div>
-        </div>
-
-        <div class="small-card">
-          <strong>Palm Fruit Object Detection</strong>
-          <span><strong>Problem:</strong> Manual fruit detection from plantation videos is time-consuming. <strong>Outcome:</strong> Used YOLO-based deep transfer learning for object detection.</span>
-          <div class="tag-row">
-            <span class="tag">Object Detection</span>
-            <span class="tag">YOLO</span>
-            <span class="tag">Computer Vision</span>
-          </div>
+          <p><span class="label">Problem and Importance:</span> Ransomware attacks encrypt files and block access to important data, especially when users and small organizations lack secure backups or recovery procedures.</p>
+          <p><span class="label">Method:</span> Analyzed infection paths, file-encryption behavior, user-level security weaknesses, recovery limitations, and prevention strategies.</p>
+          <p><span class="label">Outcome:</span> Developed a practical data protection framework organized around prevention before infection, damage reduction during an attack, and recovery after file encryption.</p>
         </div>
       </div>
 
