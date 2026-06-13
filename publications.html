@@ -47,17 +47,26 @@
       flex-wrap: wrap;
     }
 
-  .nav a {
-  color: #505965;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.1px;
-}
+    .nav a {
+      color: #505965;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.1px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid transparent;
+    }
 
-.nav a:first-child {
-  font-weight: 600;
-  color: #222222;
-}
+    .nav a:hover {
+      color: #0b5f95;
+      text-decoration: none;
+      border-bottom: 3px solid #d6e8f7;
+    }
+
+    .nav a.active {
+      color: #a51c1c;
+      font-weight: 800;
+      border-bottom: 3px solid #a51c1c;
+    }
 
     .page {
       max-width: 1220px;
@@ -121,16 +130,20 @@
     }
 
     .content h2 {
-      font-size: 24px;
-      color: #003cff;
-      margin-top: 36px;
+      font-size: 25px;
+      color: #444444;
+      margin-top: 38px;
       margin-bottom: 16px;
       font-weight: 800;
+      border-bottom: 2px solid #eeeeee;
+      padding-bottom: 6px;
     }
 
     .intro {
-      max-width: 940px;
-      margin-bottom: 30px;
+      background: #f7fbff;
+      border: 1px solid #e5f0fa;
+      padding: 20px 24px;
+      margin-bottom: 26px;
     }
 
     .intro p {
@@ -138,11 +151,85 @@
       margin-bottom: 13px;
     }
 
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .blue-text {
+      color: #1f78b4;
+      font-weight: 800;
+    }
+
+    .red-text {
+      color: #a51c1c;
+      font-weight: 800;
+    }
+
+    .purple-text {
+      color: #7a007a;
+      font-weight: 800;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .highlight-card {
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      border-left: 4px solid #a51c1c;
+      padding: 14px 16px;
+      min-height: 125px;
+    }
+
+    .highlight-card:nth-child(2) {
+      border-left-color: #1f78b4;
+    }
+
+    .highlight-card:nth-child(3) {
+      border-left-color: #7a007a;
+    }
+
+    .highlight-card strong {
+      display: block;
+      color: #a51c1c;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .highlight-card span {
+      display: block;
+      color: #444444;
+      font-size: 14.5px;
+      line-height: 1.45;
+    }
+
+    .venue-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+
+    .venue-badge {
+      display: inline-block;
+      background: #fffafa;
+      border: 1px solid #f0dada;
+      color: #a51c1c;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 14px;
+      font-size: 13.5px;
+    }
+
     .pub-list {
       list-style: none;
       padding: 0;
       margin: 0;
-      max-width: 960px;
+      max-width: 980px;
     }
 
     .pub-item {
@@ -168,6 +255,11 @@
       color: #333333;
     }
 
+    .year {
+      color: #a51c1c;
+      font-weight: 900;
+    }
+
     .me {
       font-weight: 800;
       color: #333333;
@@ -179,6 +271,11 @@
 
     .status {
       color: #a51c1c;
+      font-weight: 800;
+    }
+
+    .target {
+      color: #7a007a;
       font-weight: 800;
     }
 
@@ -215,6 +312,10 @@
         text-align: center;
       }
 
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
       .pub-item {
         grid-template-columns: 1fr;
         gap: 2px;
@@ -222,6 +323,10 @@
 
       .pub-number {
         text-align: left;
+      }
+
+      .content h1 {
+        font-size: 31px;
       }
     }
   </style>
@@ -232,302 +337,447 @@
 
   <div class="topbar">
     <nav class="nav">
-  <a href="index.html">Home Page</a>
-  <a href="research.html">Research Experience</a>
-  <a href="projects.html">Notable Projects</a>
-  <a href="publications.html">Publications</a>
-  <a href="teaching.html">Teaching Experience</a>
-  <a href="awards.html">Honors & Awards</a>
-  <a href="cv.html">Academic CV</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <a href="index.html">Home Page</a>
+      <a href="research.html">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="teaching.html">Teaching Experience</a>
+      <a href="awards.html">Honors & Awards</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 
   <main class="page">
-<aside class="sidebar">
-  <img src="minarul photo.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="name">Minarul Islam</div>
+    <aside class="sidebar">
+      <img src="minar_photo.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="bio">
-    Ph.D. Candidate<br />
-    Computer Science and Software Engineering<br />
-    Auburn University<br />
-    Reliable NLP • Sentiment Analysis • AI Security
-  </div>
+      <div class="name">Minarul Islam</div>
 
-  <ul class="side-links">
-    <li>📍 Auburn, Alabama, USA</li>
-    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
-    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
-    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
-  </ul>
-</aside>
-
-<section class="content">
-
-  <h1>Publications</h1>
-
-  <div class="intro">
-    <p>
-      My publications and manuscripts span reliable natural language processing, sentiment analysis, AI security, speech and audio analysis, sensing systems, and antenna systems.
-    </p>
-
-    <p>
-      Manuscripts under review or in preparation are listed first, followed by peer-reviewed journal and conference publications.
-    </p>
-  </div>
-
-  <h2>Under Review, Submitted, and In Preparation</h2>
-
-  <ul class="pub-list">
-    <li class="pub-item">
-      <div class="pub-number">26.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE AIBThings 2026]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
-        "<span class="title">DualGraph-RoBERTa: Fusing Syntactic and Semantic Graphs for Aspect-Based Sentiment Analysis.</span>"
-        <span class="status">Submission in progress.</span>
+      <div class="bio">
+        Ph.D. Candidate<br />
+        Computer Science and Software Engineering<br />
+        Auburn University<br />
+        Reliable NLP • Sentiment Analysis • AI Security
       </div>
-    </li>
 
-    <li class="pub-item">
-      <div class="pub-number">25.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE AIBThings 2026]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
-        "<span class="title">Hierarchical Severity Classification of Vulnerability Disclosures with Automatic Common Weakness Enumeration Enrichment.</span>"
-        <span class="status">Submission in progress.</span>
+      <ul class="side-links">
+        <li>📍 Auburn, Alabama, USA</li>
+        <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+        <li>💻 <a href="https://github.com/minarul2526" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+
+      <h1>Publications</h1>
+
+      <div class="intro">
+        <p>
+          Manuscripts in preparation are listed first, followed by manuscripts under review or submitted, and then published peer-reviewed journal and conference papers.
+        </p>
       </div>
-    </li>
 
-    <li class="pub-item">
-      <div class="pub-number">24.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE AIBThings 2026]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
-        "<span class="title">Irony-Aware Twitter Sentiment Analysis via Multi-Task Learning.</span>"
-        <span class="status">Submission in progress.</span>
+      <h2>AI Security and Systems Highlights</h2>
+
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <strong>PromptShield</strong>
+          <span>Robust detection of prompt injection, jailbreak, and policy-evasive prompts in LLM systems.</span>
+          <span><b>Area:</b> NLP/LLM security and safe AI deployment.</span>
+        </div>
+
+        <div class="highlight-card">
+          <strong>DeepFakeDetect</strong>
+          <span>Fine-grained deepfake audio detection using mechanical modeling of vocal folds.</span>
+          <span><b>Area:</b> Audio security and AI-generated speech detection.</span>
+        </div>
+
+        <div class="highlight-card">
+          <strong>Vi-Detect</strong>
+          <span>Smartphone-based vibration sensing for fine-grained component looseness detection.</span>
+          <span><b>Area:</b> Mobile sensing and cyber-physical system security.</span>
+        </div>
       </div>
-    </li>
 
-    <li class="pub-item">
-      <div class="pub-number">23.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE/ACM TASLP]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
-        "<span class="title">LayerLens: Task-Relevant Layer Disruption Analysis for Self-Supervised Speech Encoders.</span>"
-        <span class="status">Manuscript in preparation.</span>
+      <h2>Targeted and Active Venues</h2>
+
+      <div class="venue-strip">
+        <span class="venue-badge">IEEE TDSC</span>
+        <span class="venue-badge">IEEE TIFS</span>
+        <span class="venue-badge">ACM TOPS</span>
+        <span class="venue-badge">Computers &amp; Security</span>
+        <span class="venue-badge">IEEE/ACM TASLP</span>
+        <span class="venue-badge">ACM TOSN</span>
+        <span class="venue-badge">ACM SenSys</span>
+        <span class="venue-badge">IEEE SECON</span>
+        <span class="venue-badge">IEEE T-ITS</span>
+        <span class="venue-badge">IEEE ICMLA</span>
+        <span class="venue-badge">IEEE AIBThings</span>
+        <span class="venue-badge">JISA</span>
+        <span class="venue-badge">IEEE Access</span>
       </div>
-    </li>
 
-    <li class="pub-item">
-      <div class="pub-number">22.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE ICMLA 2026]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
-        "<span class="title">CAGLSAv2: Position-Invariant Discourse-Span Attention for Length-Robust Sentiment Analysis.</span>"
-        <span class="status">Under review.</span>
-      </div>
-    </li>
+      <h2>Manuscripts in Preparation</h2>
 
-    <li class="pub-item">
-      <div class="pub-number">21.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE ICMLA 2026]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
-        "<span class="title">ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning.</span>"
-        <span class="status">Under review.</span>
-      </div>
-    </li>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-number">31.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[Target: IEEE TDSC / ACM TOPS]</span> &emsp;
+            <span class="me">Minarul Islam</span>, and collaborators.
+            "<span class="title">PromptShield: Robust Detection of Prompt Injection, Jailbreak, and Policy-Evasive Prompts in LLM Systems.</span>"
+            <span class="status">Manuscript in preparation.</span>
+            <span class="target">Target area: NLP/LLM security.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">20.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE T-ITS]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
-        "<span class="title">Reconstruction Accuracy and Forecasting Utility in Traffic Data Imputation: A Downstream Evaluation Study.</span>"
-        <span class="status">Submitted / under review.</span>
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">30.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[Target: IEEE TIFS / Computers &amp; Security]</span> &emsp;
+            <span class="me">Minarul Islam</span>, and collaborators.
+            "<span class="title">SecEval-LLM: Reliability and Safety Evaluation of Large Language Models for Cybersecurity Tasks.</span>"
+            <span class="status">Manuscript in preparation.</span>
+            <span class="target">Target area: trustworthy LLM evaluation for security.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">18.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE Access]</span> &emsp;
-        Aish Albladi, M. K. Uddin, <span class="me">Minarul Islam</span>, and Cheryl Seals.
-        "<span class="title">TWSSenti: A Novel Hybrid Framework for Topic-Wise Sentiment Analysis on Social Media Using Transformer Models.</span>"
-        <span class="status">Major correction submitted.</span>
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">29.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[Target: IEEE TDSC / ACM TOPS]</span> &emsp;
+            <span class="me">Minarul Islam</span>, and collaborators.
+            "<span class="title">ThreatRAG: Secure and Evidence-Grounded Retrieval-Augmented Generation for Cybersecurity Question Answering.</span>"
+            <span class="status">Manuscript in preparation.</span>
+            <span class="target">Target area: secure RAG and evidence-grounded cyber reasoning.</span>
+          </div>
+        </li>
 
-  <h2>Peer-Reviewed Journal and Conference Publications</h2>
+        <li class="pub-item">
+          <div class="pub-number">28.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[Target: IEEE TIFS / Computers &amp; Security]</span> &emsp;
+            <span class="me">Minarul Islam</span>, and collaborators.
+            "<span class="title">LogGuard-LLM: Uncertainty-Aware Incident Log Triage and Security Report Generation with Large Language Models.</span>"
+            <span class="status">Manuscript in preparation.</span>
+            <span class="target">Target area: security log analysis and incident response.</span>
+          </div>
+        </li>
+      </ul>
 
-  <ul class="pub-list">
-    <li class="pub-item">
-      <div class="pub-number">16.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE IWAT 2025]</span> &emsp;
-        Mohammed Nazmus Shakib, Shaif Uddin Khondaker, Zebreail Hamden, Atiqur Rahman Udoy,
-        <span class="me">Minarul Islam</span>, and Lim Heng Siong.
-        "<span class="title">Design of a Compact Transparent Antenna for 5G Communication Systems.</span>"
-        In <span class="title">2025 IEEE International Workshop on Antenna Technology</span>, pages 1–4. IEEE, 2025.
-      </div>
-    </li>
+      <h2>Under Review and Submitted</h2>
 
-    <li class="pub-item">
-      <div class="pub-number">15.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE Access 2025]</span> &emsp;
-        Aish Albladi, <span class="me">Minarul Islam</span>, and Cheryl Seals.
-        "<span class="title">Sentiment Analysis of Twitter Data Using NLP Models: A Comprehensive Review.</span>"
-        <span class="title">IEEE Access</span>, 2025.
-      </div>
-    </li>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-number">27.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[JISA]</span> &emsp;
+            <span class="me">Minarul Islam</span>, and collaborators.
+            "<span class="title">DeepFakeDetect: Fine-Grained Deepfake Audio Detection Using Mechanical Modeling of Vocal Folds.</span>"
+            <span class="status">Under review, Journal of Information Security and Applications.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">14.</div>
-      <div class="pub-entry">
-        <span class="venue">[IEEE Access 2025]</span> &emsp;
-        Aish Albladi, <span class="me">Minarul Islam</span>, Amit Das, Maryam Bigonah, Zheng Zhang,
-        Fatemeh Jamshidi, Mostafa Rahgouy, Nilanjana Raychawdhary, Daniela Marghitu, and Cheryl Seals.
-        "<span class="title">Hate Speech Detection Using Large Language Models: A Comprehensive Review.</span>"
-        <span class="title">IEEE Access</span>, 13:20871–20892, 2025.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">26.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[ACM TOSN]</span> &emsp;
+            <span class="me">Minarul Islam</span>, and collaborators.
+            "<span class="title">Vi-Detect: Fine-Grained Vibration-Based Component Looseness Detection Using Smartphones.</span>"
+            <span class="status">Under review, minor revision.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">11.</div>
-      <div class="pub-entry">
-        <span class="venue">[IOP MSE 2021]</span> &emsp;
-        Md Zahangir Alam, Md Nazmus Sakib, <span class="me">Minarul Islam</span>, and Mohammad Jalal Uddin.
-        "<span class="title">Various Risks and Safety Analysis to Reduce Fire in Oil Refinery Plant.</span>"
-        In <span class="title">IOP Conference Series: Materials Science and Engineering</span>, volume 1078, page 012028.
-        IOP Publishing, 2021.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">25.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE AIBThings 2026]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
+            "<span class="title">DualGraph-RoBERTa: Fusing Syntactic and Semantic Graphs for Aspect-Based Sentiment Analysis.</span>"
+            <span class="status">Under review.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">10.</div>
-      <div class="pub-entry">
-        <span class="venue">[IOP MSE 2021]</span> &emsp;
-        Md Nazmus Sakib, Md Mahmudul Hasan Sohel, Shahanul Islam, and <span class="me">Minarul Islam</span>.
-        "<span class="title">Smart Solution for Low Humidity Problems Using Automatic Ultrasonic Humidifier.</span>"
-        In <span class="title">IOP Conference Series: Materials Science and Engineering</span>, volume 1078, page 012035.
-        IOP Publishing, 2021.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">24.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE AIBThings 2026]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
+            "<span class="title">Hierarchical Severity Classification of Vulnerability Disclosures with Automatic Common Weakness Enumeration Enrichment.</span>"
+            <span class="status">Under review.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">9.</div>
-      <div class="pub-entry">
-        <span class="venue">[InECCE / Springer 2020]</span> &emsp;
-        NJ Shoumy, DM Rahaman, S Khatun, WN Azhani, MH Ariff, MN Morshed,
-        <span class="me">Minarul Islam</span>, SNA Manap, and MFM Jusof.
-        "<span class="title">Multi-Hop File Transfer in WiFi Direct Based Cognitive Radio Network for Cloud Backup.</span>"
-        In <span class="title">InECCE2019: Proceedings of the 5th International Conference on Electrical, Control & Computer Engineering</span>.
-        Springer, 2020.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">23.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE AIBThings 2026]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
+            "<span class="title">Irony-Aware Twitter Sentiment Analysis via Multi-Task Learning.</span>"
+            <span class="status">Under review.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">8.</div>
-      <div class="pub-entry">
-        <span class="venue">[ETCCE 2020]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Sabira Khatun, Kamarul Hawari Ghazali, Mohd Mawardi Saari,
-        Mohammed Nazmus Shakib, and Mohamad Shaiful Abdul Karim.
-        "<span class="title">Performance Comparison of Non-Invasive Blood Glucose Level Using Artificial Neural Network and Ultra-Wide Band Antenna.</span>"
-        In <span class="title">2020 Emerging Technology in Computing, Communication and Electronics</span>, pages 1–5. IEEE, 2020.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">22.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE/ACM TASLP]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
+            "<span class="title">LayerLens: Task-Relevant Layer Disruption Analysis for Self-Supervised Speech Encoders.</span>"
+            <span class="status">Under review.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">7.</div>
-      <div class="pub-entry">
-        <span class="venue">[ICONCS / Springer 2020]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Sabira Khatun, Nusrat Jahan Shoumy, Md Shawkat Ali,
-        Mohamad Shaiful Abdul Karim, and Bifta Sama Bari.
-        "<span class="title">Non-Invasive Diabetes Level Monitoring System Using Artificial Intelligence and UWB.</span>"
-        In <span class="title">Cyber Security and Computer Science: Second EAI International Conference, ICONCS 2020</span>,
-        Dhaka, Bangladesh, pages 376–387. Springer, 2020.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">21.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE T-ITS]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
+            "<span class="title">Reconstruction Accuracy and Forecasting Utility in Traffic Data Imputation: A Downstream Evaluation Study.</span>"
+            <span class="status">Under review.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">6.</div>
-      <div class="pub-entry">
-        <span class="venue">[ICONCS / Springer 2020]</span> &emsp;
-        Bifta Sama Bari, Sabira Khatun, Kamarul Hawari Ghazali, <span class="me">Minarul Islam</span>,
-        Mamunur Rashid, Mostafijur Rahman, and Nurhafizah Abu Talip.
-        "<span class="title">Performance Comparison of Early Breast Cancer Detection Precision Using AI and Ultra-Wideband Bio-Antennas.</span>"
-        In <span class="title">Cyber Security and Computer Science: Second EAI International Conference, ICONCS 2020</span>,
-        Dhaka, Bangladesh, pages 354–365. Springer, 2020.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">20.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE ICMLA 2026]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
+            "<span class="title">CAGLSAv2: Position-Invariant Discourse-Span Attention for Length-Robust Sentiment Analysis.</span>"
+            <span class="status">Under review.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">5.</div>
-      <div class="pub-entry">
-        <span class="venue">[JPCS 2020]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Chai Ly Min, Nusrat Jahan Shoumy, Md Shawkat Ali,
-        Sabira Khatun, Mohamad Shaiful Abdul Karim, and Bifta Sama Bari.
-        "<span class="title">Software Module Development for Non-Invasive Blood Glucose Measurement Using an Ultra-Wide Band and Machine Learning.</span>"
-        In <span class="title">Journal of Physics: Conference Series</span>, volume 1529, page 052066. IOP Publishing, 2020.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">19.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE ICMLA 2026]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Aish Albladi, Muhammad Asadur Rahman, and Cheryl Seals.
+            "<span class="title">ShiftAware-Select: Reliable NLP Classification under Distribution Shift with Abstain-to-Human Decisioning.</span>"
+            <span class="status">Under review.</span>
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">4.</div>
-      <div class="pub-entry">
-        <span class="venue">[SN Applied Sciences 2020]</span> &emsp;
-        <span class="me">Minarul Islam</span>, Md Shawkat Ali, Nusrat Jahan Shoumy, Sabira Khatun,
-        Mohamad Shaiful Abdul Karim, and Bifta Sama Bari.
-        "<span class="title">Non-Invasive Blood Glucose Concentration Level Estimation Accuracy Using Ultra-Wide Band and Artificial Intelligence.</span>"
-        <span class="title">SN Applied Sciences</span>, 2:1–9, 2020.
-      </div>
-    </li>
+        <li class="pub-item">
+          <div class="pub-number">18.</div>
+          <div class="pub-entry">
+            <span class="year">2026</span> &emsp;
+            <span class="venue">[IEEE Access]</span> &emsp;
+            Aish Albladi, M. K. Uddin, <span class="me">Minarul Islam</span>, and Cheryl Seals.
+            "<span class="title">TWSSenti: A Novel Hybrid Framework for Topic-Wise Sentiment Analysis on Social Media Using Transformer Models.</span>"
+            <span class="status">Major correction submitted.</span>
+          </div>
+        </li>
+      </ul>
 
-    <li class="pub-item">
-      <div class="pub-number">3.</div>
-      <div class="pub-entry">
-        <span class="venue">[SN Applied Sciences 2020]</span> &emsp;
-        Mamunur Rashid, <span class="me">Minarul Islam</span>, Norizam Sulaiman, Bifta Sama Bari, and Md. Ripon.
-        "<span class="title">Electrocorticography Based Motor Imagery Movements Classification Using Long Short-Term Memory Based on Deep Learning Approach.</span>"
-        <span class="title">SN Applied Sciences</span>, 2:1–7, 2020.
-      </div>
-    </li>
+      <h2>Peer-Reviewed Journal and Conference Publications</h2>
 
-    <li class="pub-item">
-      <div class="pub-number">2.</div>
-      <div class="pub-entry">
-        <span class="venue">[InECCE / Springer 2020]</span> &emsp;
-        Bifta Sama Bari, Sabira Khatun, Kamarul Hawari Ghazali, Md Moslemuddin Fakir,
-        Mohd Hisyam Mohd Ariff, Mohd Faizal Jamlos, Mamunur Rashid, <span class="me">Minarul Islam</span>,
-        Mohd Zamri Ibrahim, and Mohd Falfazli Mat Jusof.
-        "<span class="title">Bandwidth and Gain Enhancement of a Modified Ultra-Wideband Micro-Strip Patch Antenna Using a Reflecting Layer.</span>"
-        In <span class="title">InECCE2019: Proceedings of the 5th International Conference on Electrical, Control & Computer Engineering</span>,
-        Kuantan, Pahang, Malaysia, pages 463–473. Springer, 2020.
-      </div>
-    </li>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-number">17.</div>
+          <div class="pub-entry">
+            <span class="year">2025</span> &emsp;
+            <span class="venue">[IEEE IWAT 2025]</span> &emsp;
+            Mohammed Nazmus Shakib, Shaif Uddin Khondaker, Zebreail Hamden, Atiqur Rahman Udoy,
+            <span class="me">Minarul Islam</span>, and Lim Heng Siong.
+            "<span class="title">Design of a Compact Transparent Antenna for 5G Communication Systems.</span>"
+            In <span class="title">2025 IEEE International Workshop on Antenna Technology</span>, pages 1–4. IEEE, 2025.
+          </div>
+        </li>
 
-    <li class="pub-item">
-      <div class="pub-number">1.</div>
-      <div class="pub-entry">
-        <span class="venue">[InECCE / Springer 2020]</span> &emsp;
-        Bifta Sama Bari, Sabira Khatun, Kamarul Hawari Ghazali, Md Moslemuddin Fakir,
-        Wan Nur Azhani W Samsudin, Mohd Falfazli Mat Jusof, Mamunur Rashid,
-        <span class="me">Minarul Islam</span>, and Mohd Zamri Ibrahim.
-        "<span class="title">Ultra Wide Band Based Early Breast Cancer Detection Using Artificial Intelligence.</span>"
-        In <span class="title">InECCE2019: Proceedings of the 5th International Conference on Electrical, Control & Computer Engineering</span>,
-        Kuantan, Pahang, Malaysia, pages 505–515. Springer, 2020.
-      </div>
-    </li>
-  </ul>
+        <li class="pub-item">
+          <div class="pub-number">16.</div>
+          <div class="pub-entry">
+            <span class="year">2025</span> &emsp;
+            <span class="venue">[IEEE Access]</span> &emsp;
+            Aish Albladi, <span class="me">Minarul Islam</span>, and Cheryl Seals.
+            "<span class="title">Sentiment Analysis of Twitter Data Using NLP Models: A Comprehensive Review.</span>"
+            <span class="title">IEEE Access</span>, 2025.
+          </div>
+        </li>
 
-</section>
+        <li class="pub-item">
+          <div class="pub-number">15.</div>
+          <div class="pub-entry">
+            <span class="year">2025</span> &emsp;
+            <span class="venue">[IEEE Access]</span> &emsp;
+            Aish Albladi, <span class="me">Minarul Islam</span>, Amit Das, Maryam Bigonah, Zheng Zhang,
+            Fatemeh Jamshidi, Mostafa Rahgouy, Nilanjana Raychawdhary, Daniela Marghitu, and Cheryl Seals.
+            "<span class="title">Hate Speech Detection Using Large Language Models: A Comprehensive Review.</span>"
+            <span class="title">IEEE Access</span>, 13:20871–20892, 2025.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">14.</div>
+          <div class="pub-entry">
+            <span class="year">2024</span> &emsp;
+            <span class="venue">[ACM SenSys 2024]</span> &emsp;
+            <span class="me">Minarul Islam</span>, and collaborators.
+            "<span class="title">Vi-Detect: Fine-Grained Vibration-Based Component Looseness Detection Using Smartphones.</span>"
+            <span class="status">Poster / short paper published.</span>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">13.</div>
+          <div class="pub-entry">
+            <span class="year">2021</span> &emsp;
+            <span class="venue">[IOP MSE]</span> &emsp;
+            Md Zahangir Alam, Md Nazmus Sakib, <span class="me">Minarul Islam</span>, and Mohammad Jalal Uddin.
+            "<span class="title">Various Risks and Safety Analysis to Reduce Fire in Oil Refinery Plant.</span>"
+            In <span class="title">IOP Conference Series: Materials Science and Engineering</span>, volume 1078, page 012028.
+            IOP Publishing, 2021.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">12.</div>
+          <div class="pub-entry">
+            <span class="year">2021</span> &emsp;
+            <span class="venue">[IOP MSE]</span> &emsp;
+            Md Nazmus Sakib, Md Mahmudul Hasan Sohel, Shahanul Islam, and <span class="me">Minarul Islam</span>.
+            "<span class="title">Smart Solution for Low Humidity Problems Using Automatic Ultrasonic Humidifier.</span>"
+            In <span class="title">IOP Conference Series: Materials Science and Engineering</span>, volume 1078, page 012035.
+            IOP Publishing, 2021.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">11.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[InECCE / Springer]</span> &emsp;
+            NJ Shoumy, DM Rahaman, S Khatun, WN Azhani, MH Ariff, MN Morshed,
+            <span class="me">Minarul Islam</span>, SNA Manap, and MFM Jusof.
+            "<span class="title">Multi-Hop File Transfer in WiFi Direct Based Cognitive Radio Network for Cloud Backup.</span>"
+            In <span class="title">InECCE2019: Proceedings of the 5th International Conference on Electrical, Control & Computer Engineering</span>.
+            Springer, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">10.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[ETCCE]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Sabira Khatun, Kamarul Hawari Ghazali, Mohd Mawardi Saari,
+            Mohammed Nazmus Shakib, and Mohamad Shaiful Abdul Karim.
+            "<span class="title">Performance Comparison of Non-Invasive Blood Glucose Level Using Artificial Neural Network and Ultra-Wide Band Antenna.</span>"
+            In <span class="title">2020 Emerging Technology in Computing, Communication and Electronics</span>, pages 1–5. IEEE, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">9.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[ICONCS / Springer]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Sabira Khatun, Nusrat Jahan Shoumy, Md Shawkat Ali,
+            Mohamad Shaiful Abdul Karim, and Bifta Sama Bari.
+            "<span class="title">Non-Invasive Diabetes Level Monitoring System Using Artificial Intelligence and UWB.</span>"
+            In <span class="title">Cyber Security and Computer Science: Second EAI International Conference, ICONCS 2020</span>,
+            Dhaka, Bangladesh, pages 376–387. Springer, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">8.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[ICONCS / Springer]</span> &emsp;
+            Bifta Sama Bari, Sabira Khatun, Kamarul Hawari Ghazali, <span class="me">Minarul Islam</span>,
+            Mamunur Rashid, Mostafijur Rahman, and Nurhafizah Abu Talip.
+            "<span class="title">Performance Comparison of Early Breast Cancer Detection Precision Using AI and Ultra-Wideband Bio-Antennas.</span>"
+            In <span class="title">Cyber Security and Computer Science: Second EAI International Conference, ICONCS 2020</span>,
+            Dhaka, Bangladesh, pages 354–365. Springer, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">7.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[JPCS]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Chai Ly Min, Nusrat Jahan Shoumy, Md Shawkat Ali,
+            Sabira Khatun, Mohamad Shaiful Abdul Karim, and Bifta Sama Bari.
+            "<span class="title">Software Module Development for Non-Invasive Blood Glucose Measurement Using an Ultra-Wide Band and Machine Learning.</span>"
+            In <span class="title">Journal of Physics: Conference Series</span>, volume 1529, page 052066. IOP Publishing, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">6.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[SN Applied Sciences]</span> &emsp;
+            <span class="me">Minarul Islam</span>, Md Shawkat Ali, Nusrat Jahan Shoumy, Sabira Khatun,
+            Mohamad Shaiful Abdul Karim, and Bifta Sama Bari.
+            "<span class="title">Non-Invasive Blood Glucose Concentration Level Estimation Accuracy Using Ultra-Wide Band and Artificial Intelligence.</span>"
+            <span class="title">SN Applied Sciences</span>, 2:1–9, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">5.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[SN Applied Sciences]</span> &emsp;
+            Mamunur Rashid, <span class="me">Minarul Islam</span>, Norizam Sulaiman, Bifta Sama Bari, and Md. Ripon.
+            "<span class="title">Electrocorticography Based Motor Imagery Movements Classification Using Long Short-Term Memory Based on Deep Learning Approach.</span>"
+            <span class="title">SN Applied Sciences</span>, 2:1–7, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">4.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[InECCE / Springer]</span> &emsp;
+            Bifta Sama Bari, Sabira Khatun, Kamarul Hawari Ghazali, Md Moslemuddin Fakir,
+            Mohd Hisyam Mohd Ariff, Mohd Faizal Jamlos, Mamunur Rashid, <span class="me">Minarul Islam</span>,
+            Mohd Zamri Ibrahim, and Mohd Falfazli Mat Jusof.
+            "<span class="title">Bandwidth and Gain Enhancement of a Modified Ultra-Wideband Micro-Strip Patch Antenna Using a Reflecting Layer.</span>"
+            In <span class="title">InECCE2019: Proceedings of the 5th International Conference on Electrical, Control & Computer Engineering</span>,
+            Kuantan, Pahang, Malaysia, pages 463–473. Springer, 2020.
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-number">3.</div>
+          <div class="pub-entry">
+            <span class="year">2020</span> &emsp;
+            <span class="venue">[InECCE / Springer]</span> &emsp;
+            Bifta Sama Bari, Sabira Khatun, Kamarul Hawari Ghazali, Md Moslemuddin Fakir,
+            Wan Nur Azhani W Samsudin, Mohd Falfazli Mat Jusof, Mamunur Rashid,
+            <span class="me">Minarul Islam</span>, and Mohd Zamri Ibrahim.
+            "<span class="title">Ultra Wide Band Based Early Breast Cancer Detection Using Artificial Intelligence.</span>"
+            In <span class="title">InECCE2019: Proceedings of the 5th International Conference on Electrical, Control & Computer Engineering</span>,
+            Kuantan, Pahang, Malaysia, pages 505–515. Springer, 2020.
+          </div>
+        </li>
+      </ul>
+
+    </section>
 
   </main>
 
