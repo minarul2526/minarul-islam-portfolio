@@ -47,17 +47,26 @@
       flex-wrap: wrap;
     }
 
-   .nav a {
-  color: #505965;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.1px;
-}
+    .nav a {
+      color: #505965;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.1px;
+      padding-bottom: 6px;
+      border-bottom: 3px solid transparent;
+    }
 
-.nav a:first-child {
-  font-weight: 600;
-  color: #222222;
-}
+    .nav a:hover {
+      color: #0b5f95;
+      text-decoration: none;
+      border-bottom: 3px solid #d6e8f7;
+    }
+
+    .nav a.active {
+      color: #a51c1c;
+      font-weight: 800;
+      border-bottom: 3px solid #a51c1c;
+    }
 
     .page {
       max-width: 1220px;
@@ -140,7 +149,7 @@
       background: #f7fbff;
       border: 1px solid #e5f0fa;
       padding: 20px 24px;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     .overview p {
@@ -150,6 +159,52 @@
 
     .overview p:last-child {
       margin-bottom: 0;
+    }
+
+    .impact-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 0 0 28px;
+    }
+
+    .impact-item {
+      background: linear-gradient(135deg, #f7fbff, #ffffff);
+      border: 1px solid #dcecf8;
+      border-left: 4px solid #1f78b4;
+      padding: 12px 10px;
+      text-align: center;
+      font-weight: 800;
+      color: #333333;
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
+    }
+
+    .impact-item:nth-child(2) {
+      border-left-color: #7a007a;
+    }
+
+    .impact-item:nth-child(3) {
+      border-left-color: #a51c1c;
+    }
+
+    .impact-item:nth-child(4) {
+      border-left-color: #2f8f46;
+    }
+
+    .impact-number {
+      display: block;
+      font-size: 25px;
+      line-height: 1.1;
+      color: #a51c1c;
+      font-weight: 900;
+    }
+
+    .impact-label {
+      display: block;
+      font-size: 13.5px;
+      line-height: 1.25;
+      color: #444444;
+      margin-top: 4px;
     }
 
     .red-text {
@@ -361,8 +416,13 @@
       }
 
       .project-grid,
-      .map-grid {
+      .map-grid,
+      .impact-strip {
         grid-template-columns: 1fr;
+      }
+
+      .content h1 {
+        font-size: 31px;
       }
     }
   </style>
@@ -373,298 +433,310 @@
 
   <div class="topbar">
     <nav class="nav">
-  <a href="index.html">Home Page</a>
-  <a href="research.html">Research Experience</a>
-  <a href="projects.html">Notable Projects</a>
-  <a href="publications.html">Publications</a>
-  <a href="teaching.html">Teaching Experience</a>
-  <a href="awards.html">Honors & Awards</a>
-  <a href="cv.html">Academic CV</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <a href="index.html">Home Page</a>
+      <a href="research.html" class="active">Research Experience</a>
+      <a href="projects.html">Notable Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching Experience</a>
+      <a href="awards.html">Honors & Awards</a>
+      <a href="cv.html">Academic CV</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 
   <main class="page">
-<aside class="sidebar">
-  <img src="minarul photo.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="name">Minarul Islam</div>
+    <aside class="sidebar">
+      <img src="minar_photo.png" alt="Minarul Islam" class="profile-img" />
 
-  <div class="bio">
-    Ph.D. Candidate<br />
-    Computer Science and Software Engineering<br />
-    Auburn University<br />
-    Reliable NLP • Sentiment Analysis • AI Security
-  </div>
+      <div class="name">Minarul Islam</div>
 
-  <ul class="side-links">
-    <li>📍 Auburn, Alabama, USA</li>
-    <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
-    <li>💻 <a href="https://github.com/minarul2526" target="_blank">GitHub</a></li>
-    <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank">Google Scholar</a></li>
-    <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank">LinkedIn</a></li>
-    <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank">Download CV</a></li>
-  </ul>
-</aside>
-
-<section class="content">
-
-  <h1>Research Experience</h1>
-
-  <div class="overview">
-    <p>
-      My research experience spans natural language processing, reliable machine learning, AI security, speech and audio analysis, sensing systems, and biomedical AI. The common thread is reliability. I study how models behave when the data is complex, noisy, shifted, or tied to real-world decision making.
-    </p>
-
-    <p>
-      At Auburn University, my current work focuses on reliable and context-aware NLP. This includes sentiment analysis under linguistic complexity, distribution shift, aspect-level opinion, software vulnerability analysis, and speech model diagnostics. Earlier work at Universiti Malaysia Pahang focused on applied machine learning for biomedical sensing and ultra-wideband systems.
-    </p>
-
-    <p>
-      This page summarizes my research experience by institution and role. Detailed descriptions of selected systems and manuscripts are provided on the Notable Projects page.
-    </p>
-  </div>
-
-  <div class="research-map">
-    <div class="map-title">Research Themes</div>
-    <div class="map-subtitle">Reliable NLP, Applied AI, Security, Speech, and Sensing</div>
-
-    <div class="map-grid">
-      <div class="map-box">
-        <strong>Reliable NLP</strong>
-        <span>Distribution shift, calibration, selective prediction, and uncertainty-aware decisions.</span>
+      <div class="bio">
+        Ph.D. Candidate<br />
+        Computer Science and Software Engineering<br />
+        Auburn University<br />
+        Reliable NLP • Sentiment Analysis • AI Security
       </div>
 
-      <div class="map-box">
-        <strong>Context-Aware Sentiment</strong>
-        <span>Contrast, irony, discourse, aspect-level opinion, and domain transfer.</span>
+      <ul class="side-links">
+        <li>📍 Auburn, Alabama, USA</li>
+        <li>✉ <a href="mailto:mzi0030@auburn.edu">Email</a></li>
+        <li>💻 <a href="https://github.com/minarul2526" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li>🎓 <a href="https://scholar.google.com/citations?hl=en&user=cGEB2UwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/minarul-islam-9a5b4714a" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li>📄 <a href="Minarul_Islam_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+
+      <h1>Research Experience</h1>
+
+      <div class="overview">
+        <p>
+          My research focuses on <strong class="blue-text">reliable and context-aware machine learning</strong> for natural language processing, large language models, AI for cybersecurity, sensing systems, and biomedical AI. I study how models behave when data are complex, noisy, shifted, incomplete, or tied to real-world decision making.
+        </p>
+
+        <p>
+          At <strong class="blue-text">Auburn University</strong>, my Ph.D. research focuses on reliable and context-aware NLP. This work includes sentiment analysis under linguistic complexity, distribution shift, irony understanding, aspect-level opinion, cybersecurity text analytics, software vulnerability analysis, and speech model diagnostics. Earlier work at <strong class="blue-text">Universiti Malaysia Pahang</strong> focused on applied machine learning for biomedical sensing and ultra-wideband systems.
+        </p>
+
+        <p>
+          Detailed descriptions of selected systems and manuscripts are provided on the
+          <a href="projects.html"><strong>Notable Projects</strong></a> page.
+        </p>
       </div>
 
-      <div class="map-box">
-        <strong>Software Security</strong>
-        <span>Vulnerability severity prediction with sentence evidence and CWE knowledge.</span>
-      </div>
-
-      <div class="map-box">
-        <strong>Speech and Audio AI</strong>
-        <span>Speech representation diagnostics and deepfake audio analysis.</span>
-      </div>
-
-      <div class="map-box">
-        <strong>Sensing Systems</strong>
-        <span>Smartphone-based vibration sensing and structural condition monitoring.</span>
-      </div>
-
-      <div class="map-box">
-        <strong>Biomedical AI</strong>
-        <span>UWB sensing, non-invasive monitoring, and machine learning for health applications.</span>
-      </div>
-    </div>
-  </div>
-
-  <h2 class="section-title">Institution-Based Research Experience</h2>
-
-  <div class="institution">
-    <div class="institution-header">
-      <div class="institution-title">Auburn University</div>
-      <div class="institution-meta">Ph.D. Research, Graduate Research Assistant, and Collaborative Research | 2022–Present</div>
-    </div>
-
-    <div class="institution-body">
-      <p>
-        My Ph.D. research at Auburn University focuses on reliable and context-aware machine learning. The main dissertation direction studies sentiment analysis when text contains linguistic complexity. I also work on related problems in software security, speech representation analysis, traffic data imputation, and sensing systems.
-      </p>
-
-      <p>
-        This research combines transformer-based modeling, uncertainty estimation, graph learning, hierarchical evidence modeling, and task-aware evaluation. The goal is to build methods that remain useful beyond clean benchmark settings.
-      </p>
-
-      <div class="project-grid">
-        <div class="project-box">
-          <strong>ShiftAware-Select</strong>
-          <span>Reliable NLP classification under distribution shift. Target venue: IEEE ICMLA.</span>
+      <div class="impact-strip">
+        <div class="impact-item">
+          <span class="impact-number">360+</span>
+          <span class="impact-label">Google Scholar Citations</span>
         </div>
 
-        <div class="project-box">
-          <strong>CAGLSAv2</strong>
-          <span>Discourse-span attention for length-robust sentiment analysis. Target venue: IEEE ICMLA.</span>
+        <div class="impact-item">
+          <span class="impact-number">300+</span>
+          <span class="impact-label">Research Articles Reviewed</span>
         </div>
 
-        <div class="project-box">
-          <strong>Irony-Aware Twitter Sentiment Analysis</strong>
-          <span>Multitask learning for sentiment, irony, and emotion. Submission in progress: IEEE AIBThings.</span>
+        <div class="impact-item">
+          <span class="impact-number">12+</span>
+          <span class="impact-label">Presentations and Talks</span>
         </div>
 
-        <div class="project-box">
-          <strong>Hierarchical Severity Classification</strong>
-          <span>Vulnerability severity prediction with automatic CWE enrichment. Submission in progress: IEEE AIBThings.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>DualGraph-RoBERTa</strong>
-          <span>Aspect-based sentiment analysis using syntactic and semantic graph evidence. Submission in progress: IEEE AIBThings.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Discourse-Aware Domain Adaptation</strong>
-          <span>Sentiment transfer across domains using discourse and span-level evidence. In progress.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>LayerLens</strong>
-          <span>Task-relevant layer disruption analysis for self-supervised speech encoders. Target venue: IEEE/ACM TASLP.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Vi-Detect</strong>
-          <span>Smartphone-based vibration sensing for component looseness detection. ACM SenSys poster and ACM TOSN journal work.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>DeepFakeDetect</strong>
-          <span>Deepfake audio detection using mechanical modeling of vocal folds. Journal direction: JISA / security venues.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Traffic Data Imputation Study</strong>
-          <span>Downstream evaluation of reconstruction accuracy and forecasting utility. Journal direction: IEEE T-ITS.</span>
+        <div class="impact-item">
+          <span class="impact-number">5+</span>
+          <span class="impact-label">Distinctions and Awards</span>
         </div>
       </div>
 
-      <div class="tag-row">
-        <span class="tag">Reliable NLP</span>
-        <span class="tag">Sentiment Analysis</span>
-        <span class="tag">Software Security</span>
-        <span class="tag">Speech Processing</span>
-        <span class="tag">Sensing Systems</span>
-        <span class="tag">Transformer Models</span>
-      </div>
-    </div>
-  </div>
+      <div class="research-map">
+        <div class="map-title">Research Themes</div>
+        <div class="map-subtitle">Reliable NLP, AI for Cybersecurity, Applied AI, and Mobile Sensing</div>
 
-  <div class="institution">
-    <div class="institution-header red">
-      <div class="institution-title">Universiti Malaysia Pahang</div>
-      <div class="institution-meta">M.Sc. by Research and Graduate Research Assistant | 2018–2021</div>
-    </div>
+        <div class="map-grid">
+          <div class="map-box">
+            <strong>Reliable NLP</strong>
+            <span>Distribution shift, calibration, selective prediction, uncertainty estimation, and human-in-the-loop decisions.</span>
+          </div>
 
-    <div class="institution-body">
-      <p>
-        My graduate research at Universiti Malaysia Pahang focused on applied machine learning, digital signal processing, ultra-wideband sensing, and biomedical AI. This period gave me a strong foundation in experimental research, signal-based modeling, and engineering-driven machine learning.
-      </p>
+          <div class="map-box">
+            <strong>Context-Aware Sentiment</strong>
+            <span>Contrast, irony, discourse, aspect-level opinion, and domain shift.</span>
+          </div>
 
-      <p>
-        Much of this work studied how sensing signals can support non-invasive monitoring and biomedical decision support. It also included deep learning applications in image-based and object detection tasks.
-      </p>
+          <div class="map-box">
+            <strong>AI for Cybersecurity</strong>
+            <span>Vulnerability severity prediction, CWE enrichment, security text analytics, and AI-assisted decision support.</span>
+          </div>
 
-      <div class="project-grid">
-        <div class="project-box">
-          <strong>Non-Invasive Blood Glucose Estimation</strong>
-          <span>Machine learning with ultra-wideband signals for glucose-level estimation.</span>
-        </div>
+          <div class="map-box">
+            <strong>Speech and Audio AI</strong>
+            <span>Speech representation diagnostics, task-relevant layer disruption, and deepfake audio analysis.</span>
+          </div>
 
-        <div class="project-box">
-          <strong>Non-Invasive Diabetes Monitoring</strong>
-          <span>AI and UWB-based modeling for biomedical monitoring systems.</span>
-        </div>
+          <div class="map-box">
+            <strong>Sensing Systems</strong>
+            <span>Smartphone-based vibration sensing, mobile sensing, and structural condition monitoring.</span>
+          </div>
 
-        <div class="project-box">
-          <strong>UWB Biomedical Antenna Systems</strong>
-          <span>Ultra-wideband antenna and signal-based sensing for health applications.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Breast Cancer Detection Support</strong>
-          <span>AI-assisted analysis using ultra-wideband sensing concepts.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Grape Leaf Disease Detection</strong>
-          <span>Deep learning for agricultural image-based disease recognition.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Palm Fruit Object Detection</strong>
-          <span>Deep transfer learning using YOLO-based object detection from video.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Land Deformation Analysis</strong>
-          <span>Deep learning support for deformation-related monitoring systems.</span>
-        </div>
-
-        <div class="project-box">
-          <strong>Signal Processing and Experimental Evaluation</strong>
-          <span>MATLAB and Python-based analysis for sensing and biomedical research.</span>
+          <div class="map-box">
+            <strong>Biomedical AI</strong>
+            <span>UWB sensing, non-invasive monitoring, and machine learning for health applications.</span>
+          </div>
         </div>
       </div>
 
-      <div class="tag-row">
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Deep Learning</span>
-        <span class="tag">Digital Signal Processing</span>
-        <span class="tag">UWB Technology</span>
-        <span class="tag">Biomedical AI</span>
-        <span class="tag">Mobile Sensing</span>
+      <h2 class="section-title">Research Experience by Academic Institution</h2>
+
+      <div class="institution">
+        <div class="institution-header">
+          <div class="institution-title">Auburn University</div>
+          <div class="institution-meta">Graduate Research Assistant | Department of Computer Science and Software Engineering | 2022–Present</div>
+        </div>
+
+        <div class="institution-body">
+          <p>
+            My Ph.D. research at Auburn University develops reliable and context-aware AI methods for language understanding, cybersecurity decision support, speech representation analysis, intelligent transportation, and sensing systems. The main dissertation direction studies sentiment analysis when text contains linguistic complexity such as contrast, irony, implicit meaning, aspect-specific opinion, and distribution shift.
+          </p>
+
+          <p>
+            This research combines transformer-based modeling, uncertainty estimation, graph learning, multi-task learning, hierarchical evidence modeling, and task-aware evaluation. My goal is to build methods that remain useful beyond clean benchmark settings and can support practical decisions in real-world computing environments.
+          </p>
+
+          <div class="project-grid">
+            <div class="project-box">
+              <strong>ShiftAware-Select</strong>
+              <span>Reliable NLP classification under distribution shift with calibration, uncertainty estimation, and abstain-to-human decisioning. Under review: IEEE ICMLA 2026.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>CAGLSAv2</strong>
+              <span>Position-invariant discourse-span attention for contrastive and length-robust sentiment analysis. Under review: IEEE ICMLA 2026.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Irony-Aware Twitter Sentiment Analysis</strong>
+              <span>Multi-task learning framework for sentiment, irony, and emotion understanding in social media text. Submitted: IEEE AIBThings 2026.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Hierarchical Severity Classification</strong>
+              <span>Cybersecurity vulnerability severity prediction with automatic CWE enrichment and sentence-level evidence. Submitted: IEEE AIBThings 2026.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>DualGraph-RoBERTa</strong>
+              <span>Aspect-based sentiment analysis using syntactic dependency graphs and semantic co-occurrence evidence. Submitted: IEEE AIBThings 2026.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>LayerLens</strong>
+              <span>Task-relevant layer disruption analysis for self-supervised speech encoders under noise, reverberation, and enhancement artifacts. Under review: IEEE/ACM TASLP.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Traffic Data Imputation Study</strong>
+              <span>Downstream evaluation of reconstruction accuracy and forecasting utility for intelligent transportation data. Under review: IEEE T-ITS.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Vi-Detect</strong>
+              <span>Smartphone-based vibration sensing for fine-grained component looseness detection. Poster published at ACM SenSys; full article under minor revision at ACM TOSN.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>DeepFakeDetect</strong>
+              <span>Fine-grained deepfake audio detection using mechanical modeling of vocal folds. Under review: Journal of Information Security and Applications.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Discourse-Aware Domain Adaptation</strong>
+              <span>Planned sentiment transfer research using discourse structure and span-level evidence for domain-adaptive language understanding.</span>
+            </div>
+          </div>
+
+          <div class="tag-row">
+            <span class="tag">Reliable NLP</span>
+            <span class="tag">Sentiment Analysis</span>
+            <span class="tag">AI for Cybersecurity</span>
+            <span class="tag">Speech Processing</span>
+            <span class="tag">Sensing Systems</span>
+            <span class="tag">Transformer Models</span>
+            <span class="tag">Graph Learning</span>
+            <span class="tag">Uncertainty Estimation</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="institution">
-    <div class="institution-header purple">
-      <div class="institution-title">Jessore University of Science and Technology</div>
-      <div class="institution-meta">B.Sc. in Computer Science and Engineering | Undergraduate Research Foundation</div>
-    </div>
-
-    <div class="institution-body">
-      <p>
-        My undergraduate training at Jessore University of Science and Technology provided the foundation for my later research in machine learning, software systems, and applied AI. I built core preparation in programming, algorithms, database systems, networking, and software development.
-      </p>
-
-      <p>
-        This stage shaped my interest in research-oriented computing. It also gave me early teaching and mentoring experience through tutoring and coaching, which later supported my work as a graduate teaching assistant.
-      </p>
-
-      <div class="project-grid">
-        <div class="project-box">
-          <strong>Computer Science Foundation</strong>
-          <span>Programming, data structures, algorithms, databases, networks, and software engineering.</span>
+      <div class="institution">
+        <div class="institution-header red">
+          <div class="institution-title">Universiti Malaysia Pahang</div>
+          <div class="institution-meta">Graduate Research Assistant | M.Sc. by Research in Electrical and Electronic Engineering | 2018–2021</div>
         </div>
 
-        <div class="project-box">
-          <strong>Early Applied Computing Work</strong>
-          <span>Undergraduate projects and coursework that supported later AI and ML research directions.</span>
-        </div>
+        <div class="institution-body">
+          <p>
+            My graduate research at Universiti Malaysia Pahang focused on applied machine learning, digital signal processing, ultra-wideband sensing, and biomedical AI. This period gave me a strong foundation in experimental research, signal-based modeling, sensor-driven decision support, and engineering-oriented machine learning.
+          </p>
 
-        <div class="project-box">
-          <strong>Teaching and Mentoring Foundation</strong>
-          <span>Private tutoring and classroom coaching in science, mathematics, and information technology.</span>
-        </div>
+          <p>
+            Much of this work studied how sensing signals can support non-invasive monitoring and biomedical decision support. I also collaborated on applied deep learning projects involving image-based disease detection, object detection, and monitoring applications.
+          </p>
 
-        <div class="project-box">
-          <strong>Research Preparation</strong>
-          <span>Preparation for graduate research through technical writing, implementation, and problem solving.</span>
+          <div class="project-grid">
+            <div class="project-box">
+              <strong>Non-Invasive Blood Glucose Estimation</strong>
+              <span>Machine learning with ultra-wideband signals for glucose-level estimation and biomedical decision support.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Non-Invasive Diabetes Monitoring</strong>
+              <span>AI and UWB-based modeling for non-invasive biomedical monitoring systems.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Breast Cancer Detection Support</strong>
+              <span>Collaborative AI-assisted analysis using ultra-wideband sensing concepts for early detection support.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Grape Leaf Disease Detection</strong>
+              <span>Deep learning for agricultural image-based disease recognition.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Palm Fruit Object Detection</strong>
+              <span>Deep transfer learning using YOLO-based object detection from plantation video data.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Land Deformation Analysis</strong>
+              <span>Deep learning support for deformation-related monitoring and applied sensing systems.</span>
+            </div>
+          </div>
+
+          <div class="tag-row">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Digital Signal Processing</span>
+            <span class="tag">UWB Technology</span>
+            <span class="tag">Biomedical AI</span>
+            <span class="tag">Applied Sensing</span>
+          </div>
         </div>
       </div>
 
-      <div class="tag-row">
-        <span class="tag">Computer Science</span>
-        <span class="tag">Programming</span>
-        <span class="tag">Algorithms</span>
-        <span class="tag">Software Systems</span>
-        <span class="tag">Teaching Foundation</span>
+      <div class="institution">
+        <div class="institution-header purple">
+          <div class="institution-title">Jashore University of Science and Technology</div>
+          <div class="institution-meta">B.Sc. in Computer Science and Engineering | Undergraduate Research Foundation</div>
+        </div>
+
+        <div class="institution-body">
+          <p>
+            My undergraduate training at Jashore University of Science and Technology provided the foundation for my later research in machine learning, software systems, cybersecurity, and applied AI. I built core preparation in programming, algorithms, database systems, networking, operating systems, and software development.
+          </p>
+
+          <p>
+            My undergraduate thesis focused on ransomware file encryption attacks and data protection. This early work helped shape my interest in cybersecurity, software systems, and practical computing problems.
+          </p>
+
+          <div class="project-grid">
+            <div class="project-box">
+              <strong>Ransomware File Encryption Attacks</strong>
+              <span>Undergraduate thesis on ransomware behavior, file encryption attacks, user-level security weaknesses, and data protection strategies.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Computer Science Foundation</strong>
+              <span>Programming, data structures, algorithms, databases, computer networks, operating systems, and software engineering.</span>
+            </div>
+
+            <div class="project-box">
+              <strong>Research Preparation</strong>
+              <span>Early preparation for graduate research through technical writing, implementation, problem solving, and applied computing projects.</span>
+            </div>
+          </div>
+
+          <div class="tag-row">
+            <span class="tag">Computer Science</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">Programming</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">Software Systems</span>
+            <span class="tag">Research Foundation</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="note-box">
-    <p>
-      The Research Experience page gives a broad view of my research path. The Notable Projects page gives more detail about selected systems, manuscripts, and technical contributions.
-    </p>
-  </div>
+      <div class="note-box">
+        <p>
+          My research experience connects reliable AI methods with real-world computing needs. Across these projects, I focus on careful evaluation, interpretable model behavior, practical deployment challenges, and student-centered research opportunities.
+        </p>
+      </div>
 
-</section>
+    </section>
 
   </main>
 
